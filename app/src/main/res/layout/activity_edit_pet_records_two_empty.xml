@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="editPetRecordsTwoEmptyVM" type="com.ehayvan.app.modules.editpetrecordstwoempty.data.viewmodel.EditPetRecordsTwoEmptyVM"/>
+        <variable name="editPetRecordsTwoVM" type="com.barsapplication.app.modules.editpetrecordstwo.data.viewmodel.EditPetRecordsTwoVM"/>
     </data>
     <LinearLayout android:gravity="center_horizontal"
         android:id="@+id/linearEditPetRecord"
@@ -17,86 +17,89 @@
                 android:gravity="center_horizontal"
                 android:id="@+id/toolbarToolbar"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_6pxh"
-                android:layout_marginStart="@dimen/_13pxh"
-                android:layout_marginTop="@dimen/_23pxv"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_24pxv"
                 android:layout_width="match_parent" app:contentInsetStart="0dp">
-                <FrameLayout android:id="@+id/frameNavigationHead"
-                    android:layout_height="@dimen/_40pxv" android:layout_width="match_parent">
-                    <View
-                        android:background="@drawable/rectangle_gradient_s_bluegray_400_87_e_bluegray_400_87"
-                        android:id="@+id/lineLine"
-                        android:layout_gravity="bottom|center"
-                        android:layout_height="@dimen/_1pxv"
-                        android:layout_marginBottom="@dimen/_13pxv"
-                        android:layout_marginStart="@dimen/_10pxh"
-                        android:layout_marginTop="@dimen/_13pxv" android:layout_width="@dimen/_327pxh"/>
-                    <LinearLayout android:id="@+id/linearNavigationHead"
-                        android:layout_gravity="center"
+                <LinearLayout android:id="@+id/linearNavigationHead"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/btnArrowLeft"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="@dimen/_15pxv"
+                        android:layout_marginBottom="@dimen/_15pxv"
+                        android:layout_marginStart="@dimen/_4pxh"
+                        android:scaleType="centerCrop"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:src="@drawable/img_arrowleft"
+                        android:contentDescription="@string/content_description_arrow_left"
+                        android:padding="7dp"/>
+
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:id="@+id/linearColumnbody"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/_8pxh"
-                        android:layout_width="match_parent" android:orientation="horizontal">
-                        <ImageView android:id="@+id/imageArrowleft"
-                            android:layout_height="@dimen/_10pxh"
-                            android:layout_marginBottom="@dimen/_15pxv"
-                            android:layout_marginStart="@dimen/_4pxh"
-                            android:layout_marginTop="@dimen/_15pxv"
-                            android:layout_width="@dimen/_11pxh"
-                            android:scaleType="centerCrop"
-                            circular="@{true}"
-                            imageRes="@{@drawable/img_arrowleft}"
-                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
-                        <View android:background="@color/bluegray_50"
-                            android:id="@+id/lineLineDivider"
-                            android:layout_height="@dimen/_22pxv"
-                            android:layout_marginBottom="@dimen/_9pxv"
-                            android:layout_marginStart="@dimen/_12pxh"
-                            android:layout_marginTop="@dimen/_9pxv"
-                            android:layout_weight="0.0" android:layout_width="0dp"/>
-                        <LinearLayout android:gravity="start"
-                            android:id="@+id/linearColumnbody"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_7pxh"
-                            android:layout_weight="0.74"
-                            android:layout_width="0dp" android:orientation="vertical">
-                            <TextView android:ellipsize="end"
-                                android:id="@+id/txtBody"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="@dimen/_10pxh"
-                                android:layout_width="wrap_content"
-                                android:lineSpacingExtra="@dimen/_6pxh"
-                                android:singleLine="true"
-                                android:text="@{editPetRecordsTwoEmptyVM.editPetRecordsTwoEmptyModel.txtBody}"
-                                style="@style/txtNotoSansnotosansregular14" tools:text="@string/msg_edit_pet_record"/>
-                            <TextView android:ellipsize="end"
-                                android:id="@+id/txtTitle"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="@dimen/_10pxh"
-                                android:layout_width="wrap_content"
-                                android:lineSpacingExtra="@dimen/_11pxh"
-                                android:singleLine="true"
-                                android:text="@{editPetRecordsTwoEmptyVM.editPetRecordsTwoEmptyModel.txtTitle}"
-                                style="@style/txtCatamaranromansemibold16" tools:text="@string/lbl_drops"/>
-                        </LinearLayout>
-                        <androidx.appcompat.widget.AppCompatButton
+                        android:layout_marginStart="@dimen/_7pxh"
+                        android:layout_marginTop="17dp"
+                        android:layout_weight="0.72"
+                        android:layout_width="0dp"
+                        android:orientation="vertical">
+
+                        <TextView
                             android:ellipsize="end"
+                            android:id="@+id/txtBody"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
                             android:gravity="center"
-                            android:id="@+id/btnDudu"
-                            android:layout_height="@dimen/_40pxv"
-                            android:layout_marginStart="@dimen/_7pxh"
-                            android:layout_width="@dimen/_65pxh"
                             android:lineSpacingExtra="@dimen/_6pxh"
-                            android:paddingBottom="@dimen/_10pxv"
-                            android:paddingEnd="@dimen/_14pxh"
-                            android:paddingStart="@dimen/_14pxh"
-                            android:paddingTop="@dimen/_10pxv"
                             android:singleLine="true"
-                            android:text="@string/lbl_dudu"
-                            android:textAllCaps="false"
-                            style="@style/btnSolidRoundedOutline" tools:text="@string/lbl_dudu"/>
+                            android:text="@{editPetRecordsThreeVM.editPetRecordsThreeModel.txtBody}"
+                            style="@style/txtNotoSansnotosansregular14"
+                            tools:text="@string/msg_edit_pet_record"/>
+
+
+                        <TextView
+                            android:id="@+id/txtTitle"
+                            style="@style/txtCatamaranromansemibold16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_10pxh"
+                            android:ellipsize="end"
+                            android:lineSpacingExtra="@dimen/_11pxh"
+                            android:singleLine="true"
+                            android:text="@{editPetRecordsThreeVM.editPetRecordsThreeModel.txtTitle}"
+                            tools:text="@string/lbl_drops" />
                     </LinearLayout>
-                </FrameLayout>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:ellipsize="end" android:gravity="center"
+                        android:id="@+id/btnDudu"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="@dimen/_7pxh"
+                        android:layout_width="@dimen/_65pxh"
+                        android:lineSpacingExtra="@dimen/_6pxh"
+                        android:paddingBottom="@dimen/_10pxv"
+                        android:paddingEnd="@dimen/_14pxh"
+                        android:paddingStart="@dimen/_14pxh"
+                        android:paddingTop="@dimen/_10pxv"
+                        android:layout_marginTop="15dp"
+                        android:singleLine="true"
+                        android:text="@string/lbl_dudu"
+                        android:textAllCaps="false"
+                        style="@style/btnSolidRoundedOutline" tools:text="@string/lbl_dudu"/>
+                </LinearLayout>
             </androidx.appcompat.widget.Toolbar>
+            <View
+                android:background="@drawable/rectangle_gradient_s_bluegray_400_87_e_bluegray_400_87"
+                android:id="@+id/lineLine"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxv"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_9pxv" android:layout_width="@dimen/_327pxh"/>
+
             <TextView android:ellipsize="end"
                 android:id="@+id/txtTitleOne"
                 android:layout_gravity="center_horizontal"
@@ -119,44 +122,25 @@
                 android:scaleType="fitXY"
                 android:src="@drawable/img_illustration"
                 tools:ignore="ContentDescription" tools:src="@drawable/img_illustration"/>
-            <LinearLayout android:gravity="center_horizontal"
-                android:id="@+id/linearContainerswith"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_28pxv"
-                android:layout_marginEnd="@dimen/_13pxh"
-                android:layout_marginStart="@dimen/_13pxh"
-                android:layout_marginTop="@dimen/_104pxv"
-                android:layout_width="match_parent"
-                android:orientation="vertical" style="@style/groupStylecornerRadius_2">
-                <LinearLayout android:gravity="center_vertical"
-                    android:id="@+id/linearButtonMobile"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal" style="@style/groupStylewhite_2">
-                    <ImageView android:id="@+id/imageVector"
-                        android:layout_height="@dimen/_11pxh"
-                        android:layout_marginBottom="@dimen/_22pxv"
-                        android:layout_marginStart="@dimen/_120pxh"
-                        android:layout_marginTop="@dimen/_22pxv"
-                        android:layout_width="@dimen/_11pxh"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/img_vector_blue_600"
-                        tools:ignore="ContentDescription" tools:src="@drawable/img_vector_blue_600"/>
-                    <TextView android:ellipsize="end"
-                        android:id="@+id/txtButton"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_18pxv"
-                        android:layout_marginEnd="@dimen/_116pxh"
-                        android:layout_marginStart="@dimen/_10pxh"
-                        android:layout_marginTop="@dimen/_18pxv"
-                        android:layout_weight="0.86"
-                        android:layout_width="0dp"
-                        android:lineSpacingExtra="@dimen/_6pxh"
-                        android:singleLine="true"
-                        android:text="@{editPetRecordsTwoEmptyVM.editPetRecordsTwoEmptyModel.txtButton}"
-                        style="@style/txtNotoSansnotosansmedium14_2" tools:text="@string/lbl_add_drops"/>
-                </LinearLayout>
-            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end"
+                android:gravity="center"
+                android:layout_marginTop="90dp"
+                android:id="@+id/btnReserve"
+                android:layout_height="65dp"
+                android:layout_width="400dp"
+                android:lineSpacingExtra="@dimen/_6pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_reserve"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded"
+                tools:text="Edit Pet Records" />
+
         </LinearLayout>
     </LinearLayout>
 </layout>
+

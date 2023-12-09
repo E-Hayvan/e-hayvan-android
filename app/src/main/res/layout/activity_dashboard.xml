@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="dashboardVM" type="com.ehayvan.app.modules.dashboard.data.viewmodel.DashboardVM"/>
+        <variable name="dashboardVM" type="com.barsapplication.app.modules.dashboard.data.viewmodel.DashboardVM"/>
     </data>
     <LinearLayout android:gravity="center_horizontal"
         android:id="@+id/linearDashboard"
@@ -59,14 +59,16 @@
                                 android:text="@{dashboardVM.dashboardModel.txtEsther}"
                                 style="@style/txtNotoSansnotosanssemibold16" tools:text="@string/lbl_esther"/>
                         </LinearLayout>
-                        <ImageView android:id="@+id/imageSearch"
-                            android:layout_height="@dimen/_18pxh"
-                            android:layout_marginBottom="@dimen/_13pxv"
-                            android:layout_marginTop="@dimen/_13pxv"
-                            android:layout_width="@dimen/_18pxh"
+                        <ImageButton
+                            android:id="@+id/btnSearch"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:scaleType="fitXY"
+                            android:background="?android:attr/selectableItemBackground"
                             android:src="@drawable/img_search"
-                            tools:ignore="ContentDescription" tools:src="@drawable/img_search"/>
+                            tools:ignore="ContentDescription"
+                            android:contentDescription="deneme"
+                            tools:src="@drawable/img_search" />
                         <View android:background="@color/gray_300"
                             android:id="@+id/lineDivider"
                             android:layout_height="@dimen/_19pxv"
