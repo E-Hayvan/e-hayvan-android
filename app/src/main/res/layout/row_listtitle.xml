@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listtitleRowModel" type="com.ehayvan.app.modules.veterinariandashboard.data.model.ListtitleRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearCardHorizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyleblue_1">
+        <TextView android:ellipsize="end" android:id="@+id/txtTitle"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_34pxh"
+            android:layout_marginStart="@dimen/_34pxh"
+            android:layout_marginTop="@dimen/_13pxv"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_8pxh"
+            android:singleLine="true"
+            android:text="@{listtitleRowModel.txtTitle}"
+            style="@style/txtNotoSansnotosanssemibold20" tools:text="@string/lbl_bubu"/>
+        <TextView android:id="@+id/txtPrice"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_34pxh"
+            android:layout_marginStart="@dimen/_34pxh"
+            android:layout_marginTop="@dimen/_4pxv"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_6pxh"
+            android:text="@{listtitleRowModel.txtPrice}"
+            style="@style/txtNotoSansnotosansregular14_1" tools:text="@string/msg_dog_2_years_o2"/>
+        <ImageView android:id="@+id/imageVector"
+            android:layout_height="@dimen/_17pxh"
+            android:layout_marginBottom="@dimen/_17pxv"
+            android:layout_marginEnd="@dimen/_39pxh"
+            android:layout_marginStart="@dimen/_39pxh"
+            android:layout_marginTop="@dimen/_9pxv"
+            android:layout_width="@dimen/_17pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_vector"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_vector"/>
+    </LinearLayout>
+</layout>

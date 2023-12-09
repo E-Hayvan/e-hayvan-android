@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="content1RowModel" type="com.ehayvan.app.modules.viewprofile.data.model.Content1RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearCardHorizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylewhite_1">
+        <ImageButton
+            android:background="@drawable/rectangle_bg_blue_50_7f_radius_12"
+            android:id="@+id/btnVector"
+            android:layout_height="@dimen/_42pxh"
+            android:layout_marginBottom="@dimen/_16pxv"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="@dimen/_42pxh"
+            android:paddingHorizontal="@dimen/_13pxh"
+            android:paddingVertical="@dimen/_13pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_vector_blue_600_42x42" tools:ignore="ContentDescription"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnbody"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16pxv"
+            android:layout_marginEnd="@dimen/_127pxh"
+            android:layout_marginStart="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_15pxv"
+            android:layout_weight="0.76" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:ellipsize="end" android:id="@+id/txtBody"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_6pxh"
+                android:singleLine="true"
+                android:text="@{content1RowModel.txtBody}"
+                style="@style/txtNotoSansnotosansregular14" tools:text="@string/msg_name_and_surnam"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtTitle"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_6pxh"
+                android:singleLine="true"
+                android:text="@{content1RowModel.txtTitle}"
+                style="@style/txtNotoSansnotosanssemibold14" tools:text="@string/lbl_esther_dae"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
