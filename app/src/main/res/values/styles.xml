@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="txtSolidRoundedOutline">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/bluegray_400</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+        <item name="android:background">@drawable/rectangle_bg_white_a700_border_bluegray_101_radius_4</item>
+    </style>
+    <style name="txtNotoSansnotosansmedium14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/white_A700</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtNotoSansnotosanssemibold16">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/bluegray_800</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="groupStyleblue_600cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_blue_600_radius_14</item>
+    </style>
+    <style name="btnSolidRounded_3">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/white_A700</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+        <item name="android:background">@drawable/rectangle_bg_red_a700_radius_14</item>
+    </style>
+    <style name="txtNotoSansnotosansmedium16">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/bluegray_400</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="btnSolidRounded_2">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/bluegray_600</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+        <item name="android:background">@drawable/rectangle_bg_bluegray_50_radius_10</item>
+    </style>
+    <style name="txtNotoSansnotosanssemibold14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/bluegray_800</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="btnSolidRounded_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/white_A700</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+        <item name="android:background">@drawable/rectangle_bg_blue_600_radius_14</item>
+    </style>
+    <style name="groupStylecornerRadius">
+        <item name="android:background">@drawable/rectangle_gradient_s_bluegray_100_00_e_bluegray_100_radius_26</item>
+    </style>
+    <style name="txtCatamaranromansemibold16">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/bluegray_800</item>
+        <item name="android:fontFamily">@font/catamaran</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtNotoSansnotosanssemibold20">
+        <item name="android:textSize">@dimen/_20pxh</item>
+        <item name="android:textColor">@color/white_A700</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="groupStyleblue_1">
+        <item name="android:background">@drawable/rectangle_bg_blue_600_border_gray_51_radius_14</item>
+    </style>
+    <style name="txtSolidRoundedOutline_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/bluegray_400</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+        <item name="android:background">@drawable/rectangle_bg_white_a700_border_bluegray_101_radius_4</item>
+    </style>
+    <style name="txtSolidRoundedOutline_2">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/bluegray_400</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+        <item name="android:background">@drawable/rectangle_bg_white_a700_border_bluegray_101_radius_5</item>
+    </style>
+    <style name="txtNotoSansnotosansregular14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/bluegray_400</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtNotoSansnotosansregular14_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/bluegray_50</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="btnSolidRoundedOutline">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/bluegray_800</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+        <item name="android:background">@drawable/rectangle_bg_bluegray_50_radius_10</item>
+    </style>
+    <style name="txtNotoSansnotosansregular16">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/bluegray_400</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="groupStylewhite_A700">
+        <item name="android:background">@drawable/rectangle_bg_white_a700</item>
+    </style>
+    <style name="groupStylecornerRadius_3">
+        <item name="android:background">@drawable/rectangle_radius_tl_26_tr_26</item>
+    </style>
+    <style name="groupStylegreen_600cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_green_600_border_gray_51_radius_14</item>
+    </style>
+    <style name="groupStylecornerRadius_2">
+        <item name="android:background">@drawable/rectangle_radius_26</item>
+    </style>
+    <style name="btnSolidRounded">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/white_A700</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+        <item name="android:background">@drawable/rectangle_bg_blue_600_radius_26</item>
+    </style>
+    <style name="groupStylecornerRadius_4">
+        <item name="android:background">@drawable/rectangle_border_blue_50_radius_30</item>
+    </style>
+    <style name="txtNotoSansnotosansmedium14_3">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/bluegray_400</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtRocknRollOneregular52">
+        <item name="android:textSize">@dimen/_52pxh</item>
+        <item name="android:textColor">@color/bluegray_900</item>
+        <item name="android:fontFamily">@font/rocknroll_one</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtNotoSansnotosansmedium14_2">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/blue_600</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="groupStylegray_50cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_gray_50_radius_26</item>
+    </style>
+    <style name="groupStylecornerRadius_1">
+        <item name="android:background">@drawable/rectangle_radius_14</item>
+    </style>
+    <style name="txtNotoSansnotosansmedium14_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/bluegray_200</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="groupStylewhite_1">
+        <item name="android:background">@drawable/rectangle_bg_white_a700_radius_14</item>
+    </style>
+    <style name="groupStyleblue_600">
+        <item name="android:background">@drawable/rectangle_bg_blue_600</item>
+    </style>
+    <style name="groupStylewhite_A700cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_white_a700_border_gray_300_radius_14</item>
+    </style>
+    <style name="groupStylewhite_2">
+        <item name="android:background">@drawable/rectangle_bg_white_a700_border_blue_600_radius_26</item>
+    </style>
+    <style name="etSolidRoundedOutline">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/bluegray_400</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+        <item name="android:background">@drawable/rectangle_bg_white_a700_border_gray_300_radius_14</item>
+    </style>
+    <style name="txtCatamaranbold26">
+        <item name="android:textSize">@dimen/_26pxh</item>
+        <item name="android:textColor">@color/bluegray_800</item>
+        <item name="android:fontFamily">@font/catamaran</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="groupStyle">
+        <item name="android:background">@drawable/rectangle_dhi_0</item>
+    </style>
+    <style name="groupStylegray_50">
+        <item name="android:background">@drawable/rectangle_bg_gray_50</item>
+    </style>
+</resources>
