@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="viewProfileVM" type="com.ehayvan.app.modules.viewprofile.data.viewmodel.ViewProfileVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearViewProfile"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearViewProfile1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylegray_50cornerRadius">
+            <FrameLayout android:id="@+id/frameStackvector"
+                android:layout_height="@dimen/_343pxv" android:layout_width="match_parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerContent"
+                    android:layout_gravity="bottom|center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_10pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_24pxh}" tools:itemCount="3" tools:listitem="@layout/row_content1"/>
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbarToolbar"
+                    android:layout_gravity="top|start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10pxv"
+                    android:layout_width="match_parent"
+                    app:contentInsetStart="0dp" style="@style/groupStylegray_50">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearColumnarrowleft"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="vertical">
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearIconDivider"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_10pxh"
+                            android:layout_width="match_parent" android:orientation="horizontal">
+                            <ImageView android:id="@+id/imageArrowleft"
+                                android:layout_height="@dimen/_10pxh"
+                                android:layout_marginBottom="@dimen/_14pxv"
+                                android:layout_marginStart="@dimen/_4pxh"
+                                android:layout_marginTop="@dimen/_14pxv"
+                                android:layout_width="@dimen/_11pxh"
+                                android:scaleType="centerCrop"
+                                circular="@{true}"
+                                imageRes="@{@drawable/img_arrowleft}"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtTitleTwo"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_7pxv"
+                                android:layout_marginStart="@dimen/_123pxh"
+                                android:layout_marginTop="@dimen/_3pxv"
+                                android:layout_weight="0.88"
+                                android:layout_width="0dp"
+                                android:lineSpacingExtra="@dimen/_11pxh"
+                                android:singleLine="true"
+                                android:text="@{viewProfileVM.viewProfileModel.txtTitleTwo}"
+                                style="@style/txtCatamaranromansemibold16" tools:text="@string/lbl_view_profile"/>
+                        </LinearLayout>
+                        <View android:background="@color/bluegray_50"
+                            android:id="@+id/lineDefault"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_3pxv"
+                            android:layout_marginStart="@dimen/_1pxh"
+                            android:layout_marginTop="@dimen/_20pxv" android:layout_width="@dimen/_324pxh"/>
+                    </LinearLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </FrameLayout>
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearButtonsContain"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_18pxv"
+                android:layout_marginTop="@dimen/_64pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylecornerRadius_2">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btnEditProfile"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_12pxh"
+                    android:layout_marginStart="@dimen/_18pxh"
+                    android:layout_marginTop="@dimen/_80pxv"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_6pxh"
+                    android:paddingBottom="@dimen/_18pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_18pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_edit_profile"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRounded_1" tools:text="@string/lbl_edit_profile"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btnChangePasswordOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_12pxh"
+                    android:layout_marginStart="@dimen/_18pxh"
+                    android:layout_marginTop="@dimen/_8pxv"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_6pxh"
+                    android:paddingBottom="@dimen/_18pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_18pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_change_password"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRounded_1" tools:text="@string/lbl_change_password"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
