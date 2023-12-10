@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="petOwnerDashboardVM" type="com.barsapplication.app.modules.petownerdashboard.data.viewmodel.PetOwnerDashboardVM"/>
+        <variable name="veterinarianDashboardVM" type="com.ehayvan.app.modules.veterinariandashboard.data.viewmodel.VeterinarianDashboardVM"/>
     </data>
     <LinearLayout android:gravity="center_horizontal"
         android:id="@+id/linearPetOwnerDashb"
@@ -46,7 +46,7 @@
                                 android:layout_width="wrap_content"
                                 android:lineSpacingExtra="@dimen/_6pxh"
                                 android:singleLine="true"
-                                android:text="@{dashboardVM.dashboardModel.txtHello}"
+                                android:text="@{veterinarianDashboardVM.veterinarianDashboardModel.txtHello}"
                                 style="@style/txtNotoSansnotosansregular14" tools:text="@string/lbl_hello"/>
                             <TextView android:ellipsize="end"
                                 android:id="@+id/txtEsther"
@@ -56,14 +56,15 @@
                                 android:layout_width="wrap_content"
                                 android:lineSpacingExtra="@dimen/_6pxh"
                                 android:singleLine="true"
-                                android:text="@{dashboardVM.dashboardModel.txtEsther}"
+                                android:text="@{veterinarianDashboardVM.veterinarianDashboardModel.txtAlice}"
                                 style="@style/txtNotoSansnotosanssemibold16" tools:text="Alice"/>
                         </LinearLayout>
                         <ImageButton
                             android:id="@+id/btnSearch"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
                             android:scaleType="fitXY"
+                            android:layout_marginTop="10dp"
                             android:background="?android:attr/selectableItemBackground"
                             android:src="@drawable/img_search"
                             tools:ignore="ContentDescription"
@@ -103,7 +104,7 @@
                     android:layout_width="0dp"
                     android:lineSpacingExtra="@dimen/_6pxh"
                     android:singleLine="true"
-                    android:text="@{petOwnerDashboardVM.petOwnerDashboardModel.txtText}"
+                    android:text="@{veterinarianDashboardVM.veterinarianDashboardModel.txtText}"
                     style="@style/txtNotoSansnotosanssemibold16" tools:text="Today's Appointments"/>
                 <androidx.appcompat.widget.AppCompatButton
                     android:ellipsize="end" android:gravity="center"
@@ -122,92 +123,18 @@
                     style="@style/btnSolidRounded_2" tools:text="@string/lbl_2"/>
             </LinearLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:ellipsize="end"
-                android:gravity="center"
-                android:id="@+id/btnAddPet"
-                android:layout_height="100dp"
-                android:layout_marginEnd="@dimen/_15pxh"
-                android:layout_marginStart="@dimen/_15pxh"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:lineSpacingExtra="@dimen/_6pxh"
-                android:paddingBottom="@dimen/_18pxv"
-                android:paddingEnd="@dimen/_30pxh"
-                android:paddingStart="@dimen/_30pxh"
-                android:paddingTop="@dimen/_18pxv"
-                android:singleLine="false"
-                android:text="Bubu\nDog | 2 years old 10.30 AM"
-                android:textSize="18sp"
-                android:textColor="@android:color/white"
-                android:textAllCaps="false"
-                style="@style/btnSolidRounded_1" />
-
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:ellipsize="end"
-                android:gravity="center"
-                android:id="@+id/btnAddPet"
-                android:layout_height="100dp"
-                android:layout_marginEnd="@dimen/_15pxh"
-                android:layout_marginStart="@dimen/_15pxh"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:lineSpacingExtra="@dimen/_6pxh"
-                android:paddingBottom="@dimen/_18pxv"
-                android:paddingEnd="@dimen/_30pxh"
-                android:paddingStart="@dimen/_30pxh"
-                android:paddingTop="@dimen/_18pxv"
-                android:singleLine="false"
-                android:text="Dudu\nDog | 1 years old 2.30 PM"
-                android:textSize="18sp"
-                android:textColor="@android:color/white"
-                android:textAllCaps="false"
-                style="@style/btnSolidRounded_1" />
-            <androidx.appcompat.widget.AppCompatButton
-                android:ellipsize="end"
-                android:gravity="center"
-                android:id="@+id/btnAddPet"
-                android:layout_height="100dp"
-                android:layout_marginEnd="@dimen/_15pxh"
-                android:layout_marginStart="@dimen/_15pxh"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:lineSpacingExtra="@dimen/_6pxh"
-                android:paddingBottom="@dimen/_18pxv"
-                android:paddingEnd="@dimen/_30pxh"
-                android:paddingStart="@dimen/_30pxh"
-                android:paddingTop="@dimen/_18pxv"
-                android:singleLine="false"
-                android:text="Dobby\nCat | 1 years old 11.30 AM"
-                android:textSize="18sp"
-                android:textColor="@android:color/white"
-                android:textAllCaps="false"
-                style="@style/btnSolidRounded_1" />
-            <LinearLayout android:gravity="center_horizontal"
-                android:id="@+id/linearButtonsContain"
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerListtitle"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_20pxv"
-                android:layout_marginEnd="@dimen/_15pxh"
+                android:layout_marginEnd="@dimen/_16pxh"
                 android:layout_marginStart="@dimen/_16pxh"
-                android:layout_marginTop="@dimen/_87pxv"
+                android:layout_marginTop="@dimen/_24pxv"
                 android:layout_width="match_parent"
-                android:orientation="vertical" style="@style/groupStylecornerRadius_2">
-                <androidx.appcompat.widget.AppCompatButton
-                    android:ellipsize="end" android:gravity="center"
-                    android:id="@+id/btnAddPet"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
-                    android:lineSpacingExtra="@dimen/_6pxh"
-                    android:paddingBottom="@dimen/_18pxv"
-                    android:paddingEnd="@dimen/_30pxh"
-                    android:paddingStart="@dimen/_30pxh"
-                    android:paddingTop="@dimen/_18pxv"
-                    android:singleLine="true"
-                    android:text="@string/lbl_add_pet"
-                    android:textAllCaps="false"
-                    style="@style/btnSolidRounded" tools:text="@string/lbl_add_pet"/>
-            </LinearLayout>
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_24pxh}" tools:itemCount="3" tools:listitem="@layout/row_listtitle"/>
+
         </LinearLayout>
     </LinearLayout>
 </layout>

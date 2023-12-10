@@ -6,6 +6,7 @@
     <LinearLayout android:gravity="center_horizontal"
         android:id="@+id/linearRegister"
         android:layout_height="match_parent"
+        android:background="@drawable/dog"
         android:layout_width="match_parent" android:orientation="vertical">
         <LinearLayout android:gravity="center_horizontal"
             android:id="@+id/linearOnboardingCr"
@@ -22,6 +23,13 @@
                     android:id="@+id/frameStacktitle"
                     android:layout_height="@dimen/_554pxv"
                     android:layout_width="match_parent" style="@style/groupStyle">
+                    <ImageView android:id="@+id/imageActionSheetBa"
+                        android:layout_gravity="start"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        imageRes="@{@drawable/img_actionsheetba}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_actionsheetba"/>
                     <LinearLayout android:id="@+id/linearActionSheet"
                         android:layout_gravity="top|start"
                         android:layout_height="wrap_content"
@@ -246,13 +254,6 @@
                         android:paddingVertical="@dimen/_18pxv"
                         android:scaleType="fitCenter"
                         android:src="@drawable/img_iconframe" tools:ignore="ContentDescription"/>
-                    <ImageView android:id="@+id/imageActionSheetBa"
-                        android:layout_gravity="start"
-                        android:layout_height="match_parent"
-                        android:layout_width="match_parent"
-                        android:scaleType="fitXY"
-                        imageRes="@{@drawable/img_actionsheetba}"
-                        tools:ignore="ContentDescription" tools:src="@drawable/img_actionsheetba"/>
                 </FrameLayout>
             </LinearLayout>
         </LinearLayout>

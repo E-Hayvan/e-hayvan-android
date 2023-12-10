@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="petOwnerDashboardVM" type="com.barsapplication.app.modules.petownerdashboard.data.viewmodel.PetOwnerDashboardVM"/>
+        <variable name="petOwnerDashboardVM" type="com.ehayvan.app.modules.petownerdashboard.data.viewmodel.PetOwnerDashboardVM"/>
     </data>
     <LinearLayout android:gravity="center_horizontal"
         android:id="@+id/linearPetOwnerDashb"
@@ -46,7 +46,7 @@
                                 android:layout_width="wrap_content"
                                 android:lineSpacingExtra="@dimen/_6pxh"
                                 android:singleLine="true"
-                                android:text="@{dashboardVM.dashboardModel.txtHello}"
+                                android:text="@{petOwnerDashboardVM.petOwnerDashboardModel.txtHello}"
                                 style="@style/txtNotoSansnotosansregular14" tools:text="@string/lbl_hello"/>
                             <TextView android:ellipsize="end"
                                 android:id="@+id/txtEsther"
@@ -56,7 +56,7 @@
                                 android:layout_width="wrap_content"
                                 android:lineSpacingExtra="@dimen/_6pxh"
                                 android:singleLine="true"
-                                android:text="@{dashboardVM.dashboardModel.txtEsther}"
+                                android:text="@{petOwnerDashboardVM.petOwnerDashboardModel.txtEsther}"
                                 style="@style/txtNotoSansnotosanssemibold16" tools:text="@string/lbl_esther"/>
                         </LinearLayout>
                         <ImageButton
@@ -154,7 +154,7 @@
                     style="@style/txtNotoSansnotosansregular14_1" tools:text="@string/msg_dog_3_years_o"/>
             </LinearLayout>
             <LinearLayout android:gravity="start"
-                android:id="@+id/linearCardHorizontal1"
+                android:id="@+id/linearCardHorizontal2"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_13pxh"
                 android:layout_marginStart="@dimen/_16pxh"
@@ -162,7 +162,7 @@
                 android:layout_width="match_parent"
                 android:orientation="vertical" style="@style/groupStyleblue_1">
                 <TextView android:ellipsize="end"
-                    android:id="@+id/txtTitleOne"
+                    android:id="@+id/txtTitleTwo"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_22pxh"
                     android:layout_marginStart="@dimen/_22pxh"
@@ -173,7 +173,7 @@
                     android:text="@{petOwnerDashboardVM.petOwnerDashboardModel.txtTitleOne}"
                     style="@style/txtNotoSansnotosanssemibold20" tools:text="@string/lbl_bubu"/>
                 <TextView android:ellipsize="end"
-                    android:id="@+id/txtPriceOne"
+                    android:id="@+id/txtPriceTwo"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/_36pxv"
                     android:layout_marginEnd="@dimen/_22pxh"

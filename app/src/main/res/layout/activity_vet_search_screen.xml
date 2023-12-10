@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="vetSearchScreenVM" type="com.barsapplication.app.modules.vetsearchscreen.data.viewmodel.VetSearchScreenVM"/>
+        <variable name="vetSearchScreenVM" type="com.ehayvan.app.modules.vetsearchscreen.data.viewmodel.VetSearchScreenVM"/>
     </data>
     <LinearLayout android:gravity="center_horizontal"
         android:id="@+id/linearVetSearchScre"
@@ -75,7 +75,6 @@
                                 android:scaleType="fitXY"
                                 android:src="@drawable/img_search"
                                 android:background="?android:attr/selectableItemBackground"
-                                android:contentDescription="@string/content_description_search"
                                 tools:ignore="ContentDescription" />
 
                         </LinearLayout>
@@ -93,7 +92,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:ellipsize="end"
                 android:gravity="center"
-                android:id="@+id/btnAddPet"
+                android:id="@+id/btnAddPet1"
                 android:layout_height="100dp"
                 android:layout_marginBottom="@dimen/_20pxv"
                 android:layout_marginEnd="@dimen/_15pxh"
@@ -115,7 +114,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:ellipsize="end"
                 android:gravity="center"
-                android:id="@+id/btnAddPet"
+                android:id="@+id/btnAddPet2"
                 android:layout_height="100dp"
                 android:layout_marginBottom="@dimen/_20pxv"
                 android:layout_marginEnd="@dimen/_15pxh"
@@ -137,7 +136,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:ellipsize="end"
                 android:gravity="center"
-                android:id="@+id/btnAddPet"
+                android:id="@+id/btnAddPet3"
                 android:layout_height="100dp"
                 android:layout_marginBottom="@dimen/_20pxv"
                 android:layout_marginEnd="@dimen/_15pxh"
