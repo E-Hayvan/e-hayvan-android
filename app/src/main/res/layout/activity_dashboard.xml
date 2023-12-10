@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="dashboardVM" type="com.barsapplication.app.modules.dashboard.data.viewmodel.DashboardVM"/>
+        <variable name="dashboardVM" type="com.ehayvan.app.modules.dashboard.data.viewmodel.DashboardVM"/>
     </data>
     <LinearLayout android:gravity="center_horizontal"
         android:id="@+id/linearDashboard"
@@ -61,9 +61,10 @@
                         </LinearLayout>
                         <ImageButton
                             android:id="@+id/btnSearch"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
                             android:scaleType="fitXY"
+                            android:layout_marginTop="10dp"
                             android:background="?android:attr/selectableItemBackground"
                             android:src="@drawable/img_search"
                             tools:ignore="ContentDescription"

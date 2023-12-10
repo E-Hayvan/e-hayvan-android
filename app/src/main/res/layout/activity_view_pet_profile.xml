@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="viewPetProfileVM" type="com.barsapplication.app.modules.viewpetprofile.data.viewmodel.ViewPetProfileVM"/>
+        <variable name="viewPetProfileVM" type="com.ehayvan.app.modules.viewpetprofile.data.viewmodel.ViewPetProfileVM"/>
     </data>
     <LinearLayout android:gravity="center_horizontal"
         android:id="@+id/linearViewPetProfil"
@@ -130,8 +130,7 @@
                             android:layout_marginBottom="@dimen/_14pxv"
                             android:scaleType="centerCrop"
                             android:src="@drawable/img_arrowleft"
-                            android:background="?android:attr/selectableItemBackground"
-                            android:contentDescription="@string/button_description" />
+                            android:background="?android:attr/selectableItemBackground"/>
 
                         <TextView
                             android:id="@+id/txtTitleTwo"

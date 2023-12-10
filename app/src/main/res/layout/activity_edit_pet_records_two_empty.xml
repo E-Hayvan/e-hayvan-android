@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="editPetRecordsTwoVM" type="com.barsapplication.app.modules.editpetrecordstwo.data.viewmodel.EditPetRecordsTwoVM"/>
+        <variable name="editPetRecordsTwoEmptyVM" type="com.ehayvan.app.modules.editpetrecordstwoempty.data.viewmodel.EditPetRecordsTwoEmptyVM"/>
     </data>
     <LinearLayout android:gravity="center_horizontal"
         android:id="@+id/linearEditPetRecord"
@@ -25,17 +25,15 @@
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent" android:orientation="horizontal">
                     <ImageButton
-                        android:id="@+id/btnArrowLeft"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="@dimen/_15pxv"
+                        android:id="@+id/imageArrowleft"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="25dp"
                         android:layout_marginBottom="@dimen/_15pxv"
                         android:layout_marginStart="@dimen/_4pxh"
                         android:scaleType="centerCrop"
                         android:background="?android:attr/selectableItemBackground"
-                        android:src="@drawable/img_arrowleft"
-                        android:contentDescription="@string/content_description_arrow_left"
-                        android:padding="7dp"/>
+                        android:src="@drawable/img_arrowleft" />
 
 
                     <LinearLayout
@@ -56,7 +54,7 @@
                             android:gravity="center"
                             android:lineSpacingExtra="@dimen/_6pxh"
                             android:singleLine="true"
-                            android:text="@{editPetRecordsThreeVM.editPetRecordsThreeModel.txtBody}"
+                            android:text="@{editPetRecordsTwoEmptyVM.editPetRecordsTwoEmptyModel.txtBody}"
                             style="@style/txtNotoSansnotosansregular14"
                             tools:text="@string/msg_edit_pet_record"/>
 
@@ -70,7 +68,7 @@
                             android:ellipsize="end"
                             android:lineSpacingExtra="@dimen/_11pxh"
                             android:singleLine="true"
-                            android:text="@{editPetRecordsThreeVM.editPetRecordsThreeModel.txtTitle}"
+                            android:text="@{editPetRecordsTwoEmptyVM.editPetRecordsTwoEmptyModel.txtTitle}"
                             tools:text="@string/lbl_drops" />
                     </LinearLayout>
                     <androidx.appcompat.widget.AppCompatButton

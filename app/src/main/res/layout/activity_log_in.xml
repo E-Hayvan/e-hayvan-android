@@ -5,27 +5,35 @@
     </data>
     <LinearLayout android:gravity="center_horizontal"
         android:id="@+id/linearLogIn"
+        android:background="@drawable/dog"
         android:layout_height="match_parent"
         android:layout_width="match_parent" android:orientation="vertical">
         <LinearLayout android:gravity="center_horizontal"
             android:id="@+id/linearOnboardingCr"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            android:orientation="vertical">
             <FrameLayout android:gravity="start"
                 android:id="@+id/frameActionSheetCo"
                 android:layout_height="@dimen/_378pxv"
                 android:layout_marginTop="@dimen/_245pxv"
-                android:layout_width="match_parent" style="@style/groupStyle">
+                android:layout_width="@dimen/_393pxh" style="@style/groupStyle">
+                <ImageView android:id="@+id/imageActionSheetBa"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_410pxh"
+                    android:layout_width="@dimen/_393pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_actionsheetba_gray_50"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_actionsheetba_gray_50"/>
                 <LinearLayout android:id="@+id/linearActionSheet"
                     android:layout_gravity="top|start"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/_10pxv"
-                    android:layout_marginTop="@dimen/_8pxv"
+                    android:layout_marginTop="@dimen/_20pxv"
                     android:layout_width="match_parent" android:orientation="vertical">
                     <FrameLayout android:id="@+id/frameStackvector"
                         android:layout_gravity="center_horizontal"
-                        android:layout_height="@dimen/_64pxv"
+                        android:layout_height="@dimen/_60pxv"
                         android:layout_marginEnd="@dimen/_16pxh"
                         android:layout_marginStart="@dimen/_16pxh"
                         android:layout_width="@dimen/_60pxh" style="@style/groupStylecornerRadius_4">
@@ -65,6 +73,8 @@
                             android:id="@+id/linearInputBox"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/_10pxv"
+                            android:paddingStart="@dimen/_15pxh"
+                            android:paddingEnd="@dimen/_15pxh"
                             android:layout_width="match_parent"
                             android:orientation="vertical" style="@style/groupStylecornerRadius_1">
                             <LinearLayout
@@ -90,6 +100,8 @@
                             android:gravity="center_horizontal"
                             android:id="@+id/linearInputBox1"
                             android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_15pxh"
+                            android:paddingEnd="@dimen/_15pxh"
                             android:layout_marginTop="@dimen/_16pxv"
                             android:layout_width="match_parent"
                             android:orientation="vertical" style="@style/groupStylecornerRadius_1">
@@ -115,6 +127,8 @@
                         <LinearLayout
                             android:gravity="center_horizontal"
                             android:id="@+id/linearPrimaryButton"
+                            android:layout_marginStart="@dimen/_15pxh"
+                            android:layout_marginEnd="@dimen/_15pxh"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/_24pxv"
                             android:layout_width="match_parent"
@@ -135,13 +149,6 @@
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
-                <ImageView android:id="@+id/imageActionSheetBa"
-                    android:layout_gravity="start"
-                    android:layout_height="@dimen/_378pxh"
-                    android:layout_width="match_parent"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/img_actionsheetba_gray_50"
-                    tools:ignore="ContentDescription" tools:src="@drawable/img_actionsheetba_gray_50"/>
             </FrameLayout>
         </LinearLayout>
     </LinearLayout>
