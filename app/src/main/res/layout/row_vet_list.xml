@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listVetModel" type="com.ehayvan.app.modules.vetsearchscreen.data.model.ListVetModel"/>
+    </data>
+    <androidx.appcompat.widget.AppCompatButton
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/btnVet"
+        android:layout_height="100dp"
+        android:layout_marginBottom="@dimen/_10pxv"
+        android:layout_marginEnd="@dimen/_15pxh"
+        android:layout_marginStart="@dimen/_15pxh"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:lineSpacingExtra="@dimen/_6pxh"
+        android:paddingBottom="@dimen/_18pxv"
+        android:paddingEnd="@dimen/_30pxh"
+        android:paddingStart="@dimen/_30pxh"
+        android:paddingTop="@dimen/_18pxv"
+        android:singleLine="true"
+        android:text='@{listVetModel.txtVet + " " + listVetModel.txtRating + "/10"}'
+        tools:text = "@string/msg_alice_ruth"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        style="@style/groupStyleblue_600cornerRadius"/>
+</layout>

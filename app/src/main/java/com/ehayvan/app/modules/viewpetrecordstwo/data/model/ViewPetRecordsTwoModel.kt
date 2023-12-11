@@ -23,7 +23,7 @@ data class ViewPetRecordsTwoModel(
   /**
    * TODO Replace with dynamic value
    */
-  var txt11032023: String? = MyApp.getInstance().resources.getString(R.string.lbl_11_03_2023)
+  var txtPetName: String? = MyApp.getInstance().resources.getString(R.string.lbl_dudu)
   ,
   /**
    * TODO Replace with dynamic value

@@ -13,7 +13,12 @@ data class VeterinarianDashboardModel(
   /**
    * TODO Replace with dynamic value
    */
-  var txtAlice: String? = MyApp.getInstance().resources.getString(R.string.lbl_alice)
+  var txtUser: String? = MyApp.getInstance().resources.getString(R.string.lbl_alice)
+  ,
+  /**
+   * TODO Replace with dynamic value
+   */
+  var txtCount: Int? = 2
   ,
   /**
    * TODO Replace with dynamic value

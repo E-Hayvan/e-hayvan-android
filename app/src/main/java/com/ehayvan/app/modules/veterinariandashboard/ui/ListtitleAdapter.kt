@@ -11,7 +11,7 @@ import kotlin.Int
 import kotlin.collections.List
 
 class ListtitleAdapter(
-  var list: List<ListtitleRowModel>
+  private var list: List<ListtitleRowModel>
 ) : RecyclerView.Adapter<ListtitleAdapter.RowListtitleVH>() {
   private var clickListener: OnItemClickListener? = null
 

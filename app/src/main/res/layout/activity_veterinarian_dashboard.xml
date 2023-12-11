@@ -56,7 +56,7 @@
                                 android:layout_width="wrap_content"
                                 android:lineSpacingExtra="@dimen/_6pxh"
                                 android:singleLine="true"
-                                android:text="@{veterinarianDashboardVM.veterinarianDashboardModel.txtAlice}"
+                                android:text="@{veterinarianDashboardVM.veterinarianDashboardModel.txtUser}"
                                 style="@style/txtNotoSansnotosanssemibold16" tools:text="Alice"/>
                         </LinearLayout>
                         <ImageButton
@@ -67,8 +67,6 @@
                             android:layout_marginTop="10dp"
                             android:background="?android:attr/selectableItemBackground"
                             android:src="@drawable/img_search"
-                            tools:ignore="ContentDescription"
-                            android:contentDescription="deneme"
                             tools:src="@drawable/img_search" />
                         <View android:background="@color/gray_300"
                             android:id="@+id/lineDivider"
@@ -118,7 +116,7 @@
                     android:paddingStart="@dimen/_8pxh"
                     android:paddingTop="@dimen/_4pxv"
                     android:singleLine="true"
-                    android:text="@string/lbl_2"
+                    android:text="@{veterinarianDashboardVM.veterinarianDashboardModel.txtCount}"
                     android:textAllCaps="false"
                     style="@style/btnSolidRounded_2" tools:text="@string/lbl_2"/>
             </LinearLayout>
@@ -134,7 +132,6 @@
                 android:orientation="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 itemSpace="@{@dimen/_24pxh}" tools:itemCount="3" tools:listitem="@layout/row_listtitle"/>
-
         </LinearLayout>
     </LinearLayout>
 </layout>

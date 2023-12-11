@@ -23,6 +23,11 @@ data class EditPetRecordsTwoEmptyModel(
   /**
    * TODO Replace with dynamic value
    */
+  var txtPetName: String? = MyApp.getInstance().resources.getString(R.string.lbl_dudu)
+  ,
+  /**
+   * TODO Replace with dynamic value
+   */
   var txtButton: String? = MyApp.getInstance().resources.getString(R.string.lbl_add_drops)
 
 )

@@ -84,7 +84,7 @@
                         android:paddingStart="@dimen/_14pxh"
                         android:paddingTop="@dimen/_10pxv"
                         android:singleLine="true"
-                        android:text="@string/lbl_dudu"
+                        android:text="@{editPetRecordsThreeVM.editPetRecordsThreeModel.txtPetName}"
                         android:textAllCaps="false"
                         style="@style/btnSolidRoundedOutline" tools:text="@string/lbl_dudu"/>
                 </LinearLayout>
