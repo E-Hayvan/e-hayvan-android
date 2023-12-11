@@ -81,4 +81,5 @@
   <string name="lbl_your_pet_s_name">Your pet\u2019s name</string>
 <string name="msg_please_enter_valid_nu">Please enter valid number</string>
 <string name="msg_please_enter_valid_text">Please enter valid text</string>
+  <string name="edit">Edit</string>
 </resources>

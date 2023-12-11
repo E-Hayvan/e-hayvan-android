@@ -13,7 +13,7 @@ data class PetOwnerDashboardModel(
   /**
    * TODO Replace with dynamic value
    */
-  var txtEsther: String? = MyApp.getInstance().resources.getString(R.string.lbl_esther)
+  var txtUser: String? = MyApp.getInstance().resources.getString(R.string.lbl_esther)
   ,
   /**
    * TODO Replace with dynamic value
@@ -24,6 +24,11 @@ data class PetOwnerDashboardModel(
    * TODO Replace with dynamic value
    */
   var txtTitle: String? = MyApp.getInstance().resources.getString(R.string.lbl_dudu)
+  ,
+  /**
+   * TODO Replace with dynamic value
+   */
+  var txtCount: Int? = 2
   ,
   /**
    * TODO Replace with dynamic value

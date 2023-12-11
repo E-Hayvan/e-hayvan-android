@@ -23,6 +23,11 @@ data class EditPetRecordsOneModel(
   /**
    * TODO Replace with dynamic value
    */
+  var txtPetName: String? = MyApp.getInstance().resources.getString(R.string.lbl_dudu)
+  ,
+  /**
+   * TODO Replace with dynamic value
+   */
   var txtTitleThree: String? = MyApp.getInstance().resources.getString(R.string.lbl_medications)
 
 )

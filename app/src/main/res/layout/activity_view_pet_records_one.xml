@@ -30,24 +30,23 @@
 
                     <ImageButton
                         android:id="@+id/imageArrowleft"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
                         android:layout_marginTop="@dimen/_15pxv"
                         android:layout_marginBottom="@dimen/_15pxv"
                         android:layout_marginStart="@dimen/_4pxh"
                         android:scaleType="centerCrop"
                         android:background="?android:attr/selectableItemBackground"
-                        android:src="@drawable/img_arrowleft"
-                        android:padding="7dp"/>
+                        android:src="@drawable/img_arrowleft" />
 
                     <TextView
                         android:id="@+id/txtTitle"
                         style="@style/txtCatamaranromansemibold16"
                         android:layout_width="400dp"
+                        android:layout_gravity="center_vertical"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_7pxh"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="@dimen/_6pxv"
+                        android:layout_marginStart="@dimen/_30pxh"
                         android:layout_weight="0.69"
                         android:ellipsize="end"
                         android:lineSpacingExtra="@dimen/_11pxh"
@@ -58,9 +57,9 @@
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnDudu"
                         android:ellipsize="end"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
                         android:layout_height="48dp"
-                        android:layout_marginTop="20dp"
                         android:layout_marginStart="@dimen/_40pxh"
                         android:layout_width="@dimen/_65pxh"
                         android:lineSpacingExtra="@dimen/_6pxh"
@@ -69,7 +68,7 @@
                         android:paddingStart="@dimen/_14pxh"
                         android:paddingTop="@dimen/_10pxv"
                         android:singleLine="true"
-                        android:text="@string/lbl_dudu"
+                        android:text="@{viewPetRecordsOneVM.viewPetRecordsOneModel.txtPetName}"
                         android:textAllCaps="false"
                         style="@style/btnSolidRoundedOutline"
                         tools:text="@string/lbl_dudu" />

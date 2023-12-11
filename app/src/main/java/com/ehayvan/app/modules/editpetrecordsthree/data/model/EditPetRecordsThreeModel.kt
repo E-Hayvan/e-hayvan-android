@@ -18,6 +18,8 @@ data class EditPetRecordsThreeModel(
   /**
    * TODO Replace with dynamic value
    */
+  var txtPetName: String? = MyApp.getInstance().resources.getString(R.string.lbl_dudu)
+  ,
   var etInputContentValue: String? = null,
   /**
    * TODO Replace with dynamic value

@@ -12,6 +12,7 @@
         <LinearLayout android:gravity="center_horizontal"
             android:id="@+id/linearSplashScreen"
             android:layout_height="match_parent"
+            android:background="@drawable/dog"
             android:layout_width="match_parent"
             android:orientation="vertical" style="@style/groupStylecornerRadius">
             <androidx.appcompat.widget.Toolbar
