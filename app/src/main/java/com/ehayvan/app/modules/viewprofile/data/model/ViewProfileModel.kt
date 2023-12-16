@@ -5,9 +5,12 @@ import com.ehayvan.app.appcomponents.di.MyApp
 import kotlin.String
 
 data class ViewProfileModel(
-  /**
-   * TODO Replace with dynamic value
-   */
-  var txtTitleTwo: String? = MyApp.getInstance().resources.getString(R.string.lbl_view_profile)
+
+  var txtNameAndSurname: String? = MyApp.getInstance().resources.getString(R.string.msg_name_and_surnam)
+  ,
+  var txtEMail: String? = MyApp.getInstance().resources.getString(R.string.lbl_e_mail_address)
+  ,
+  var txtUserType: String? = MyApp.getInstance().resources.getString(R.string.lbl_user_type)
+  ,
 
 )
