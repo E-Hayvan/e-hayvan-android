@@ -13,81 +13,72 @@
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:orientation="vertical" style="@style/groupStylegray_50cornerRadius">
-            <LinearLayout android:gravity="center_horizontal"
-                android:id="@+id/linearStatusBarNa"
+            <androidx.appcompat.widget.Toolbar
+                android:gravity="center_horizontal"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_2pxh"
-                android:layout_marginStart="@dimen/_2pxh"
-                android:layout_marginTop="@dimen/_12pxv"
-                android:layout_width="match_parent"
-                android:orientation="vertical" style="@style/groupStylegray_50">
-                <androidx.appcompat.widget.Toolbar
-                    android:gravity="center_horizontal"
-                    android:id="@+id/toolbarToolbar"
+                android:layout_marginEnd="@dimen/_15pxh"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+
+                <LinearLayout android:gravity="end"
+                    android:id="@+id/linearNavigationHead"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_14pxh"
-                    android:layout_marginStart="@dimen/_14pxh"
-                    android:layout_marginTop="@dimen/_24pxv"
-                    android:layout_width="match_parent" app:contentInsetStart="0dp">
-                    <LinearLayout android:id="@+id/linearNavigationHe"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_width="match_parent" android:orientation="horizontal">
-                        <LinearLayout android:gravity="start"
-                            android:id="@+id/linearColumnhello"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="270dp">
+
+                        <TextView
+                            android:ellipsize="end"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="@dimen/_1pxv"
+                            android:layout_marginEnd="@dimen/_10pxh"
+                            android:layout_width="wrap_content"
+                            android:lineSpacingExtra="@dimen/_6pxh"
+                            android:singleLine="true"
+                            android:text="Hello"
+                            style="@style/txtNotoSansnotosansregular14"
+                            tools:text="@string/lbl_hello"/>
+
+                        <TextView
+                            android:ellipsize="end"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_10pxh"
                             android:layout_marginTop="@dimen/_1pxv"
-                            android:layout_weight="0.94"
-                            android:layout_width="0dp" android:orientation="vertical">
-                            <TextView android:ellipsize="end"
-                                android:id="@+id/txtHello"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="@dimen/_10pxh"
-                                android:layout_width="wrap_content"
-                                android:lineSpacingExtra="@dimen/_6pxh"
-                                android:singleLine="true"
-                                android:text="@{dashboardVM.dashboardModel.txtHello}"
-                                style="@style/txtNotoSansnotosansregular14" tools:text="@string/lbl_hello"/>
-                            <TextView android:ellipsize="end"
-                                android:id="@+id/txtEsther"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="@dimen/_10pxh"
-                                android:layout_marginTop="@dimen/_1pxv"
-                                android:layout_width="wrap_content"
-                                android:lineSpacingExtra="@dimen/_6pxh"
-                                android:singleLine="true"
-                                android:text="@{dashboardVM.dashboardModel.txtEsther}"
-                                style="@style/txtNotoSansnotosanssemibold16" tools:text="@string/lbl_esther"/>
-                        </LinearLayout>
-                        <ImageButton
-                            android:id="@+id/btnSearch"
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:scaleType="fitXY"
-                            android:layout_marginTop="10dp"
-                            android:background="?android:attr/selectableItemBackground"
-                            android:src="@drawable/img_search"
-                            tools:ignore="ContentDescription"
-                            android:contentDescription="deneme"
-                            tools:src="@drawable/img_search" />
-                        <View android:background="@color/gray_300"
-                            android:id="@+id/lineDivider"
-                            android:layout_height="@dimen/_19pxv"
-                            android:layout_marginBottom="@dimen/_12pxv"
-                            android:layout_marginStart="@dimen/_15pxh"
-                            android:layout_marginTop="@dimen/_12pxv"
-                            android:layout_weight="0.0" android:layout_width="0dp"/>
+                            android:layout_width="wrap_content"
+                            android:lineSpacingExtra="@dimen/_6pxh"
+                            android:singleLine="true"
+                            android:text="@{dashboardVM.dashboardModel.txtEsther}"
+                            style="@style/txtNotoSansnotosanssemibold16"
+                            tools:text="@string/lbl_esther"/>
                     </LinearLayout>
-                </androidx.appcompat.widget.Toolbar>
-                <View
-                    android:background="@drawable/rectangle_gradient_s_bluegray_400_87_e_bluegray_400_87"
-                    android:id="@+id/lineLine"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_height="@dimen/_1pxv"
-                    android:layout_marginEnd="@dimen/_14pxh"
-                    android:layout_marginStart="@dimen/_14pxh"
-                    android:layout_marginTop="@dimen/_20pxv" android:layout_width="@dimen/_327pxh"/>
-            </LinearLayout>
+                    <ImageButton
+                        android:id="@+id/btnSearch"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="10dp"
+                        android:scaleType="fitXY"
+                        android:layout_marginTop="10dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:src="@drawable/img_search"
+                        tools:ignore="ContentDescription"
+                        android:contentDescription="deneme"
+                        tools:src="@drawable/img_search" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+            <View
+                android:background="@drawable/rectangle_gradient_s_bluegray_400_87_e_bluegray_400_87"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxv"
+                android:layout_marginEnd="@dimen/_15pxh"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginBottom="35dp"
+                android:layout_marginTop="@dimen/_6pxv" android:layout_width="@dimen/_327pxh"/>
+
             <ImageView android:id="@+id/imageEmptySpaceIll"
                 android:layout_gravity="start"
                 android:layout_height="@dimen/_210pxh"
@@ -107,7 +98,7 @@
                 android:layout_width="wrap_content"
                 android:lineSpacingExtra="@dimen/_17pxh"
                 android:singleLine="true"
-                android:text="@{dashboardVM.dashboardModel.txtTitle}"
+                android:text="Uh Oh!"
                 style="@style/txtCatamaranbold26" tools:text="@string/lbl_uh_oh"/>
             <TextView android:gravity="center_horizontal"
                 android:id="@+id/txtBody"
@@ -117,7 +108,7 @@
                 android:layout_marginTop="@dimen/_8pxv"
                 android:layout_width="match_parent"
                 android:lineSpacingExtra="@dimen/_8pxh"
-                android:text="@{dashboardVM.dashboardModel.txtBody}"
+                android:text="Looks like you have no profiles set up at this moment, add your pet now"
                 style="@style/txtNotoSansnotosansmedium16" tools:text="@string/msg_looks_like_you"/>
             <LinearLayout android:gravity="center_horizontal"
                 android:id="@+id/linearButtonsContain"
