@@ -5,157 +5,285 @@
         <variable name="viewPetProfileVM" type="com.ehayvan.app.modules.viewpetprofile.data.viewmodel.ViewPetProfileVM"/>
     </data>
     <LinearLayout android:gravity="center_horizontal"
-        android:id="@+id/linearViewPetProfil"
+        android:id="@+id/linearEditPetRecord"
         android:layout_height="match_parent"
         android:layout_width="match_parent" android:orientation="vertical">
-        <FrameLayout android:gravity="start"
-            android:id="@+id/frameViewPetProfil"
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearEditPetRecord1"
             android:layout_height="match_parent"
-            android:layout_width="match_parent" style="@style/groupStylegray_50cornerRadius">
-            <LinearLayout android:id="@+id/linearButtonsContain"
-                android:layout_gravity="bottom|start"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylegray_50cornerRadius">
+            <androidx.appcompat.widget.Toolbar
+                android:gravity="center_horizontal"
+                android:id="@+id/toolbarToolbar"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_27pxv"
-                android:layout_marginTop="@dimen/_27pxv"
-                android:layout_width="match_parent"
-                android:orientation="vertical" style="@style/groupStylecornerRadius_2">
-                <androidx.appcompat.widget.AppCompatButton
-                    android:ellipsize="end" android:gravity="center"
-                    android:id="@+id/btnReserveAnAppointment"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:id="@+id/linearNavigationHead"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_15pxh"
-                    android:layout_marginStart="@dimen/_15pxh"
-                    android:layout_marginTop="@dimen/_24pxv"
-                    android:layout_width="match_parent"
-                    android:lineSpacingExtra="@dimen/_6pxh"
-                    android:paddingBottom="@dimen/_18pxv"
-                    android:paddingEnd="@dimen/_30pxh"
-                    android:paddingStart="@dimen/_30pxh"
-                    android:paddingTop="@dimen/_18pxv"
-                    android:singleLine="true"
-                    android:text="@string/msg_reserve_an_appo"
-                    android:textAllCaps="false"
-                    style="@style/btnSolidRounded_1" tools:text="@string/msg_reserve_an_appo"/>
-                <androidx.appcompat.widget.AppCompatButton
-                    android:ellipsize="end" android:gravity="center"
-                    android:id="@+id/btnEditPetProfileOne"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_15pxh"
-                    android:layout_marginStart="@dimen/_15pxh"
-                    android:layout_marginTop="@dimen/_8pxv"
-                    android:layout_width="match_parent"
-                    android:lineSpacingExtra="@dimen/_6pxh"
-                    android:paddingBottom="@dimen/_18pxv"
-                    android:paddingEnd="@dimen/_30pxh"
-                    android:paddingStart="@dimen/_30pxh"
-                    android:paddingTop="@dimen/_18pxv"
-                    android:singleLine="true"
-                    android:text="@string/msg_edit_pet_profil"
-                    android:textAllCaps="false"
-                    style="@style/btnSolidRounded_1" tools:text="@string/msg_edit_pet_profil"/>
-                <androidx.appcompat.widget.AppCompatButton
-                    android:ellipsize="end" android:gravity="center"
-                    android:id="@+id/btnViewPetRecordsOne"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_15pxh"
-                    android:layout_marginStart="@dimen/_15pxh"
-                    android:layout_marginTop="@dimen/_8pxv"
-                    android:layout_width="match_parent"
-                    android:lineSpacingExtra="@dimen/_6pxh"
-                    android:paddingBottom="@dimen/_18pxv"
-                    android:paddingEnd="@dimen/_30pxh"
-                    android:paddingStart="@dimen/_30pxh"
-                    android:paddingTop="@dimen/_18pxv"
-                    android:singleLine="true"
-                    android:text="@string/msg_view_pet_record"
-                    android:textAllCaps="false"
-                    style="@style/btnSolidRounded_1" tools:text="@string/msg_view_pet_record"/>
-                <androidx.appcompat.widget.AppCompatButton
-                    android:ellipsize="end" android:gravity="center"
-                    android:id="@+id/btnDeletePet"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_15pxh"
-                    android:layout_marginStart="@dimen/_15pxh"
-                    android:layout_marginTop="@dimen/_8pxv"
-                    android:layout_width="match_parent"
-                    android:lineSpacingExtra="@dimen/_6pxh"
-                    android:paddingBottom="@dimen/_18pxv"
-                    android:paddingEnd="@dimen/_30pxh"
-                    android:paddingStart="@dimen/_30pxh"
-                    android:paddingTop="@dimen/_18pxv"
-                    android:singleLine="true"
-                    android:text="@string/lbl_delete_pet"
-                    android:textAllCaps="false"
-                    style="@style/btnSolidRounded_3" tools:text="@string/lbl_delete_pet"/>
-            </LinearLayout>
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/imageArrowleft"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="@dimen/_15pxv"
+                        android:layout_marginStart="@dimen/_4pxh"
+                        android:scaleType="centerCrop"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:src="@drawable/img_arrowleft" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerContent"
-                itemSpace="@{@dimen/_24pxh}"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top|center"
-                android:layout_marginStart="@dimen/_14pxh"
-                android:layout_marginTop="135dp"
-                android:layout_marginEnd="@dimen/_14pxh"
-                android:layout_marginBottom="@dimen/_71pxv"
-                android:orientation="vertical"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:itemCount="3"
-                tools:listitem="@layout/row_content" />
-
-            <LinearLayout android:id="@+id/linearStatusBarNa"
-                android:layout_gravity="top|start"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_10pxv"
-                android:layout_width="match_parent"
-                android:orientation="vertical" style="@style/groupStylegray_50">
-                <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/toolbarToolbar"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_12pxh"
-                    android:layout_marginStart="@dimen/_12pxh"
-                    android:layout_marginTop="@dimen/_8pxv"
-                    android:layout_width="match_parent" app:contentInsetStart="0dp">
-                    <LinearLayout android:gravity="start"
-                        android:id="@+id/linearIconDivider"
+                    <TextView
+                        android:ellipsize="end"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="@dimen/_15pxv"
+                        android:layout_marginStart="@dimen/_4pxh"
+                        android:layout_marginEnd="15dp"
                         android:layout_height="wrap_content"
-                        android:layout_width="match_parent" android:orientation="horizontal">
-                        <ImageButton
-                            android:id="@+id/imageArrowleft"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_marginStart="@dimen/_4pxh"
-                            android:layout_marginTop="@dimen/_14pxv"
-                            android:layout_marginBottom="@dimen/_14pxv"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/img_arrowleft"
-                            android:background="?android:attr/selectableItemBackground"/>
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/_6pxh"
+                        android:layout_weight="0.69"
+                        android:singleLine="true"
+                        android:text="View Pet Profile"
+                        style="@style/txtCatamaranromansemibold16"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <View
+                android:background="@drawable/rectangle_gradient_s_bluegray_400_87_e_bluegray_400_87"
+                android:id="@+id/lineLine"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxv"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_marginBottom="14dp"
+                android:layout_width="@dimen/_327pxh"/>
 
-                        <TextView
-                            android:id="@+id/txtTitleTwo"
-                            style="@style/txtCatamaranromansemibold16"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="65dp"
-                            android:layout_marginTop="25dp"
-                            android:layout_weight="0.9"
-                            android:ellipsize="end"
-                            android:lineSpacingExtra="@dimen/_11pxh"
-                            android:singleLine="true"
-                            android:text="@{viewPetProfileVM.viewPetProfileModel.txtTitleTwo}"
-                            tools:text="@string/msg_view_pet_profil" />
-                    </LinearLayout>
-                </androidx.appcompat.widget.Toolbar>
-                <View android:background="@color/bluegray_50"
-                    android:id="@+id/lineDefault"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_height="@dimen/_3pxv"
-                    android:layout_marginBottom="@dimen/_24pxv"
-                    android:layout_marginEnd="@dimen/_12pxh"
-                    android:layout_marginStart="@dimen/_12pxh"
-                    android:layout_width="@dimen/_324pxh"/>
+            <!-- Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                android:gravity="start">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:background="#80D1E6FF"
+                    android:paddingHorizontal="@dimen/_8pxh"
+                    android:paddingVertical="@dimen/_8pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/name"
+                    app:tint="#1B85F3"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:orientation="vertical"
+                    android:gravity="start">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:lineSpacingExtra="@dimen/_6pxh"
+                        android:singleLine="true"
+                        android:text="Name"
+                        style="@style/txtNotoSansnotosansregular14"/>
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:layout_marginBottom="30dp"
+                        android:textColor="@color/black"
+                        android:lineSpacingExtra="@dimen/_6pxh"
+                        android:singleLine="true"
+                        android:text="@{viewPetProfileVM.viewPetProfileModel.txtName}"
+                        style="@style/txtNotoSansnotosanssemibold14"
+                        tools:text="@string/lbl_dudu"
+                        />
+                </LinearLayout>
             </LinearLayout>
-        </FrameLayout>
+
+            <!-- Type -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                android:gravity="start">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:background="#80D1E6FF"
+                    android:paddingHorizontal="@dimen/_8pxh"
+                    android:paddingVertical="@dimen/_8pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/type"
+                    app:tint="#1B85F3"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:orientation="vertical"
+                    android:gravity="start">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:lineSpacingExtra="@dimen/_6pxh"
+                        android:singleLine="true"
+                        android:text="Type"
+                        style="@style/txtNotoSansnotosansregular14"/>
+
+                    <TextView
+                        android:id="@+id/txtType"
+                        style="@style/txtNotoSansnotosanssemibold14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:gravity="start"
+                        android:lineSpacingExtra="@dimen/_6pxh"
+                        android:singleLine="true"
+                        android:text="@{viewPetProfileVM.viewPetProfileModel.txtType}"
+                        android:textColor="@color/black"
+                        tools:text="@string/lbl_dog" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Age -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:orientation="horizontal"
+                android:gravity="start">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:background="#80D1E6FF"
+                    android:paddingHorizontal="@dimen/_8pxh"
+                    android:paddingVertical="@dimen/_8pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon"
+                    app:tint="#1B85F3"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:orientation="vertical"
+                    android:gravity="start">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:lineSpacingExtra="@dimen/_6pxh"
+                        android:singleLine="true"
+                        android:text="Age"
+                        style="@style/txtNotoSansnotosansregular14"/>
+
+                    <TextView
+                        android:id="@+id/txtAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:lineSpacingExtra="@dimen/_6pxh"
+                        android:textColor="@color/black"
+                        android:singleLine="true"
+                        android:text="@{viewPetProfileVM.viewPetProfileModel.txtAge}"
+                        style="@style/txtNotoSansnotosanssemibold14"
+                        tools:text="@string/lbl_3_years_old" />
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnReserveAnAppointment"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15pxh"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginTop="@dimen/_35pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_6pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/msg_reserve_an_appo"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded_1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnEditPetProfileOne"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15pxh"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginTop="@dimen/_8pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_6pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/msg_edit_pet_profil"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded_1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnViewPetRecordsOne"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15pxh"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginTop="@dimen/_8pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_6pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/msg_view_pet_record"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded_1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnDeletePet"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15pxh"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginTop="@dimen/_8pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_6pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_delete_pet"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded_3"/>
+        </LinearLayout>
     </LinearLayout>
 </layout>
