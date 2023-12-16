@@ -5,17 +5,12 @@ import com.ehayvan.app.appcomponents.di.MyApp
 import kotlin.String
 
 data class AppointmentModel(
-  /**
-   * TODO Replace with dynamic value
-   */
-  var txtTitle: String? = MyApp.getInstance().resources.getString(R.string.msg_reserve_an_appo)
+
+  var etInputContentValue: String? = null
   ,
-  /**
-   * TODO Replace with dynamic value
-   */
-  var etInputContentValue: String? = null,
-  /**
-   * TODO Replace with dynamic value
-   */
+
+  var txtPetName: String? = MyApp.getInstance().resources.getString(R.string.lbl_dudu)
+  ,
+
   var etInputContentOneValue: String? = null
 )

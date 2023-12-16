@@ -43,6 +43,7 @@
                         android:id="@+id/txtTitle"
                         style="@style/txtCatamaranromansemibold16"
                         android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
                         android:layout_marginStart="40dp"
                         android:layout_marginTop="10dp"
                         android:layout_gravity="center_vertical"
@@ -51,7 +52,7 @@
                         android:ellipsize="end"
                         android:lineSpacingExtra="@dimen/_11pxh"
                         android:singleLine="true"
-                        android:text="@{editPetRecordsOneVM.editPetRecordsOneModel.txtTitle}"
+                        android:text="Edit Pet Records"
                         tools:text="Edit Pet Records" />
 
                     <androidx.appcompat.widget.AppCompatButton
@@ -116,7 +117,7 @@
                     android:layout_width="0dp"
                     android:lineSpacingExtra="@dimen/_6pxh"
                     android:singleLine="true"
-                    android:text="@{editPetRecordsOneVM.editPetRecordsOneModel.txtTitleOne}"
+                    android:text="Vaccines"
                     style="@style/txtNotoSansnotosanssemibold14" tools:text="@string/lbl_vaccines"/>
             </LinearLayout>
             <LinearLayout android:gravity="start"
@@ -151,7 +152,7 @@
                     android:layout_width="0dp"
                     android:lineSpacingExtra="@dimen/_6pxh"
                     android:singleLine="true"
-                    android:text="@{editPetRecordsOneVM.editPetRecordsOneModel.txtTitleTwo}"
+                    android:text="Drops"
                     style="@style/txtNotoSansnotosanssemibold14" tools:text="@string/lbl_drops"/>
             </LinearLayout>
 
@@ -195,7 +196,7 @@
                     android:ellipsize="end"
                     android:lineSpacingExtra="@dimen/_6pxh"
                     android:singleLine="true"
-                    android:text="@{editPetRecordsOneVM.editPetRecordsOneModel.txtTitleThree}"
+                    android:text="Medications"
                     tools:text="@string/lbl_medications" />
             </LinearLayout>
         </LinearLayout>

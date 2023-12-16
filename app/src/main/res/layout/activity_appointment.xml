@@ -52,7 +52,7 @@
                         android:layout_width="0dp"
                         android:lineSpacingExtra="@dimen/_11pxh"
                         android:singleLine="true"
-                        android:text="@{appointmentVM.appointmentModel.txtTitle}"
+                        android:text="Reserve an Appointment"
                         style="@style/txtCatamaranromansemibold16" tools:text="@string/msg_reserve_an_appo"/>
                     <androidx.appcompat.widget.AppCompatButton
                         android:ellipsize="end" android:gravity="center"
@@ -67,7 +67,7 @@
                         android:paddingStart="@dimen/_14pxh"
                         android:paddingTop="@dimen/_10pxv"
                         android:singleLine="true"
-                        android:text="@string/lbl_dudu"
+                        android:text="@{appointmentVM.appointmentModel.txtPetName}"
                         android:textAllCaps="false"
                         style="@style/btnSolidRoundedOutline" tools:text="@string/lbl_dudu"/>
                 </LinearLayout>

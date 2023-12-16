@@ -54,7 +54,7 @@
                             android:gravity="center"
                             android:lineSpacingExtra="@dimen/_6pxh"
                             android:singleLine="true"
-                            android:text="@{editPetRecordsTwoEmptyVM.editPetRecordsTwoEmptyModel.txtBody}"
+                            android:text="Edit Pet Records"
                             style="@style/txtNotoSansnotosansregular14"
                             tools:text="@string/msg_edit_pet_record"/>
 
@@ -68,7 +68,7 @@
                             android:ellipsize="end"
                             android:lineSpacingExtra="@dimen/_11pxh"
                             android:singleLine="true"
-                            android:text="@{editPetRecordsTwoEmptyVM.editPetRecordsTwoEmptyModel.txtTitle}"
+                            android:text="Drops"
                             tools:text="@string/lbl_drops" />
                     </LinearLayout>
                     <androidx.appcompat.widget.AppCompatButton
