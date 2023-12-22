@@ -8,6 +8,8 @@ data class EditPetRecordsThreeModel(
 
   var txtPetName: String? = MyApp.getInstance().resources.getString(R.string.lbl_dudu)
   ,
+  var txtTitle: String? = MyApp.getInstance().resources.getString(R.string.lbl_drops)
+  ,
   var etInputContentValue: String? = null,
 
   var etInputContentOneValue: String? = null,
