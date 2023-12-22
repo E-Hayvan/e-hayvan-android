@@ -17,18 +17,6 @@ class ViewProfileActivity : BaseActivity<ActivityViewProfileBinding>(R.layout.ac
 
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
-    val contentAdapter = ContentAdapter(viewModel.contentList.value?:mutableListOf())
-    binding.recyclerContent.adapter = contentAdapter
-    contentAdapter.setOnItemClickListener(
-    object : ContentAdapter.OnItemClickListener {
-      override fun onItemClick(view:View, position:Int, item : Content1RowModel) {
-        onClickRecyclerContent(view, position, item)
-      }
-    }
-    )
-    viewModel.contentList.observe(this) {
-      contentAdapter.updateData(it)
-    }
     binding.viewProfileVM = viewModel
   }
 
