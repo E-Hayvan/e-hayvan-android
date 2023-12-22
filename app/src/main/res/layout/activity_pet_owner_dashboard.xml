@@ -13,43 +13,37 @@
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:orientation="vertical" style="@style/groupStylegray_50cornerRadius">
-            <LinearLayout android:gravity="center_horizontal"
-                android:id="@+id/linearStatusBarNa"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_2pxh"
-                android:layout_marginStart="@dimen/_2pxh"
-                android:layout_marginTop="@dimen/_12pxv"
-                android:layout_width="match_parent"
-                android:orientation="vertical" style="@style/groupStylegray_50">
                 <androidx.appcompat.widget.Toolbar
                     android:gravity="center_horizontal"
-                    android:id="@+id/toolbarToolbar"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_14pxh"
-                    android:layout_marginStart="@dimen/_14pxh"
+                    android:layout_marginEnd="@dimen/_15pxh"
+                    android:layout_marginStart="@dimen/_15pxh"
                     android:layout_marginTop="@dimen/_24pxv"
                     android:layout_width="match_parent" app:contentInsetStart="0dp">
-                    <LinearLayout android:id="@+id/linearNavigationHe"
+
+                    <LinearLayout android:gravity="end"
+                        android:id="@+id/linearNavigationHead"
                         android:layout_height="wrap_content"
                         android:layout_width="match_parent" android:orientation="horizontal">
-                        <LinearLayout android:gravity="start"
-                            android:id="@+id/linearColumnhello"
+                        <LinearLayout
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="@dimen/_1pxv"
-                            android:layout_marginTop="@dimen/_1pxv"
-                            android:layout_weight="0.94"
-                            android:layout_width="0dp" android:orientation="vertical">
-                            <TextView android:ellipsize="end"
-                                android:id="@+id/txtHello"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="270dp">
+
+                            <TextView
+                                android:ellipsize="end"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="@dimen/_10pxh"
                                 android:layout_width="wrap_content"
                                 android:lineSpacingExtra="@dimen/_6pxh"
                                 android:singleLine="true"
-                                android:text="@{petOwnerDashboardVM.petOwnerDashboardModel.txtHello}"
-                                style="@style/txtNotoSansnotosansregular14" tools:text="@string/lbl_hello"/>
-                            <TextView android:ellipsize="end"
-                                android:id="@+id/txtEsther"
+                                android:text="Hello"
+                                style="@style/txtNotoSansnotosansregular14"
+                                tools:text="@string/lbl_hello"/>
+
+                            <TextView
+                                android:ellipsize="end"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="@dimen/_10pxh"
                                 android:layout_marginTop="@dimen/_1pxv"
@@ -57,43 +51,32 @@
                                 android:lineSpacingExtra="@dimen/_6pxh"
                                 android:singleLine="true"
                                 android:text="@{petOwnerDashboardVM.petOwnerDashboardModel.txtUser}"
-                                style="@style/txtNotoSansnotosanssemibold16" tools:text="@string/lbl_esther"/>
+                                style="@style/txtNotoSansnotosanssemibold16"
+                                tools:text="@string/lbl_esther"/>
                         </LinearLayout>
-                        <ImageButton
-                            android:id="@+id/btnSearch"
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:scaleType="fitXY"
-                            android:layout_marginTop="10dp"
-                            android:background="?android:attr/selectableItemBackground"
-                            android:src="@drawable/img_search"
-                            tools:ignore="ContentDescription"
-                            android:contentDescription="deneme"
-                            tools:src="@drawable/img_search" />
-                        <View android:background="@color/gray_300"
-                            android:id="@+id/lineDivider"
-                            android:layout_height="@dimen/_19pxv"
-                            android:layout_marginBottom="@dimen/_12pxv"
-                            android:layout_marginStart="@dimen/_15pxh"
-                            android:layout_marginTop="@dimen/_12pxv"
-                            android:layout_weight="0.0" android:layout_width="0dp"/>
+                        <SearchView
+                            android:id="@+id/petOwnerDashboardSearchView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"/>
+
+
                     </LinearLayout>
+
                 </androidx.appcompat.widget.Toolbar>
-                <View
-                    android:background="@drawable/rectangle_gradient_s_bluegray_400_87_e_bluegray_400_87"
-                    android:id="@+id/lineLine"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_height="@dimen/_1pxv"
-                    android:layout_marginEnd="@dimen/_16pxh"
-                    android:layout_marginStart="@dimen/_16pxh"
-                    android:layout_marginTop="@dimen/_20pxv" android:layout_width="@dimen/_327pxh"/>
-            </LinearLayout>
+            <View
+                android:background="@drawable/rectangle_gradient_s_bluegray_400_87_e_bluegray_400_87"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxv"
+                android:layout_marginEnd="@dimen/_15pxh"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginBottom="35dp"
+                android:layout_marginTop="@dimen/_6pxv" android:layout_width="@dimen/_327pxh"/>
             <LinearLayout android:gravity="start"
                 android:id="@+id/linearNavigationSe"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_21pxh"
                 android:layout_marginStart="@dimen/_21pxh"
-                android:layout_marginTop="@dimen/_23pxv"
                 android:layout_width="wrap_content" android:orientation="horizontal">
                 <TextView android:ellipsize="end"
                     android:id="@+id/txtText"
@@ -151,7 +134,7 @@
                     android:paddingBottom="@dimen/_18pxv"
                     android:paddingEnd="@dimen/_30pxh"
                     android:paddingStart="@dimen/_30pxh"
-                    android:paddingTop="@dimen/_18pxv"
+                    android:paddingTop="@dimen/_21pxv"
                     android:singleLine="true"
                     android:text="@string/lbl_add_pet"
                     android:textAllCaps="false"

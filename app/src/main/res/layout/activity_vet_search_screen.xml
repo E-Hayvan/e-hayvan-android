@@ -50,35 +50,28 @@
                             android:layout_marginTop="@dimen/_5pxv"
                             android:layout_weight="0.94"
                             android:layout_width="0dp" android:orientation="horizontal">
+
                             <TextView
-                                android:ellipsize="end"
                                 android:id="@+id/txtTitle"
+                                style="@style/txtCatamaranromansemibold16"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="0.83"
                                 android:layout_gravity="center_vertical"
-                                android:layout_marginStart="30dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_width="0dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="170dp"
+                                android:ellipsize="end"
                                 android:lineSpacingExtra="@dimen/_11pxh"
                                 android:singleLine="true"
                                 android:text="@{vetSearchScreenVM.vetSearchScreenModel.txtTitle}"
                                 android:textSize="20sp"
-                                style="@style/txtCatamaranromansemibold16"
                                 tools:text="@string/lbl_dobby_clinic" />
 
 
-                            <ImageButton
-                                android:id="@+id/imageSearch"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:layout_gravity="center_vertical"
-                                android:layout_marginStart="@dimen/_69pxh"
-                                android:layout_marginTop="@dimen/_4pxv"
-                                android:layout_marginBottom="@dimen/_4pxv"
-                                android:scaleType="fitXY"
-                                android:src="@drawable/img_search"
-                                android:background="?android:attr/selectableItemBackground"
-                                tools:ignore="ContentDescription" />
+                            <SearchView
+                                android:id="@+id/searchView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"/>
 
                         </LinearLayout>
                     </LinearLayout>
