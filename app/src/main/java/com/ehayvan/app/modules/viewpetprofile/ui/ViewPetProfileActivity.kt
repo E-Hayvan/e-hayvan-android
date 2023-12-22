@@ -17,18 +17,6 @@ class ViewPetProfileActivity :
 
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
-    val contentAdapter = ContentAdapter(viewModel.contentList.value?:mutableListOf())
-    binding.recyclerContent.adapter = contentAdapter
-    contentAdapter.setOnItemClickListener(
-    object : ContentAdapter.OnItemClickListener {
-      override fun onItemClick(view:View, position:Int, item : ContentRowModel) {
-        onClickRecyclerContent(view, position, item)
-      }
-    }
-    )
-    viewModel.contentList.observe(this) {
-      contentAdapter.updateData(it)
-    }
     binding.viewPetProfileVM = viewModel
   }
 
