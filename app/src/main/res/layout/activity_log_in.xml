@@ -15,25 +15,19 @@
             android:orientation="vertical">
             <FrameLayout android:gravity="start"
                 android:id="@+id/frameActionSheetCo"
-                android:layout_height="@dimen/_378pxv"
-                android:layout_marginTop="@dimen/_245pxv"
-                android:layout_width="@dimen/_393pxh" style="@style/groupStyle">
-                <ImageView android:id="@+id/imageActionSheetBa"
-                    android:layout_gravity="start"
-                    android:layout_height="@dimen/_410pxh"
-                    android:layout_width="@dimen/_393pxh"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/img_actionsheetba_gray_50"
-                    tools:ignore="ContentDescription" tools:src="@drawable/img_actionsheetba_gray_50"/>
+                android:layout_height="755dp"
+                android:layout_width="450dp" style="@style/groupStyle">
                 <LinearLayout android:id="@+id/linearActionSheet"
-                    android:layout_gravity="top|start"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_10pxv"
-                    android:layout_marginTop="@dimen/_20pxv"
+                    android:layout_gravity="bottom|start"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/img_actionsheetba_gray_50"
+                    android:layout_marginTop="@dimen/_250pxv"
+                    android:paddingTop="10dp"
                     android:layout_width="match_parent" android:orientation="vertical">
                     <FrameLayout android:id="@+id/frameStackvector"
                         android:layout_gravity="center_horizontal"
                         android:layout_height="@dimen/_60pxv"
+                        android:layout_marginTop="20dp"
                         android:layout_marginEnd="@dimen/_16pxh"
                         android:layout_marginStart="@dimen/_16pxh"
                         android:layout_width="@dimen/_60pxh" style="@style/groupStylecornerRadius_4">
@@ -66,8 +60,7 @@
                             android:layout_width="wrap_content"
                             android:lineSpacingExtra="@dimen/_17pxh"
                             android:singleLine="true"
-                            android:text="@{logInVM.logInModel.txtTitle}"
-                            style="@style/txtCatamaranbold26" tools:text="@string/lbl_log_in"/>
+                            style="@style/txtCatamaranbold26" android:text="@string/lbl_log_in"/>
                         <LinearLayout
                             android:gravity="center_horizontal"
                             android:id="@+id/linearInputBox"
@@ -79,21 +72,23 @@
                             android:orientation="vertical" style="@style/groupStylecornerRadius_1">
                             <LinearLayout
                                 android:gravity="center_horizontal"
-                                android:id="@+id/linearInputContent"
+                                android:id="@+id/linearInputContent1"
                                 android:layout_height="match_parent"
                                 android:layout_width="match_parent"
                                 android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
-                                <TextView android:ellipsize="end"
+                                <EditText android:ellipsize="end"
                                     android:gravity="start"
-                                    android:id="@+id/txtLabel"
+                                    android:id="@+id/txtLabel1"
                                     android:layout_height="match_parent"
-                                    android:layout_marginHorizontal="@dimen/_16pxh"
-                                    android:layout_marginVertical="@dimen/_16pxv"
                                     android:layout_width="match_parent"
+                                    android:paddingBottom="@dimen/_13pxv"
+                                    android:paddingEnd="@dimen/_30pxh"
+                                    android:paddingStart="@dimen/_16pxh"
+                                    android:paddingTop="@dimen/_18pxv"
                                     android:lineSpacingExtra="@dimen/_6pxh"
                                     android:singleLine="true"
-                                    android:text="@{logInVM.logInModel.txtLabel}"
-                                    style="@style/txtNotoSansnotosansregular16" tools:text="@string/lbl_your_email"/>
+                                    android:text="@{logInVM.logInModel.etInputContentTwoValue}"
+                                    style="@style/etSolidRoundedOutline" tools:ignore="Autofill" android:hint="@string/lbl_your_email"/>
                             </LinearLayout>
                         </LinearLayout>
                         <LinearLayout
@@ -107,21 +102,23 @@
                             android:orientation="vertical" style="@style/groupStylecornerRadius_1">
                             <LinearLayout
                                 android:gravity="center_horizontal"
-                                android:id="@+id/linearInputContent1"
+                                android:id="@+id/linearInputContent2"
                                 android:layout_height="match_parent"
                                 android:layout_width="match_parent"
                                 android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
-                                <TextView android:ellipsize="end"
+                                <EditText android:ellipsize="end"
                                     android:gravity="start"
-                                    android:id="@+id/txtLabelOne"
+                                    android:id="@+id/txtLabel2"
                                     android:layout_height="match_parent"
-                                    android:layout_marginHorizontal="@dimen/_16pxh"
-                                    android:layout_marginVertical="@dimen/_16pxv"
                                     android:layout_width="match_parent"
+                                    android:paddingBottom="@dimen/_13pxv"
+                                    android:paddingEnd="@dimen/_30pxh"
+                                    android:paddingStart="@dimen/_16pxh"
+                                    android:paddingTop="@dimen/_18pxv"
                                     android:lineSpacingExtra="@dimen/_6pxh"
                                     android:singleLine="true"
-                                    android:text="@{logInVM.logInModel.txtLabelOne}"
-                                    style="@style/txtNotoSansnotosansregular16" tools:text="@string/lbl_password"/>
+                                    android:text="@{logInVM.logInModel.etInputContentTwoValue}"
+                                    style="@style/etSolidRoundedOutline" tools:ignore="Autofill" android:hint="@string/lbl_password"/>
                             </LinearLayout>
                         </LinearLayout>
                         <LinearLayout
@@ -138,14 +135,11 @@
                                 android:id="@+id/txtButton"
                                 android:layout_height="match_parent"
                                 android:layout_marginBottom="@dimen/_17pxv"
-                                android:layout_marginEnd="@dimen/_143pxh"
-                                android:layout_marginStart="@dimen/_143pxh"
                                 android:layout_marginTop="@dimen/_17pxv"
                                 android:layout_width="match_parent"
                                 android:lineSpacingExtra="@dimen/_6pxh"
                                 android:singleLine="true"
-                                android:text="@{logInVM.logInModel.txtButton}"
-                                style="@style/txtNotoSansnotosansmedium14" tools:text="@string/lbl_log_in"/>
+                                style="@style/txtNotoSansnotosansmedium14" android:text="@string/lbl_log_in"/>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>

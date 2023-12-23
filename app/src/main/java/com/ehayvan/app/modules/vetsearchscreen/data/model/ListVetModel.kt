@@ -4,10 +4,6 @@ data class ListVetModel(
     /**
      * TODO Replace with dynamic value
      */
-    var txtVet: String? = "Alice Ruth"
+    var txtText: String? = "Alice Ruth 9/10"
     ,
-    /**
-     * TODO Replace with dynamic value
-     */
-    var txtRating: Int? = 5
 )
