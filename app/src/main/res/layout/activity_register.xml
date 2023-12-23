@@ -11,32 +11,36 @@
         <LinearLayout android:gravity="center_horizontal"
             android:id="@+id/linearOnboardingCr"
             android:layout_height="match_parent"
-            android:layout_width="match_parent"
+            android:layout_width="435dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/img_actionsheetba"
             android:orientation="vertical" style="@style/groupStylecornerRadius">
             <LinearLayout android:gravity="center_horizontal"
                 android:id="@+id/linearActionSheetCo"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/_69pxv"
+                android:layout_marginTop="@dimen/_29pxv"
+                android:layout_marginStart="15dp"
                 android:layout_width="match_parent"
                 android:orientation="vertical" style="@style/groupStyle">
                 <FrameLayout android:gravity="start"
                     android:id="@+id/frameStacktitle"
-                    android:layout_height="@dimen/_554pxv"
+                    android:layout_height="match_parent"
                     android:layout_width="match_parent" style="@style/groupStyle">
-                    <ImageView android:id="@+id/imageActionSheetBa"
-                        android:layout_gravity="start"
-                        android:layout_height="match_parent"
-                        android:layout_width="match_parent"
-                        android:scaleType="fitXY"
-                        imageRes="@{@drawable/img_actionsheetba}"
-                        tools:ignore="ContentDescription" tools:src="@drawable/img_actionsheetba"/>
                     <LinearLayout android:id="@+id/linearActionSheet"
                         android:layout_gravity="top|start"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_75pxv"
-                        android:layout_marginTop="@dimen/_75pxv"
                         android:layout_width="match_parent"
                         android:orientation="vertical" style="@style/groupStylecornerRadius_3">
+                        <ImageView
+                            android:background="@drawable/rectangle_border_blue_50_radius_32"
+                            android:id="@+id/btnIconFrame"
+                            android:layout_gravity="top|center"
+                            android:layout_height="@dimen/_64pxh"
+                            android:layout_marginStart="15dp"
+                            android:layout_width="@dimen/_64pxh"
+                            android:paddingVertical="@dimen/_18pxv"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_iconframe" tools:ignore="ContentDescription"/>
                         <TextView android:ellipsize="end"
                             android:id="@+id/txtTitle"
                             android:layout_gravity="center_horizontal"
@@ -47,8 +51,7 @@
                             android:layout_width="wrap_content"
                             android:lineSpacingExtra="@dimen/_17pxh"
                             android:singleLine="true"
-                            android:text="@{registerVM.registerModel.txtTitle}"
-                            style="@style/txtCatamaranbold26" tools:text="@string/lbl_sign_up"/>
+                            style="@style/txtCatamaranbold26" android:text="@string/lbl_sign_up"/>
                         <TextView android:gravity="center_horizontal"
                             android:id="@+id/txtBody"
                             android:layout_height="wrap_content"
@@ -57,8 +60,7 @@
                             android:layout_marginTop="@dimen/_5pxv"
                             android:layout_width="match_parent"
                             android:lineSpacingExtra="@dimen/_8pxh"
-                            android:text="@{registerVM.registerModel.txtBody}"
-                            style="@style/txtNotoSansnotosansmedium16" tools:text="@string/msg_welcome_please"/>
+                            style="@style/txtNotoSansnotosansmedium16" android:text="@string/msg_welcome_please"/>
                         <LinearLayout
                             android:gravity="center_horizontal"
                             android:id="@+id/linearInputBox"
@@ -70,21 +72,23 @@
                             android:orientation="vertical" style="@style/groupStylecornerRadius_1">
                             <LinearLayout
                                 android:gravity="center_horizontal"
-                                android:id="@+id/linearInputContent"
+                                android:id="@+id/linearInputContent1"
                                 android:layout_height="match_parent"
                                 android:layout_width="match_parent"
                                 android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
-                                <TextView android:ellipsize="end"
+                                <EditText android:ellipsize="end"
                                     android:gravity="start"
-                                    android:id="@+id/txtNameandSurnam"
+                                    android:id="@+id/txtLabel1"
                                     android:layout_height="match_parent"
-                                    android:layout_marginHorizontal="@dimen/_16pxh"
-                                    android:layout_marginVertical="@dimen/_16pxv"
                                     android:layout_width="match_parent"
+                                    android:paddingBottom="@dimen/_13pxv"
+                                    android:paddingEnd="@dimen/_30pxh"
+                                    android:paddingStart="@dimen/_16pxh"
+                                    android:paddingTop="@dimen/_18pxv"
                                     android:lineSpacingExtra="@dimen/_6pxh"
                                     android:singleLine="true"
-                                    android:text="@{registerVM.registerModel.txtNameandSurnam}"
-                                    style="@style/txtNotoSansnotosansregular16" tools:text="@string/msg_name_and_surnam"/>
+                                    android:text="@{registerVM.registerModel.etInputContentOneValue}"
+                                    style="@style/etSolidRoundedOutline" tools:ignore="Autofill" android:hint="@string/msg_name_and_surnam"/>
                             </LinearLayout>
                         </LinearLayout>
                         <LinearLayout
@@ -98,21 +102,23 @@
                             android:orientation="vertical" style="@style/groupStylecornerRadius_1">
                             <LinearLayout
                                 android:gravity="center_horizontal"
-                                android:id="@+id/linearInputContent1"
+                                android:id="@+id/linearInputContent2"
                                 android:layout_height="match_parent"
                                 android:layout_width="match_parent"
                                 android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
-                                <TextView android:ellipsize="end"
+                                <EditText android:ellipsize="end"
                                     android:gravity="start"
-                                    android:id="@+id/txtLabel"
+                                    android:id="@+id/txtLabel2"
                                     android:layout_height="match_parent"
-                                    android:layout_marginHorizontal="@dimen/_16pxh"
-                                    android:layout_marginVertical="@dimen/_16pxv"
                                     android:layout_width="match_parent"
+                                    android:paddingBottom="@dimen/_13pxv"
+                                    android:paddingEnd="@dimen/_30pxh"
+                                    android:paddingStart="@dimen/_16pxh"
+                                    android:paddingTop="@dimen/_18pxv"
                                     android:lineSpacingExtra="@dimen/_6pxh"
                                     android:singleLine="true"
-                                    android:text="@{registerVM.registerModel.txtLabel}"
-                                    style="@style/txtNotoSansnotosansregular16" tools:text="@string/lbl_your_email"/>
+                                    android:text="@{registerVM.registerModel.etInputContentTwoValue}"
+                                    style="@style/etSolidRoundedOutline" tools:ignore="Autofill" android:hint="@string/lbl_your_email"/>
                             </LinearLayout>
                         </LinearLayout>
                         <LinearLayout
@@ -126,21 +132,23 @@
                             android:orientation="vertical" style="@style/groupStylecornerRadius_1">
                             <LinearLayout
                                 android:gravity="center_horizontal"
-                                android:id="@+id/linearInputContent2"
+                                android:id="@+id/linearInputContent3"
                                 android:layout_height="match_parent"
                                 android:layout_width="match_parent"
                                 android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
-                                <TextView android:ellipsize="end"
+                                <EditText android:ellipsize="end"
                                     android:gravity="start"
-                                    android:id="@+id/txtLabelOne"
+                                    android:id="@+id/txtLabel3"
                                     android:layout_height="match_parent"
-                                    android:layout_marginHorizontal="@dimen/_16pxh"
-                                    android:layout_marginVertical="@dimen/_16pxv"
                                     android:layout_width="match_parent"
+                                    android:paddingBottom="@dimen/_13pxv"
+                                    android:paddingEnd="@dimen/_30pxh"
+                                    android:paddingStart="@dimen/_16pxh"
+                                    android:paddingTop="@dimen/_18pxv"
                                     android:lineSpacingExtra="@dimen/_6pxh"
                                     android:singleLine="true"
-                                    android:text="@{registerVM.registerModel.txtLabelOne}"
-                                    style="@style/txtNotoSansnotosansregular16" tools:text="@string/lbl_password"/>
+                                    android:text="@{registerVM.registerModel.etInputContentThreeValue}"
+                                    style="@style/etSolidRoundedOutline" tools:ignore="Autofill" android:hint="@string/lbl_password"/>
                             </LinearLayout>
                         </LinearLayout>
                         <LinearLayout android:gravity="start"
@@ -208,24 +216,23 @@
                         <LinearLayout
                             android:gravity="center_horizontal"
                             android:id="@+id/linearPrimaryButton"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/_15pxh"
                             android:layout_marginStart="@dimen/_15pxh"
-                            android:layout_marginTop="@dimen/_16pxv"
+                            android:layout_marginEnd="@dimen/_15pxh"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_24pxv"
                             android:layout_width="match_parent"
-                            android:orientation="vertical" style="@style/groupStyleblue_600">
+                            android:orientation="vertical" style="@style/groupStyleblue_600cornerRadius">
                             <TextView android:ellipsize="end"
                                 android:gravity="center_horizontal"
+                                android:textAlignment="center"
                                 android:id="@+id/txtButton"
-                                android:layout_height="match_parent"
-                                android:layout_marginEnd="@dimen/_139pxh"
-                                android:layout_marginStart="@dimen/_139pxh"
-                                android:layout_marginTop="@dimen/_18pxv"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp"
                                 android:layout_width="match_parent"
                                 android:lineSpacingExtra="@dimen/_6pxh"
                                 android:singleLine="true"
-                                android:text="@{registerVM.registerModel.txtButton}"
-                                style="@style/txtNotoSansnotosansmedium14" tools:text="@string/lbl_sign_up"/>
+                                style="@style/txtNotoSansnotosansmedium14" android:text="@string/lbl_sign_up"/>
                         </LinearLayout>
                         <TextView android:ellipsize="end"
                             android:gravity="center_horizontal"
@@ -233,27 +240,13 @@
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="@dimen/_15pxh"
                             android:layout_marginStart="@dimen/_15pxh"
-                            android:layout_marginTop="@dimen/_73pxv"
+                            android:layout_marginTop="10dp"
                             android:layout_width="match_parent"
                             android:lineSpacingExtra="@dimen/_6pxh"
                             android:singleLine="true"
-                            android:text="@{registerVM.registerModel.txtConfirmation}"
-                            style="@style/txtNotoSansnotosansmedium14_1" tools:text="@string/msg_already_have_an"/>
+                            style="@style/txtNotoSansnotosansmedium14_1" android:text="@string/msg_already_have_an"/>
                     </LinearLayout>
-                    <ImageButton
-                        android:background="@drawable/rectangle_border_blue_50_radius_32"
-                        android:id="@+id/btnIconFrame"
-                        android:layout_gravity="top|center"
-                        android:layout_height="@dimen/_64pxh"
-                        android:layout_marginBottom="@dimen/_10pxv"
-                        android:layout_marginEnd="@dimen/_142pxh"
-                        android:layout_marginStart="@dimen/_142pxh"
-                        android:layout_marginTop="@dimen/_7pxv"
-                        android:layout_width="@dimen/_64pxh"
-                        android:paddingHorizontal="@dimen/_18pxh"
-                        android:paddingVertical="@dimen/_18pxv"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/img_iconframe" tools:ignore="ContentDescription"/>
+
                 </FrameLayout>
             </LinearLayout>
         </LinearLayout>

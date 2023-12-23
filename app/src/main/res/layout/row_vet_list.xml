@@ -20,7 +20,7 @@
         android:paddingStart="@dimen/_30pxh"
         android:paddingTop="@dimen/_18pxv"
         android:singleLine="true"
-        android:text='@{listVetModel.txtVet + " " + listVetModel.txtRating + "/10"}'
+        android:text='@{listVetModel.txtText}'
         tools:text = "@string/msg_alice_ruth"
         android:textSize="18sp"
         android:textColor="@android:color/white"
