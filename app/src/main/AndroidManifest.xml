@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest package="com.ehayvan.app" xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest package="com.ehayvan.app" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:usesCleartextTraffic="true">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application android:allowBackup="false"
@@ -9,45 +10,45 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
         <activity
-            android:name="com.ehayvan.app.modules.viewprofile.ui.ViewProfileActivity" android:screenOrientation="portrait"/>
+            android:name="com.ehayvan.app.modules.viewprofile.ui.ViewProfileActivity" android:screenOrientation="fullSensor"/>
         <activity
-            android:name="com.ehayvan.app.modules.editpetrecordstwoempty.ui.EditPetRecordsTwoEmptyActivity" android:screenOrientation="portrait"/>
+            android:name="com.ehayvan.app.modules.editpetrecordstwoempty.ui.EditPetRecordsTwoEmptyActivity" android:screenOrientation="fullSensor"/>
         <activity
-            android:name="com.ehayvan.app.modules.appointment.ui.AppointmentActivity" android:screenOrientation="portrait"/>
+            android:name="com.ehayvan.app.modules.appointment.ui.AppointmentActivity" android:screenOrientation="fullSensor"/>
         <activity
-            android:name="com.ehayvan.app.modules.petownerdashboard.ui.PetOwnerDashboardActivity" android:screenOrientation="portrait"/>
+            android:name="com.ehayvan.app.modules.petownerdashboard.ui.PetOwnerDashboardActivity" android:screenOrientation="fullSensor"/>
         <activity
-            android:name="com.ehayvan.app.modules.editpetrecordsone.ui.EditPetRecordsOneActivity" android:screenOrientation="portrait"/>
+            android:name="com.ehayvan.app.modules.editpetrecordsone.ui.EditPetRecordsOneActivity" android:screenOrientation="fullSensor"/>
         <activity
-            android:name="com.ehayvan.app.modules.viewpetrecordstwo.ui.ViewPetRecordsTwoActivity" android:screenOrientation="portrait"/>
+            android:name="com.ehayvan.app.modules.viewpetrecordstwo.ui.ViewPetRecordsTwoActivity" android:screenOrientation="fullSensor"/>
         <activity
-            android:name="com.ehayvan.app.modules.splashscreen.ui.SplashScreenActivity" android:screenOrientation="portrait"/>
+            android:name="com.ehayvan.app.modules.splashscreen.ui.SplashScreenActivity" android:screenOrientation="fullSensor"/>
         <activity
-            android:name="com.ehayvan.app.modules.veterinariandashboard.ui.VeterinarianDashboardActivity" android:screenOrientation="portrait"/>
+            android:name="com.ehayvan.app.modules.veterinariandashboard.ui.VeterinarianDashboardActivity" android:screenOrientation="fullSensor"/>
         <activity
-            android:name="com.ehayvan.app.modules.login.ui.LogInActivity" android:screenOrientation="portrait"/>
+            android:name="com.ehayvan.app.modules.login.ui.LogInActivity" android:screenOrientation="fullSensor"/>
         <activity
-            android:name="com.ehayvan.app.modules.addpetprofile.ui.AddPetProfileActivity" android:screenOrientation="portrait"/>
+            android:name="com.ehayvan.app.modules.addpetprofile.ui.AddPetProfileActivity" android:screenOrientation="fullSensor"/>
         <activity
-            android:name="com.ehayvan.app.modules.vetsearchscreen.ui.VetSearchScreenActivity" android:screenOrientation="portrait"/>
+            android:name="com.ehayvan.app.modules.vetsearchscreen.ui.VetSearchScreenActivity" android:screenOrientation="fullSensor"/>
         <activity
-            android:name="com.ehayvan.app.modules.editpetrecordsthree.ui.EditPetRecordsThreeActivity" android:screenOrientation="portrait"/>
+            android:name="com.ehayvan.app.modules.editpetrecordsthree.ui.EditPetRecordsThreeActivity" android:screenOrientation="fullSensor"/>
         <activity
-            android:name="com.ehayvan.app.modules.viewpetrecordsone.ui.ViewPetRecordsOneActivity" android:screenOrientation="portrait"/>
+            android:name="com.ehayvan.app.modules.viewpetrecordsone.ui.ViewPetRecordsOneActivity" android:screenOrientation="fullSensor"/>
         <activity
-            android:name="com.ehayvan.app.modules.register.ui.RegisterActivity" android:screenOrientation="portrait"/>
+            android:name="com.ehayvan.app.modules.register.ui.RegisterActivity" android:screenOrientation="fullSensor"/>
         <activity
-            android:name="com.ehayvan.app.modules.editpetrecordstwo.ui.EditPetRecordsTwoActivity" android:screenOrientation="portrait"/>
+            android:name="com.ehayvan.app.modules.editpetrecordstwo.ui.EditPetRecordsTwoActivity" android:screenOrientation="fullSensor"/>
         <activity android:exported="true"
-            android:name="com.ehayvan.app.modules.launchscreen.ui.LaunchScreenActivity" android:screenOrientation="portrait">
+            android:name="com.ehayvan.app.modules.launchscreen.ui.LaunchScreenActivity" android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ehayvan.app.modules.dashboard.ui.DashboardActivity" android:screenOrientation="portrait"/>
+            android:name="com.ehayvan.app.modules.dashboard.ui.DashboardActivity" android:screenOrientation="fullSensor"/>
         <activity
-            android:name="com.ehayvan.app.modules.viewpetprofile.ui.ViewPetProfileActivity" android:screenOrientation="portrait"/>
+            android:name="com.ehayvan.app.modules.viewpetprofile.ui.ViewPetProfileActivity" android:screenOrientation="fullSensor"/>
     </application>
 </manifest>

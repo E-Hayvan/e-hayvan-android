@@ -1,5 +1,6 @@
 package com.ehayvan.app.modules.editpetrecordstwo.ui
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,7 +21,7 @@ class ListPetRecordsAdapter(
     }
 
     override fun onBindViewHolder(holder: RowListPetRecordsVH, position: Int) {
-        val listPetRecordsRowModel = ListPetRecordsRowModel()
+        val listPetRecordsRowModel = list[position]
         // Uncomment the following line after integration with data source
         // val listPetRecordsRowModel = list[position]
         holder.binding.listPetRecordsRowModel = listPetRecordsRowModel

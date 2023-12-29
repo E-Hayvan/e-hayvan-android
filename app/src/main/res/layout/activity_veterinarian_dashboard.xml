@@ -21,16 +21,32 @@
                 android:layout_marginTop="@dimen/_24pxv"
                 android:layout_width="match_parent" app:contentInsetStart="0dp">
 
-                <LinearLayout android:gravity="end"
+                <LinearLayout android:gravity="start"
                     android:id="@+id/linearNavigationHead"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent" android:orientation="horizontal">
+                    <FrameLayout android:id="@+id/frameStackvector"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_36pxv"
+                        android:layout_marginEnd="@dimen/_16pxh"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_width="@dimen/_36pxh" style="@style/groupStylecornerRadius_4">
+                        <ImageView android:id="@+id/imageVector"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_24pxh"
+                            android:layout_marginBottom="@dimen/_18pxv"
+                            android:layout_marginEnd="@dimen/_21pxh"
+                            android:layout_marginStart="@dimen/_21pxh"
+                            android:layout_marginTop="@dimen/_18pxv"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_iconframe"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_iconframe"/>
+                    </FrameLayout>
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginEnd="270dp">
-
+                        android:orientation="vertical" android:layout_gravity="start">
                         <TextView
                             android:ellipsize="end"
                             android:layout_height="wrap_content"
@@ -54,15 +70,17 @@
                             style="@style/txtNotoSansnotosanssemibold16"
                             tools:text="@string/lbl_esther"/>
                     </LinearLayout>
-                    <SearchView
-                        android:id="@+id/petOwnerDashboardSearchView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="10dp"/>
+
 
 
                 </LinearLayout>
-
+                <ImageView
+                    android:layout_gravity="end"
+                    android:src="@drawable/img_search"
+                    android:id="@+id/petOwnerDashboardSearchView"
+                    android:padding="12dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp" />
             </androidx.appcompat.widget.Toolbar>
             <View
                 android:background="@drawable/rectangle_gradient_s_bluegray_400_87_e_bluegray_400_87"
@@ -88,8 +106,8 @@
                     android:layout_width="0dp"
                     android:lineSpacingExtra="@dimen/_6pxh"
                     android:singleLine="true"
-                    android:text="@{veterinarianDashboardVM.veterinarianDashboardModel.txtText}"
-                    style="@style/txtNotoSansnotosanssemibold16" tools:text="Today's Appointments"/>
+                    android:text="@string/msg_today_s_appoint"
+                    style="@style/txtNotoSansnotosanssemibold16" tools:text="@string/msg_today_s_appoint"/>
                 <androidx.appcompat.widget.AppCompatButton
                     android:ellipsize="end" android:gravity="center"
                     android:id="@+id/btnTwo"
@@ -110,7 +128,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:gravity="center_horizontal"
                 android:id="@+id/recyclerListtitle"
-                android:layout_height="wrap_content"
+                android:layout_height="400dp"
                 android:layout_marginEnd="@dimen/_16pxh"
                 android:layout_marginStart="@dimen/_16pxh"
                 android:layout_marginTop="@dimen/_24pxv"

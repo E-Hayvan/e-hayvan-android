@@ -15,12 +15,12 @@ class ListPetAdapter(
     private var clickListener: OnItemClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowListPetVH {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.activity_pet_owner_dashboard, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.row_pet_list, parent, false)
         return RowListPetVH(view)
     }
 
     override fun onBindViewHolder(holder: RowListPetVH, position: Int) {
-        val listPetRowModel = ListPetRowModel()
+        val listPetRowModel = list[position]
         // Uncomment the following line after integration with data source
         // val listPetRowModel = list[position]
         holder.binding.listPetRowModel = listPetRowModel

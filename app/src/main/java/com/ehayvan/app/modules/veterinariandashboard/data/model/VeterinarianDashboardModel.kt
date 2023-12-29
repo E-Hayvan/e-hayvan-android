@@ -18,7 +18,7 @@ data class VeterinarianDashboardModel(
   /**
    * TODO Replace with dynamic value
    */
-  var txtCount: Int? = 2
+  var txtCount: String? = "2"
   ,
   /**
    * TODO Replace with dynamic value

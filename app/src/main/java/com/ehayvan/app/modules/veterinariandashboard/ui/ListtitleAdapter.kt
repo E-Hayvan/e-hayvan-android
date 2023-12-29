@@ -21,15 +21,11 @@ class ListtitleAdapter(
   }
 
   override fun onBindViewHolder(holder: RowListtitleVH, position: Int) {
-    val listtitleRowModel = ListtitleRowModel()
-    // TODO uncomment following line after integration with data source
-    // val listtitleRowModel = list[position]
-    holder.binding.listtitleRowModel = listtitleRowModel
+    val listTitleRowModel = list[position]
+    holder.binding.listtitleRowModel = listTitleRowModel
   }
 
-  override fun getItemCount(): Int = 3
-  // TODO uncomment following line after integration with data source
-  // return list.size
+  override fun getItemCount(): Int = list.size
 
   public fun updateData(newData: List<ListtitleRowModel>) {
     list = newData

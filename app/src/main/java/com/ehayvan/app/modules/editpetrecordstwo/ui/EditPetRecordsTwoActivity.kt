@@ -14,16 +14,19 @@ class EditPetRecordsTwoActivity :
 
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
-    val listPetRecordsAdapter = ListPetRecordsAdapter(viewModel.listPetRecords.value ?: mutableListOf())
+    val dummyList: List<ListPetRecordsRowModel> = listOf(
+      ListPetRecordsRowModel("Pet 1", "Price 1"),
+      ListPetRecordsRowModel("Pet 2", "Price 2"),
+      ListPetRecordsRowModel("Pet 2", "Price 2"),
+      // Add more items as needed
+    )
+    val listPetRecordsAdapter = ListPetRecordsAdapter(dummyList)
     binding.recyclerListPetRecords.adapter = listPetRecordsAdapter
     listPetRecordsAdapter.setOnItemClickListener(object : ListPetRecordsAdapter.OnItemClickListener {
       override fun onItemClick(view: android.view.View, position: kotlin.Int, item: ListPetRecordsRowModel) {
         onClickRecyclerListPetRecords(view, position, item)
       }
     })
-    viewModel.listPetRecords.observe(this) {
-      listPetRecordsAdapter.updateData(it)
-    }
     binding.editPetRecordsTwoVM = viewModel
   }
 

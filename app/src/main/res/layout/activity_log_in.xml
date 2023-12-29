@@ -12,16 +12,17 @@
             android:id="@+id/linearOnboardingCr"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
+            android:layout_marginTop="100dp"
             android:orientation="vertical">
             <FrameLayout android:gravity="start"
                 android:id="@+id/frameActionSheetCo"
-                android:layout_height="755dp"
+                android:layout_height="800dp"
+                android:layout_marginTop="150dp"
                 android:layout_width="450dp" style="@style/groupStyle">
                 <LinearLayout android:id="@+id/linearActionSheet"
                     android:layout_gravity="bottom|start"
                     android:layout_height="match_parent"
                     android:background="@drawable/img_actionsheetba_gray_50"
-                    android:layout_marginTop="@dimen/_250pxv"
                     android:paddingTop="10dp"
                     android:layout_width="match_parent" android:orientation="vertical">
                     <FrameLayout android:id="@+id/frameStackvector"
@@ -84,9 +85,10 @@
                                     android:paddingBottom="@dimen/_13pxv"
                                     android:paddingEnd="@dimen/_30pxh"
                                     android:paddingStart="@dimen/_16pxh"
-                                    android:paddingTop="@dimen/_18pxv"
+                                    android:paddingTop="@dimen/_16pxv"
                                     android:lineSpacingExtra="@dimen/_6pxh"
                                     android:singleLine="true"
+                                    android:textColorHint="@color/bluegray_400"
                                     android:text="@{logInVM.logInModel.etInputContentTwoValue}"
                                     style="@style/etSolidRoundedOutline" tools:ignore="Autofill" android:hint="@string/lbl_your_email"/>
                             </LinearLayout>
@@ -114,9 +116,11 @@
                                     android:paddingBottom="@dimen/_13pxv"
                                     android:paddingEnd="@dimen/_30pxh"
                                     android:paddingStart="@dimen/_16pxh"
-                                    android:paddingTop="@dimen/_18pxv"
+                                    android:paddingTop="@dimen/_16pxv"
                                     android:lineSpacingExtra="@dimen/_6pxh"
                                     android:singleLine="true"
+                                    android:inputType="textPassword"
+                                    android:textColorHint="@color/bluegray_400"
                                     android:text="@{logInVM.logInModel.etInputContentTwoValue}"
                                     style="@style/etSolidRoundedOutline" tools:ignore="Autofill" android:hint="@string/lbl_password"/>
                             </LinearLayout>
@@ -141,6 +145,18 @@
                                 android:singleLine="true"
                                 style="@style/txtNotoSansnotosansmedium14" android:text="@string/lbl_log_in"/>
                         </LinearLayout>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtConfirmation"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_15pxh"
+                            android:layout_marginStart="@dimen/_15pxh"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:lineSpacingExtra="@dimen/_6pxh"
+                            android:singleLine="true"
+                            style="@style/txtNotoSansnotosansmedium14_1"
+                            android:text="@string/msg_dont_have_an"/>
                     </LinearLayout>
                 </LinearLayout>
             </FrameLayout>

@@ -55,7 +55,7 @@
                             android:lineSpacingExtra="@dimen/_6pxh"
                             android:singleLine="true"
                             android:text="Edit Pet Records"
-                            style="Drops"
+                            style="@style/txtNotoSansnotosansregular14"
                             tools:text="@string/msg_edit_pet_record"/>
 
 
@@ -116,7 +116,7 @@
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
                     android:lineSpacingExtra="@dimen/_6pxh"
-                    android:paddingBottom="@dimen/_13pxv"
+                    android:paddingBottom="@dimen/_15pxv"
                     android:paddingEnd="@dimen/_30pxh"
                     android:paddingStart="@dimen/_16pxh"
                     android:paddingTop="@dimen/_18pxv"
