@@ -25,7 +25,8 @@ class VeterinarianDashboardActivity :
   private val viewModel: VeterinarianDashboardVM by viewModels<VeterinarianDashboardVM>()
   private lateinit var requestQueue: RequestQueue
   override fun onInitialized(): Unit {
-    viewModel.navArguments = intent.extras?.getBundle("bundle")
+    viewModel.navArguments = intent.extras?.getBundle("vetID")
+    val vetID = intent.extras?.getString("vetID")
     requestQueue = Volley.newRequestQueue(this)
     makeGetRequest()
   }

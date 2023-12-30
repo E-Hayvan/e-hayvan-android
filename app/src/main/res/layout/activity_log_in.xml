@@ -52,6 +52,20 @@
                         android:layout_width="match_parent"
                         android:orientation="vertical" style="@style/groupStylecornerRadius_3">
                         <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtError"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_15pxh"
+                            android:visibility="gone"
+                            android:layout_marginStart="@dimen/_15pxh"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:lineSpacingExtra="@dimen/_6pxh"
+                            android:singleLine="true"
+                            style="@style/txtNotoSansnotosansmedium14_1"
+                            android:textColor="@color/red_A700"
+                            android:text="@string/msg_your_credent"/>
+                        <TextView android:ellipsize="end"
                             android:id="@+id/txtTitle"
                             android:layout_gravity="center_horizontal"
                             android:layout_height="wrap_content"
@@ -161,5 +175,14 @@
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:indeterminate="true"
+            android:indeterminateTint="@android:color/holo_blue_dark"
+            android:padding="150dp"
+            android:background = "@color/white"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
     </LinearLayout>
 </layout>

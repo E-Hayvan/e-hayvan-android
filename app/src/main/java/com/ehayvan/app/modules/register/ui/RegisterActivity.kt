@@ -1,6 +1,7 @@
 package com.ehayvan.app.modules.register.ui
 
 import android.content.Intent
+import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.EditText
@@ -145,18 +146,24 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
             // Handle the response
             progressBar.visibility = View.GONE
             if (checkBoxText.isChecked) {
-              val petOwnerId = response.optString("petOwnerID")
-              Log.d("Pet Owner ID", petOwnerId)
+              val bundle = Bundle()
+              val ownerID = response.optString("ownerID")
+              Log.d("Pet Owner ID", ownerID)
               val intent = Intent(this, PetOwnerDashboardActivity::class.java)
+              bundle.putString("ownerID", ownerID)
+              intent.putExtras(bundle)
               startActivity(intent)
-              finish()
+              finishAffinity()
             }
             if (checkBoxTextOne.isChecked) {
+              val bundle = Bundle()
               val vetId = response.optString("vetID")
               Log.d("Vet ID", vetId)
               val intent = Intent(this, VeterinarianDashboardActivity::class.java)
+              bundle.putString("vetID", vetId)
+              intent.putExtras(bundle)
               startActivity(intent)
-              finish()
+              finishAffinity()
             }
           },
           { error ->

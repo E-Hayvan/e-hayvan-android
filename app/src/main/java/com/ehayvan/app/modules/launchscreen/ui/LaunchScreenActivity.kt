@@ -34,7 +34,7 @@ class LaunchScreenActivity :
     // Use the postDelayed method to introduce a delay
     handler.postDelayed({
       // Create an Intent to start RegisterActivity
-      val intent = Intent(this, EditProfileActivity::class.java)
+      val intent = Intent(this, RegisterActivity::class.java)
 
       // Optionally, you can pass data to the RegisterActivity using extras
       // intent.putExtra("key", value)

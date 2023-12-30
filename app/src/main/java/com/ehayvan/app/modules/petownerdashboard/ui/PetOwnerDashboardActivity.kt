@@ -24,10 +24,9 @@ class PetOwnerDashboardActivity :
   private lateinit var requestQueue: RequestQueue
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
-
+    val ownerID = intent.extras?.getString("ownerID")
     requestQueue = Volley.newRequestQueue(this)
 
-    // Make a GET request to http://localhost:8080/api/pets/2
     val petId = 2
     makeGetRequest(petId)
 
