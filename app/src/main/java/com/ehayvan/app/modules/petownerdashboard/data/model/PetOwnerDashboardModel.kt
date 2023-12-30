@@ -18,6 +18,6 @@ data class PetOwnerDashboardModel(
   /**
    * TODO Replace with dynamic value
    */
-  var txtCount: String? = "2"
+  var txtCount: String? = "1"
   ,
 )

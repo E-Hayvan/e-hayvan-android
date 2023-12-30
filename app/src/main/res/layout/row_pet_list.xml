@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:lineSpacingExtra="@dimen/_6pxh"
             android:singleLine="true"
-            android:text="@{listPetRowModel.txtPriceOne}"
+            android:text='@{listPetRowModel.txtPriceOne + " | " + listPetRowModel.txtAge + " years old"}'
             style="@style/txtNotoSansnotosansregular14_1" tools:text="@string/msg_dog_3_years_o"/>
     </LinearLayout>
 </layout>

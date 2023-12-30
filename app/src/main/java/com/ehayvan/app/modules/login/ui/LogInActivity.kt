@@ -61,19 +61,9 @@ class LogInActivity : BaseActivity<ActivityLogInBinding>(R.layout.activity_log_i
         progressBar.visibility = View.VISIBLE
         txtContainer.visibility = View.GONE
         val url = "http://192.168.0.19:8080/api/customers/login/$inputText1/$inputText2"
-        val jsonBody = JSONObject()
-        try {
-          // Create the user object
-          val userObject = JSONObject()
-          userObject.put("password", txtLabel2)
-          userObject.put("email", txtLabel1)
-          // Add the user object to the main JSON body
-        } catch (e: JSONException) {
-          e.printStackTrace()
-        }
 
         val jsonObjectRequest = JsonObjectRequest(
-          Request.Method.GET, url, jsonBody,
+          Request.Method.GET, url, null,
           { response ->
             // Handle the response
             if (response != null) {
@@ -85,7 +75,6 @@ class LogInActivity : BaseActivity<ActivityLogInBinding>(R.layout.activity_log_i
                 val intent = Intent(this, PetOwnerDashboardActivity::class.java)
                 bundle.putString("ownerID", ownerID)
                 intent.putExtras(bundle)
-                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                 startActivity(intent)
                 finishAffinity()
               }
@@ -96,7 +85,6 @@ class LogInActivity : BaseActivity<ActivityLogInBinding>(R.layout.activity_log_i
                 val intent = Intent(this, VeterinarianDashboardActivity::class.java)
                 bundle.putString("vetID", vetId)
                 intent.putExtras(bundle)
-                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                 startActivity(intent)
                 finishAffinity()
               }

@@ -100,7 +100,7 @@
                     android:ellipsize="end"
                     android:hint="@string/lbl_your_pet_s_age"
                     android:id="@+id/etLanguage"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
                     android:lineSpacingExtra="@dimen/_6pxh"
