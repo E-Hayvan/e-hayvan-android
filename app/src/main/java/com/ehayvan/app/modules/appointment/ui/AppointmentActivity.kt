@@ -19,7 +19,7 @@ class AppointmentActivity : BaseActivity<ActivityAppointmentBinding>(R.layout.ac
 
   override fun setUpClicks(): Unit {
     binding.imageArrowleft.setOnClickListener {
-      finish()
+      onBackPressed()
     }
   }
 

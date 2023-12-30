@@ -41,7 +41,7 @@ class ViewPetRecordsTwoActivity :
 
   override fun setUpClicks(): Unit {
     binding.imageArrowleft.setOnClickListener {
-      finish()
+      onBackPressed()
     }
   }
 

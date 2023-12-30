@@ -12,5 +12,7 @@ data class ViewProfileModel(
   ,
   var txtUserType: String? = MyApp.getInstance().resources.getString(R.string.lbl_user_type)
   ,
+  var txtClinic: String? = MyApp.getInstance().resources.getString(R.string.lbl_user_type)
+  ,
 
 )

@@ -22,7 +22,7 @@ class ViewProfileActivity : BaseActivity<ActivityViewProfileBinding>(R.layout.ac
 
   override fun setUpClicks(): Unit {
     binding.imageArrowleft.setOnClickListener {
-      finish()
+      onBackPressed()
     }
   }
 

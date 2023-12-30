@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="addPetProfileVM" type="com.ehayvan.app.modules.addpetprofile.data.viewmodel.AddPetProfileVM"/>
+        <variable name="editPetProfileVM" type="com.ehayvan.app.modules.editpetprofile.data.viewmodel.EditPetProfileVM"/>
     </data>
     <LinearLayout android:gravity="center_horizontal"
         android:id="@+id/linearAddPetProfile"
@@ -42,13 +42,15 @@
                         <TextView
                             android:id="@+id/txtTitle"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
+                            android:gravity="center|center_vertical|bottom"
+                            android:layout_weight="0.2"
                             android:layout_gravity="center_vertical"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:lineSpacingExtra="@dimen/_11pxh"
                             android:singleLine="true"
-                            android:text="@string/lbl_add_pet_profile"
+                            android:text="@string/lbl_edit_pet_profile"
                             style="@style/txtCatamaranromansemibold16"/>
+
                     </LinearLayout>
                 </androidx.appcompat.widget.Toolbar>
                 <View android:background="@color/bluegray_50"
@@ -80,9 +82,9 @@
                     android:paddingBottom="@dimen/_13pxv"
                     android:paddingEnd="@dimen/_30pxh"
                     android:paddingStart="@dimen/_16pxh"
-                    android:paddingTop="@dimen/_18pxv"
+                    android:paddingTop="@dimen/_16pxv"
                     android:singleLine="true"
-                    android:text="@={addPetProfileVM.addPetProfileModel.etInputContentValue}"
+                    android:text="@={editPetProfileVM.editPetProfileModel.etInputContentValue}"
                     android:textColorHint="@color/bluegray_400"
                     style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
             </LinearLayout>
@@ -100,16 +102,16 @@
                     android:ellipsize="end"
                     android:hint="@string/lbl_your_pet_s_age"
                     android:id="@+id/etLanguage"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
                     android:lineSpacingExtra="@dimen/_6pxh"
                     android:paddingBottom="@dimen/_13pxv"
                     android:paddingEnd="@dimen/_30pxh"
                     android:paddingStart="@dimen/_16pxh"
-                    android:paddingTop="@dimen/_18pxv"
+                    android:paddingTop="@dimen/_16pxv"
                     android:singleLine="true"
-                    android:text="@={addPetProfileVM.addPetProfileModel.etLanguageValue}"
+                    android:text="@={editPetProfileVM.editPetProfileModel.etLanguageValue}"
                     android:textColorHint="@color/bluegray_400"
                     style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
             </LinearLayout>
@@ -131,7 +133,7 @@
             </LinearLayout>
             <androidx.appcompat.widget.AppCompatButton
                 android:ellipsize="end" android:gravity="center"
-                android:id="@+id/btnAddPet"
+                android:id="@+id/btnEdit"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_20pxv"
                 android:layout_marginEnd="@dimen/_15pxh"
@@ -144,9 +146,9 @@
                 android:paddingStart="@dimen/_30pxh"
                 android:paddingTop="@dimen/_18pxv"
                 android:singleLine="true"
-                android:text="@string/lbl_add_pet"
+                android:text="@string/edit"
                 android:textAllCaps="false"
-                style="@style/btnSolidRounded_1" tools:text="@string/lbl_add_pet"/>
+                style="@style/btnSolidRounded_1"/>
         </LinearLayout>
     </LinearLayout>
 </layout>

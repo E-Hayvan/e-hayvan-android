@@ -8,9 +8,11 @@ import androidx.activity.viewModels
 import com.ehayvan.app.R
 import com.ehayvan.app.appcomponents.base.BaseActivity
 import com.ehayvan.app.databinding.ActivityLaunchScreenBinding
+import com.ehayvan.app.modules.editpetprofile.ui.EditPetProfileActivity
 import com.ehayvan.app.modules.editpetrecordsthree.ui.EditPetRecordsThreeActivity
 import com.ehayvan.app.modules.editpetrecordstwo.ui.EditPetRecordsTwoActivity
 import com.ehayvan.app.modules.editpetrecordstwoempty.ui.EditPetRecordsTwoEmptyActivity
+import com.ehayvan.app.modules.editprofile.ui.EditProfileActivity
 import com.ehayvan.app.modules.launchscreen.`data`.viewmodel.LaunchScreenVM
 import com.ehayvan.app.modules.petownerdashboard.ui.PetOwnerDashboardActivity
 import com.ehayvan.app.modules.register.ui.RegisterActivity
@@ -32,7 +34,7 @@ class LaunchScreenActivity :
     // Use the postDelayed method to introduce a delay
     handler.postDelayed({
       // Create an Intent to start RegisterActivity
-      val intent = Intent(this, RegisterActivity::class.java)
+      val intent = Intent(this, EditProfileActivity::class.java)
 
       // Optionally, you can pass data to the RegisterActivity using extras
       // intent.putExtra("key", value)

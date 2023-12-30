@@ -6,6 +6,8 @@
 <string name="lbl_11_03_2023">11.03.2023</string>
   <string name="lbl_dobby">Dobby</string>
   <string name="lbl_your_email">Your email</string>
+  <string name="lbl_your_clinic">Your clinic</string>
+  <string name="lbl_clinic">Clinic</string>
   <string name="lbl_veterinarian">Veterinarian</string>
   <string name="msg_dog_3_years_o2">Dog | 3 years old
 10.00 AM</string>
@@ -71,6 +73,7 @@
   <string name="msg_dog_3_years_o">Dog | 3 years old</string>
   <string name="lbl_password">Password</string>
   <string name="lbl_add_pet_profile">Add Pet Profile</string>
+  <string name="lbl_edit_pet_profile">Edit Pet Profile</string>
   <string name="lbl_add_pet">Add Pet</string>
   <string name="lbl_alice">Alice</string>
   <string name="msg_accept_terms_an">Accept Terms and Conditions</string>
@@ -83,4 +86,11 @@
 <string name="msg_please_enter_valid_text">Please enter valid text</string>
   <string name="edit">Edit</string>
   <string name="msg_dont_have_an">Don\'t have an account? Sign up here!</string>
+  <string name="dropdown_prompt">Select pet\'s type</string>
+  <array name="dropdown_items">
+    <item>Dog</item>
+    <item>Cat</item>
+    <item>Bird</item>
+    <item>Other</item>
+  </array>
 </resources>

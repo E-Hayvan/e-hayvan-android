@@ -12,6 +12,10 @@
         <activity
             android:name="com.ehayvan.app.modules.viewprofile.ui.ViewProfileActivity" android:screenOrientation="fullSensor"/>
         <activity
+            android:name="com.ehayvan.app.modules.editpetprofile.ui.EditPetProfileActivity" android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="com.ehayvan.app.modules.editprofile.ui.EditProfileActivity" android:screenOrientation="fullSensor"/>
+        <activity
             android:name="com.ehayvan.app.modules.editpetrecordstwoempty.ui.EditPetRecordsTwoEmptyActivity" android:screenOrientation="fullSensor"/>
         <activity
             android:name="com.ehayvan.app.modules.appointment.ui.AppointmentActivity" android:screenOrientation="fullSensor"/>
