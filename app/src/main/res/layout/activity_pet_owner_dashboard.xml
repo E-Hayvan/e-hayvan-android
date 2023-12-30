@@ -161,6 +161,7 @@
                 android:gravity="center_horizontal"
                 android:id="@+id/recyclerListPet"
                 android:layout_height="400dp"
+                android:clickable="true"
                 android:visibility="gone"
                 android:layout_marginEnd="@dimen/_16pxh"
                 android:layout_marginStart="@dimen/_16pxh"
@@ -168,7 +169,8 @@
                 android:layout_width="match_parent"
                 android:orientation="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                itemSpace="@{@dimen/_24pxh}" tools:itemCount="2" tools:listitem="@layout/row_pet_list"/>
+                itemSpace="@{@dimen/_24pxh}" tools:itemCount="2" tools:listitem="@layout/row_pet_list"
+                android:focusable="true" />
             <LinearLayout android:gravity="center_horizontal"
                 android:id="@+id/linearButtonsContain"
                 android:layout_height="wrap_content"

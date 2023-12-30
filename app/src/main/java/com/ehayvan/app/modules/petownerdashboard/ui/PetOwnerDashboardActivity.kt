@@ -24,6 +24,7 @@ import com.ehayvan.app.modules.addpetprofile.ui.AddPetProfileActivity
 import com.ehayvan.app.modules.petownerdashboard.data.model.ListPetRowModel
 import com.ehayvan.app.modules.petownerdashboard.data.viewmodel.PetOwnerDashboardVM
 import com.ehayvan.app.modules.veterinariandashboard.ui.VeterinarianDashboardActivity
+import com.ehayvan.app.modules.viewpetprofile.ui.ViewPetProfileActivity
 import org.json.JSONException
 import org.json.JSONObject
 import org.w3c.dom.Text
@@ -35,6 +36,7 @@ class PetOwnerDashboardActivity :
   private val viewModel: PetOwnerDashboardVM by viewModels<PetOwnerDashboardVM>()
   private lateinit var requestQueue: RequestQueue
   private lateinit var owner: String
+  private lateinit var listAdapter: ListPetAdapter
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     viewModel.navArguments = intent.extras?.getBundle("bundle")
@@ -48,7 +50,6 @@ class PetOwnerDashboardActivity :
   }
   override fun onInitialized(): Unit {
 
-
   }
 
   override fun setUpClicks(): Unit {
@@ -61,16 +62,21 @@ class PetOwnerDashboardActivity :
       intent.putExtras(bundle)
       startActivity(intent)
     }
-  }
-
-  fun onClickRecyclerListPet(
-    view: View,
-    position: Int,
-    item: ListPetRowModel
-  ): Unit {
-    when(view.id) {
-      // Handle item click actions if needed
-    }
+    val dummyList = listOf(ListPetRowModel("",""))
+    listAdapter = ListPetAdapter(dummyList)
+    listAdapter.setOnItemClickListener(object : ListPetAdapter.OnItemClickListener {
+        override fun onItemClick(view: View, position: Int, item: ListPetRowModel) {
+          val bundle = Bundle()
+          val intent = Intent(view.context, ViewPetProfileActivity::class.java)
+          bundle.putString("ownerID", owner)
+          bundle.putString("petName", item.txtTitleOne)
+          bundle.putString("petTypeID", item.txtPriceOne)
+          bundle.putString("age", item.txtAge)
+          bundle.putString("petID", item.petID)
+          intent.putExtras(bundle)
+          startActivity(intent)
+        }
+    })
   }
 
   private fun getPets(ownerID: String?) {
@@ -113,8 +119,8 @@ class PetOwnerDashboardActivity :
             petList.add(listPetRowModel)
           }
           viewModel.petOwnerDashboardModel.value?.txtCount = petList.size.toString()
-          val listPetAdapter = ListPetAdapter(petList)
-          binding.recyclerListPet.adapter = listPetAdapter
+          listAdapter.updateData(petList)
+          binding.recyclerListPet.adapter = listAdapter
           if (petList.isNotEmpty()) {
              body1.visibility = View.GONE
              body2.visibility = View.GONE
@@ -128,12 +134,6 @@ class PetOwnerDashboardActivity :
             container.visibility = View.GONE
             recyclerList.visibility = View.GONE
           }
-
-          listPetAdapter.setOnItemClickListener(object : ListPetAdapter.OnItemClickListener {
-            override fun onItemClick(view: View, position: Int, item: ListPetRowModel) {
-              onClickRecyclerListPet(view, position, item)
-            }
-          })
         }
 
         binding.petOwnerDashboardVM = viewModel
@@ -143,35 +143,6 @@ class PetOwnerDashboardActivity :
         Log.e("YourActivity", "Error: ${error.message}")
       })
 
-    // Add the request to the RequestQueue.
-    /*val jsonObjectRequest2 = JsonObjectRequest(
-      Request.Method.GET, url, null,
-      { response ->
-        // Handle the response
-        val petName = response.optString("petName")
-        val dummyList = listOf(
-          ListPetRowModel(petName, "Price 1"),
-          ListPetRowModel("Pet 2", "Price 2"),
-
-          // Add more items as needed
-        )
-        val listPetAdapter = ListPetAdapter(dummyList)
-        binding.recyclerListPet.adapter = listPetAdapter
-        // Initialize and set up the RecyclerView with the ListPetAdapter
-        listPetAdapter.setOnItemClickListener(object : ListPetAdapter.OnItemClickListener {
-          override fun onItemClick(view: android.view.View, position: Int, item: ListPetRowModel) {
-            onClickRecyclerListPet(view, position, item)
-          }
-        })
-
-        binding.petOwnerDashboardVM = viewModel
-        Log.d("YourActivity", "Pet Name: $petName")
-      },
-      { error ->
-        // Handle errors
-        Log.e("YourActivity", "Error: ${error.message}")
-      }
-    )*/
 
     requestQueue.add(jsonObjectRequest)
   }

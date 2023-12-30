@@ -1,5 +1,6 @@
 package com.ehayvan.app.modules.petownerdashboard.ui
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,6 +29,7 @@ class ListPetAdapter(
 
     override fun getItemCount(): Int = list.size
 
+    @SuppressLint("NotifyDataSetChanged")
     public fun updateData(newData: List<ListPetRowModel>) {
         list = newData
         notifyDataSetChanged()
@@ -50,5 +52,10 @@ class ListPetAdapter(
         view: View
     ) : RecyclerView.ViewHolder(view) {
         val binding: RowPetListBinding = RowPetListBinding.bind(itemView)
+        init {
+            itemView.setOnClickListener {
+                clickListener?.onItemClick(itemView, adapterPosition, list[adapterPosition])
+            }
+        }
     }
 }

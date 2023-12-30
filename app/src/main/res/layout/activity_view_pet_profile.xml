@@ -79,15 +79,16 @@
                     android:paddingVertical="@dimen/_8pxv"
                     android:scaleType="fitCenter"
                     android:src="@drawable/name"
+                    android:layout_gravity="center_vertical"
                     app:tint="#1B85F3"
                     tools:ignore="ContentDescription" />
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="@dimen/_16pxh"
                     android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
                     android:gravity="start">
 
                     <TextView
@@ -101,10 +102,9 @@
 
                     <TextView
                         android:id="@+id/txtName"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="start"
-                        android:layout_marginBottom="30dp"
                         android:textColor="@color/black"
                         android:lineSpacingExtra="@dimen/_6pxh"
                         android:singleLine="true"
@@ -126,6 +126,7 @@
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginStart="@dimen/_16pxh"
                     android:background="#80D1E6FF"
                     android:paddingHorizontal="@dimen/_8pxh"
@@ -136,11 +137,11 @@
                     tools:ignore="ContentDescription" />
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="@dimen/_16pxh"
                     android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
                     android:gravity="start">
 
                     <TextView
@@ -157,7 +158,6 @@
                         style="@style/txtNotoSansnotosanssemibold14"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="30dp"
                         android:gravity="start"
                         android:lineSpacingExtra="@dimen/_6pxh"
                         android:singleLine="true"
@@ -180,6 +180,7 @@
                     android:layout_marginStart="@dimen/_16pxh"
                     android:background="#80D1E6FF"
                     android:paddingHorizontal="@dimen/_8pxh"
+                    android:layout_gravity="center_vertical"
                     android:paddingVertical="@dimen/_8pxv"
                     android:scaleType="fitCenter"
                     android:src="@drawable/icon"
@@ -187,9 +188,9 @@
                     tools:ignore="ContentDescription" />
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginStart="@dimen/_16pxh"
                     android:orientation="vertical"
                     android:gravity="start">
@@ -211,7 +212,7 @@
                         android:lineSpacingExtra="@dimen/_6pxh"
                         android:textColor="@color/black"
                         android:singleLine="true"
-                        android:text="@{viewPetProfileVM.viewPetProfileModel.txtAge}"
+                        android:text='@{viewPetProfileVM.viewPetProfileModel.txtAge + " years old"}'
                         style="@style/txtNotoSansnotosanssemibold14"
                         tools:text="@string/lbl_3_years_old" />
                 </LinearLayout>
