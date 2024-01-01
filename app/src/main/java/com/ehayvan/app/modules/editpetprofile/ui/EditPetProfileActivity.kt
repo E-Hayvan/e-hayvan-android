@@ -105,7 +105,7 @@ class EditPetProfileActivity :
                             bundle.putString("ownerID", owner)
                             intent.putExtras(bundle)
                             startActivity(intent)
-                            finish()
+                            finishAffinity()
                         }
                     },
                     { error ->

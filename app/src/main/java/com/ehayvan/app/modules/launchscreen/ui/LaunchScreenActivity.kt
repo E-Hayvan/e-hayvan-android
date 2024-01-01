@@ -17,6 +17,7 @@ import com.ehayvan.app.modules.launchscreen.`data`.viewmodel.LaunchScreenVM
 import com.ehayvan.app.modules.petownerdashboard.ui.PetOwnerDashboardActivity
 import com.ehayvan.app.modules.register.ui.RegisterActivity
 import com.ehayvan.app.modules.veterinariandashboard.ui.VeterinarianDashboardActivity
+import com.ehayvan.app.modules.vetsearchscreen.ui.VetSearchScreenActivity
 import kotlin.String
 import kotlin.Unit
 

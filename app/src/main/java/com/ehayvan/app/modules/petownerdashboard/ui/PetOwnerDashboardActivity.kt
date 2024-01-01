@@ -24,6 +24,7 @@ import com.ehayvan.app.modules.addpetprofile.ui.AddPetProfileActivity
 import com.ehayvan.app.modules.petownerdashboard.data.model.ListPetRowModel
 import com.ehayvan.app.modules.petownerdashboard.data.viewmodel.PetOwnerDashboardVM
 import com.ehayvan.app.modules.veterinariandashboard.ui.VeterinarianDashboardActivity
+import com.ehayvan.app.modules.vetsearchscreen.ui.VetSearchScreenActivity
 import com.ehayvan.app.modules.viewpetprofile.ui.ViewPetProfileActivity
 import org.json.JSONException
 import org.json.JSONObject
@@ -77,6 +78,13 @@ class PetOwnerDashboardActivity :
           startActivity(intent)
         }
     })
+    binding.petOwnerDashboardSearchView.setOnClickListener {
+      val bundle = Bundle()
+      val intent = Intent(this, VetSearchScreenActivity::class.java)
+      bundle.putString("ownerID", owner)
+      intent.putExtras(bundle)
+      startActivity(intent)
+    }
   }
 
   private fun getPets(ownerID: String?) {

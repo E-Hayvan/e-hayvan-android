@@ -61,7 +61,7 @@ class ViewPetProfileActivity :
             bundle.putString("ownerID", owner)
             intent.putExtras(bundle)
             startActivity(intent)
-            finish()
+            finishAffinity()
           }
         },
         { error ->
@@ -70,7 +70,7 @@ class ViewPetProfileActivity :
           bundle.putString("ownerID", owner)
           intent.putExtras(bundle)
           startActivity(intent)
-          finish()
+          finishAffinity()
           Log.e("YourActivity", "Error: ${error.message}")
         })
 
@@ -83,7 +83,6 @@ class ViewPetProfileActivity :
       bundle.putString("petID", petID)
       intent.putExtras(bundle)
       startActivity(intent)
-      finish()
     }
   }
 
