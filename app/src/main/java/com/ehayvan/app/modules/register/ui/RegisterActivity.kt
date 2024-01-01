@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.widget.AppCompatCheckBox
 import com.android.volley.DefaultRetryPolicy
@@ -168,6 +169,9 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
           },
           { error ->
             // Handle errors
+            progressBar.visibility = View.GONE
+            layout.visibility = View.VISIBLE
+            Toast.makeText(this, "Register Failed Due To Connection", Toast.LENGTH_SHORT).show()
             Log.e("YourActivity", "Error: ${error.message}")
           })
         

@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.viewModels
 import com.android.volley.Request
 import com.android.volley.RequestQueue
@@ -96,6 +97,9 @@ class LogInActivity : BaseActivity<ActivityLogInBinding>(R.layout.activity_log_i
           },
           { error ->
             // Handle errors
+            progressBar.visibility = View.GONE
+            txtContainer.visibility = View.VISIBLE
+            Toast.makeText(this, "Login Failed Due To Connection", Toast.LENGTH_SHORT).show()
             Log.e("YourActivity", "Error: ${error.message}")
           })
 

@@ -88,7 +88,7 @@
                 android:layout_marginTop="@dimen/_10pxv"
                 android:layout_width="match_parent"
                 android:orientation="vertical" style="@style/groupStylecornerRadius_1">
-                <EditText
+                <TextView
                     android:background="@drawable/rectangle_bg_white_a700_border_gray_300_radius_14"
                     android:ellipsize="end"
                     android:hint="@string/lbl_start_date"
@@ -114,7 +114,7 @@
                 android:layout_marginTop="@dimen/_24pxv"
                 android:layout_width="match_parent"
                 android:orientation="vertical" style="@style/groupStylecornerRadius_1">
-                <EditText
+                <TextView
                     android:background="@drawable/rectangle_bg_white_a700_border_gray_300_radius_14"
                     android:ellipsize="end"
                     android:hint="@string/msg_time_of_appoint"

@@ -92,6 +92,7 @@
                 android:layout_marginTop="@dimen/_6pxv" android:layout_width="@dimen/_327pxh"/>
             <ImageView android:id="@+id/imageEmptySpaceIll"
                 android:layout_gravity="start"
+                android:visibility="invisible"
                 android:layout_height="@dimen/_210pxh"
                 android:layout_marginEnd="@dimen/_59pxh"
                 android:layout_marginStart="@dimen/_59pxh"
@@ -107,6 +108,7 @@
                 android:layout_marginStart="@dimen/_16pxh"
                 android:layout_marginTop="@dimen/_30pxv"
                 android:layout_width="wrap_content"
+                android:visibility="invisible"
                 android:lineSpacingExtra="@dimen/_17pxh"
                 android:singleLine="true"
                 android:text="Uh Oh!"
@@ -114,6 +116,7 @@
             <TextView android:gravity="center_horizontal"
                 android:id="@+id/txtBody"
                 android:layout_height="wrap_content"
+                android:visibility="invisible"
                 android:layout_marginEnd="@dimen/_16pxh"
                 android:layout_marginStart="@dimen/_16pxh"
                 android:layout_marginTop="@dimen/_8pxv"

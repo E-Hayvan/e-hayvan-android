@@ -17,6 +17,7 @@ import com.ehayvan.app.R
 import com.ehayvan.app.appcomponents.base.BaseActivity
 import com.ehayvan.app.databinding.ActivityViewPetProfileBinding
 import com.ehayvan.app.modules.addpetprofile.ui.AddPetProfileActivity
+import com.ehayvan.app.modules.appointment.ui.AppointmentActivity
 import com.ehayvan.app.modules.editpetprofile.ui.EditPetProfileActivity
 import com.ehayvan.app.modules.petownerdashboard.data.model.ListPetRowModel
 import com.ehayvan.app.modules.petownerdashboard.ui.PetOwnerDashboardActivity
@@ -81,6 +82,15 @@ class ViewPetProfileActivity :
       val intent = Intent(this, EditPetProfileActivity::class.java)
       bundle.putString("ownerID", owner)
       bundle.putString("petID", petID)
+      intent.putExtras(bundle)
+      startActivity(intent)
+    }
+    binding.btnReserveAnAppointment.setOnClickListener {
+      val bundle = Bundle()
+      val intent = Intent(this, AppointmentActivity::class.java)
+      bundle.putString("ownerID", owner)
+      bundle.putString("petID", petID)
+      bundle.putString("petName", viewModel.viewPetProfileModel.value?.txtName)
       intent.putExtras(bundle)
       startActivity(intent)
     }
