@@ -74,13 +74,7 @@
 
 
                 </LinearLayout>
-                <ImageView
-                    android:layout_gravity="end"
-                    android:src="@drawable/img_search"
-                    android:id="@+id/petOwnerDashboardSearchView"
-                    android:padding="12dp"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp" />
+
             </androidx.appcompat.widget.Toolbar>
             <View
                 android:background="@drawable/rectangle_gradient_s_bluegray_400_87_e_bluegray_400_87"

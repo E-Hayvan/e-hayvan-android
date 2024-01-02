@@ -86,7 +86,7 @@
                 android:ellipsize="end"
                 android:lineSpacingExtra="@dimen/_6pxh"
                 android:singleLine="true"
-                android:text="@{listPetRecordsRowModel.txtLanguage}"
+                android:text='@{listPetRecordsRowModel.txtLanguage + " Drops left"}'
                 tools:text="@string/lbl_4_drops_left" />
 
             <View
@@ -111,7 +111,7 @@
                 android:ellipsize="end"
                 android:lineSpacingExtra="@dimen/_6pxh"
                 android:singleLine="true"
-                android:text="@{listPetRecordsRowModel.txtDuration}"
+                android:text='@{"Every " + listPetRecordsRowModel.txtDuration + " Days"}'
                 tools:text="@string/lbl_every_5_days" />
         </LinearLayout>
     </LinearLayout>

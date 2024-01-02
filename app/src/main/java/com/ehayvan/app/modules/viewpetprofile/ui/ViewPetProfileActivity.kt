@@ -23,6 +23,7 @@ import com.ehayvan.app.modules.petownerdashboard.data.model.ListPetRowModel
 import com.ehayvan.app.modules.petownerdashboard.ui.PetOwnerDashboardActivity
 import com.ehayvan.app.modules.viewpetprofile.`data`.model.ContentRowModel
 import com.ehayvan.app.modules.viewpetprofile.`data`.viewmodel.ViewPetProfileVM
+import com.ehayvan.app.modules.viewpetrecordsone.ui.ViewPetRecordsOneActivity
 import org.json.JSONObject
 import kotlin.Int
 import kotlin.String
@@ -88,6 +89,15 @@ class ViewPetProfileActivity :
     binding.btnReserveAnAppointment.setOnClickListener {
       val bundle = Bundle()
       val intent = Intent(this, AppointmentActivity::class.java)
+      bundle.putString("ownerID", owner)
+      bundle.putString("petID", petID)
+      bundle.putString("petName", viewModel.viewPetProfileModel.value?.txtName)
+      intent.putExtras(bundle)
+      startActivity(intent)
+    }
+    binding.btnViewPetRecordsOne.setOnClickListener {
+      val bundle = Bundle()
+      val intent = Intent(this, ViewPetRecordsOneActivity::class.java)
       bundle.putString("ownerID", owner)
       bundle.putString("petID", petID)
       bundle.putString("petName", viewModel.viewPetProfileModel.value?.txtName)

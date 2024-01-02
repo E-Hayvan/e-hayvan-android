@@ -133,7 +133,7 @@
                 android:layout_marginTop="@dimen/_12pxv"
                 android:layout_width="match_parent"
                 android:orientation="vertical" style="@style/groupStylecornerRadius_1">
-                <EditText
+                <TextView
                     android:background="@drawable/rectangle_bg_white_a700_border_gray_300_radius_14"
                     android:ellipsize="end"
                     android:hint="@string/lbl_start_date"
@@ -164,7 +164,7 @@
                     android:ellipsize="end"
                     android:hint="@string/msg_frequency_of_dr"
                     android:id="@+id/etInputContentTwo"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
                     android:lineSpacingExtra="@dimen/_6pxh"

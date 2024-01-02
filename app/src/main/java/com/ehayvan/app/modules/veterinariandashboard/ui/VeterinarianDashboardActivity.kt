@@ -104,7 +104,7 @@ class VeterinarianDashboardActivity :
             }
             if (petName != "") {
               val appointmentTime = extractTimeFromAppointmentDate(appointmentDate)
-              val listtitleRowModel = ListtitleRowModel(petName, petType, petAge, appointmentTime, appointmentID)
+              val listtitleRowModel = ListtitleRowModel(petName, petType, petAge, appointmentTime, appointmentID, petID)
               appointmentList.add(listtitleRowModel)
             }
           }
@@ -146,7 +146,8 @@ class VeterinarianDashboardActivity :
         val bundle = Bundle()
         val intent = Intent(view.context, EditPetRecordsOneActivity::class.java)
         bundle.putString("petName", item.txtTitle)
-        bundle.putString("petTypeID", item.txtType)
+        bundle.putString("petID", item.petID)
+        bundle.putString("vetID", vetID)
         intent.putExtras(bundle)
         startActivity(intent)
       }
