@@ -292,7 +292,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_15pxh"
                 android:layout_marginStart="@dimen/_15pxh"
-                android:layout_marginTop="180dp"
+                android:layout_marginTop="150dp"
                 android:layout_width="match_parent"
                 android:lineSpacingExtra="@dimen/_6pxh"
                 android:paddingBottom="@dimen/_18pxv"
@@ -303,7 +303,24 @@
                 android:text="Edit Profile"
                 android:textAllCaps="false"
                 style="@style/btnSolidRounded_1"/>
-
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnChangePassword"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15pxh"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginTop="@dimen/_8pxv"
+                android:layout_marginBottom="@dimen/_20pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_6pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="Log Out"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded_3"/>
         </LinearLayout>
     </LinearLayout>
 </layout>

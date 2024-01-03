@@ -14,6 +14,7 @@ import com.ehayvan.app.appcomponents.base.BaseActivity
 import com.ehayvan.app.databinding.ActivityViewProfileBinding
 import com.ehayvan.app.modules.editprofile.ui.EditProfileActivity
 import com.ehayvan.app.modules.petownerdashboard.data.model.ListPetRowModel
+import com.ehayvan.app.modules.register.ui.RegisterActivity
 import com.ehayvan.app.modules.veterinariandashboard.ui.VeterinarianDashboardActivity
 import com.ehayvan.app.modules.viewprofile.`data`.model.Content1RowModel
 import com.ehayvan.app.modules.viewprofile.`data`.viewmodel.ViewProfileVM
@@ -60,6 +61,13 @@ class ViewProfileActivity : BaseActivity<ActivityViewProfileBinding>(R.layout.ac
       bundle.putString("vetID", vetID)
       bundle.putString("ownerID", ownerID)
       bundle.putString("password", password)
+      intent.putExtras(bundle)
+      startActivity(intent)
+      finishAffinity()
+    }
+    binding.btnChangePassword.setOnClickListener {
+      val bundle = Bundle()
+      val intent = Intent(this, RegisterActivity::class.java)
       intent.putExtras(bundle)
       startActivity(intent)
       finishAffinity()
