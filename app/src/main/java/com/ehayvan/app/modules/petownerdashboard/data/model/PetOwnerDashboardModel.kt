@@ -18,31 +18,6 @@ data class PetOwnerDashboardModel(
   /**
    * TODO Replace with dynamic value
    */
-  var txtText: String? = MyApp.getInstance().resources.getString(R.string.msg_active_pet_prof)
+  var txtCount: String? = "1"
   ,
-  /**
-   * TODO Replace with dynamic value
-   */
-  var txtTitle: String? = MyApp.getInstance().resources.getString(R.string.lbl_dudu)
-  ,
-  /**
-   * TODO Replace with dynamic value
-   */
-  var txtCount: Int? = 2
-  ,
-  /**
-   * TODO Replace with dynamic value
-   */
-  var txtPrice: String? = MyApp.getInstance().resources.getString(R.string.msg_dog_3_years_o)
-  ,
-  /**
-   * TODO Replace with dynamic value
-   */
-  var txtTitleOne: String? = MyApp.getInstance().resources.getString(R.string.lbl_bubu)
-  ,
-  /**
-   * TODO Replace with dynamic value
-   */
-  var txtPriceOne: String? = MyApp.getInstance().resources.getString(R.string.msg_dog_2_years_o)
-
 )

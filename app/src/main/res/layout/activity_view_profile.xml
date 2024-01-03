@@ -48,7 +48,7 @@
                             android:layout_weight="0.69"
                             android:singleLine="true"
                             style="@style/txtCatamaranromansemibold16"
-                            tools:text="View Profile"/>
+                            android:text="View Profile"/>
                 </LinearLayout>
             </androidx.appcompat.widget.Toolbar>
             <View
@@ -66,6 +66,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
+                android:background="@drawable/rectangle_bg_white_a700_border_gray_300_radius_14"
                 android:layout_marginBottom="15dp"
                 android:orientation="horizontal"
                 android:gravity="start">
@@ -74,7 +75,8 @@
                     android:background="#80D1E6FF"
                     android:layout_height="48dp"
                     android:layout_width="48dp"
-                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginStart="15dp"
+                    android:layout_gravity="center_vertical"
                     android:paddingHorizontal="@dimen/_8pxh"
                     android:paddingVertical="@dimen/_8pxv"
                     android:scaleType="fitCenter"
@@ -83,17 +85,18 @@
                     tools:ignore="ContentDescription" />
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="@dimen/_16pxh"
                     android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
                     android:gravity="start">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="start"
+                        android:layout_gravity="center_vertical"
                         android:lineSpacingExtra="@dimen/_6pxh"
                         android:singleLine="true"
                         style="@style/txtNotoSansnotosansregular14"
@@ -104,7 +107,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="start"
-                        android:layout_marginBottom="30dp"
+                        android:layout_gravity="center_vertical"
                         android:textColor="@color/black"
                         android:lineSpacingExtra="@dimen/_6pxh"
                         android:singleLine="true"
@@ -119,6 +122,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
+                android:background="@drawable/rectangle_bg_white_a700_border_gray_300_radius_14"
                 android:layout_marginBottom="15dp"
                 android:orientation="horizontal"
                 android:gravity="start">
@@ -127,7 +131,8 @@
                     android:background="#80D1E6FF"
                     android:layout_height="48dp"
                     android:layout_width="48dp"
-                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginStart="15dp"
+                    android:layout_gravity="center_vertical"
                     android:paddingHorizontal="@dimen/_8pxh"
                     android:paddingVertical="@dimen/_8pxv"
                     android:scaleType="fitCenter"
@@ -136,33 +141,36 @@
                     tools:ignore="ContentDescription" />
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="@dimen/_16pxh"
                     android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
                     android:gravity="start">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="start"
+                        android:layout_gravity="center_vertical"
                         android:lineSpacingExtra="@dimen/_6pxh"
                         android:singleLine="true"
                         style="@style/txtNotoSansnotosansregular14"
-                        android:text="E-Mail Address" />
+                        android:text="@string/lbl_e_mail_address" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/txtBody2"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="start"
-                        android:layout_marginBottom="30dp"
+                        android:layout_gravity="center_vertical"
                         android:textColor="@color/black"
                         android:lineSpacingExtra="@dimen/_6pxh"
                         android:singleLine="true"
                         android:text="@{viewProfileVM.viewProfileModel.txtEMail}"
                         style="@style/txtNotoSansnotosanssemibold14"
-                        tools:text="@string/lbl_e_mail_address" />
+                        tools:text="@string/msg_name_and_surnam"
+                        />
                 </LinearLayout>
             </LinearLayout>
 
@@ -170,14 +178,17 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
+                android:background="@drawable/rectangle_bg_white_a700_border_gray_300_radius_14"
+                android:layout_marginBottom="15dp"
                 android:orientation="horizontal"
                 android:gravity="start">
 
                 <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="@dimen/_16pxh"
                     android:background="#80D1E6FF"
+                    android:layout_height="48dp"
+                    android:layout_width="48dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_gravity="center_vertical"
                     android:paddingHorizontal="@dimen/_8pxh"
                     android:paddingVertical="@dimen/_8pxv"
                     android:scaleType="fitCenter"
@@ -186,35 +197,94 @@
                     tools:ignore="ContentDescription" />
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="@dimen/_16pxh"
                     android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
                     android:gravity="start">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="start"
+                        android:layout_gravity="center_vertical"
                         android:lineSpacingExtra="@dimen/_6pxh"
                         android:singleLine="true"
                         style="@style/txtNotoSansnotosansregular14"
-                        android:text="User Type" />
+                        android:text="@string/lbl_user_type" />
 
                     <TextView
+                        android:id="@+id/txtBody3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="start"
-                        android:lineSpacingExtra="@dimen/_6pxh"
+                        android:layout_gravity="center_vertical"
                         android:textColor="@color/black"
+                        android:lineSpacingExtra="@dimen/_6pxh"
                         android:singleLine="true"
                         android:text="@{viewProfileVM.viewProfileModel.txtUserType}"
                         style="@style/txtNotoSansnotosanssemibold14"
-                        tools:text="@string/lbl_user_type" />
+                        tools:text="@string/lbl_user_type"
+                        />
                 </LinearLayout>
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/rectangle_bg_white_a700_border_gray_300_radius_14"
+                android:layout_marginBottom="15dp"
+                android:visibility="gone"
+                android:id="@+id/container"
+                android:orientation="horizontal"
+                android:gravity="start">
 
+                <ImageView
+                    android:background="#80D1E6FF"
+                    android:layout_height="48dp"
+                    android:layout_width="48dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/_8pxh"
+                    android:paddingVertical="@dimen/_8pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/clinic"
+                    app:tint="#1B85F3"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="start">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:layout_gravity="center_vertical"
+                        android:lineSpacingExtra="@dimen/_6pxh"
+                        android:singleLine="true"
+                        style="@style/txtNotoSansnotosansregular14"
+                        android:text="@string/lbl_clinic" />
+
+                    <TextView
+                        android:id="@+id/txtBody4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:lineSpacingExtra="@dimen/_6pxh"
+                        android:singleLine="true"
+                        android:text="@{viewProfileVM.viewProfileModel.txtClinic}"
+                        style="@style/txtNotoSansnotosanssemibold14"
+                        tools:text="@string/msg_name_and_surnam"
+                        />
+                </LinearLayout>
+            </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:ellipsize="end" android:gravity="center"
@@ -222,7 +292,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_15pxh"
                 android:layout_marginStart="@dimen/_15pxh"
-                android:layout_marginTop="190dp"
+                android:layout_marginTop="150dp"
                 android:layout_width="match_parent"
                 android:lineSpacingExtra="@dimen/_6pxh"
                 android:paddingBottom="@dimen/_18pxv"
@@ -248,9 +318,9 @@
                 android:paddingStart="@dimen/_30pxh"
                 android:paddingTop="@dimen/_18pxv"
                 android:singleLine="true"
-                android:text="Change Password"
+                android:text="Log Out"
                 android:textAllCaps="false"
-                style="@style/btnSolidRounded_1"/>
+                style="@style/btnSolidRounded_3"/>
         </LinearLayout>
     </LinearLayout>
 </layout>

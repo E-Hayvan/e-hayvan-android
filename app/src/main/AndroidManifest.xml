@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest package="com.ehayvan.app" xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest package="com.ehayvan.app" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:usesCleartextTraffic="true">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application android:allowBackup="false"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name" android:largeHeap="true"
+        android:icon="@drawable/type"
+        android:label="@string/app_name2" android:largeHeap="true"
         android:name="com.ehayvan.app.appcomponents.di.MyApp"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
         <activity
             android:name="com.ehayvan.app.modules.viewprofile.ui.ViewProfileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ehayvan.app.modules.editpetprofile.ui.EditPetProfileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ehayvan.app.modules.editprofile.ui.EditProfileActivity" android:screenOrientation="portrait"/>
         <activity
             android:name="com.ehayvan.app.modules.editpetrecordstwoempty.ui.EditPetRecordsTwoEmptyActivity" android:screenOrientation="portrait"/>
         <activity

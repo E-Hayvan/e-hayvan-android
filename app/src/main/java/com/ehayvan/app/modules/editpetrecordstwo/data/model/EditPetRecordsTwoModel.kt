@@ -12,6 +12,7 @@ data class EditPetRecordsTwoModel(
   ,
   var txtLanguage: String? = MyApp.getInstance().resources.getString(R.string.lbl_4_drops_left)
   ,
-  var txtDuration: String? = MyApp.getInstance().resources.getString(R.string.lbl_every_5_days)
+  var txtDuration: String? = MyApp.getInstance().resources.getString(R.string.lbl_every_5_days),
+  var txtTitle: String? = "Drops"
 
 )

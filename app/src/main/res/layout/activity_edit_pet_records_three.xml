@@ -55,7 +55,7 @@
                             android:lineSpacingExtra="@dimen/_6pxh"
                             android:singleLine="true"
                             android:text="Edit Pet Records"
-                            style="Drops"
+                            style="@style/txtNotoSansnotosansregular14"
                             tools:text="@string/msg_edit_pet_record"/>
 
 
@@ -77,7 +77,7 @@
                         android:layout_height="48dp"
                         android:layout_marginStart="@dimen/_7pxh"
                         android:layout_marginTop="17dp"
-                        android:layout_width="@dimen/_65pxh"
+                        android:layout_width="wrap_content"
                         android:lineSpacingExtra="@dimen/_6pxh"
                         android:paddingBottom="@dimen/_10pxv"
                         android:paddingEnd="@dimen/_14pxh"
@@ -116,7 +116,7 @@
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
                     android:lineSpacingExtra="@dimen/_6pxh"
-                    android:paddingBottom="@dimen/_13pxv"
+                    android:paddingBottom="@dimen/_15pxv"
                     android:paddingEnd="@dimen/_30pxh"
                     android:paddingStart="@dimen/_16pxh"
                     android:paddingTop="@dimen/_18pxv"
@@ -133,7 +133,7 @@
                 android:layout_marginTop="@dimen/_12pxv"
                 android:layout_width="match_parent"
                 android:orientation="vertical" style="@style/groupStylecornerRadius_1">
-                <EditText
+                <TextView
                     android:background="@drawable/rectangle_bg_white_a700_border_gray_300_radius_14"
                     android:ellipsize="end"
                     android:hint="@string/lbl_start_date"
@@ -164,7 +164,7 @@
                     android:ellipsize="end"
                     android:hint="@string/msg_frequency_of_dr"
                     android:id="@+id/etInputContentTwo"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
                     android:lineSpacingExtra="@dimen/_6pxh"

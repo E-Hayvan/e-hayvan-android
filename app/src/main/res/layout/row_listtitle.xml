@@ -25,7 +25,7 @@
             android:layout_marginTop="@dimen/_4pxv"
             android:layout_width="wrap_content"
             android:lineSpacingExtra="@dimen/_6pxh"
-            android:text="@{listtitleRowModel.txtPrice}"
+            android:text='@{listtitleRowModel.txtType + " | " + listtitleRowModel.txtAge + " years old " + listtitleRowModel.txtTime}'
             style="@style/txtNotoSansnotosansregular14_1" tools:text="@string/msg_dog_2_years_o2"/>
         <ImageView android:id="@+id/imageVector"
             android:layout_height="@dimen/_17pxh"

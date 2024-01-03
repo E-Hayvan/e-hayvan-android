@@ -20,8 +20,25 @@
                     android:layout_marginStart="@dimen/_15pxh"
                     android:layout_marginTop="@dimen/_24pxv"
                     android:layout_width="match_parent" app:contentInsetStart="0dp">
-
-                    <LinearLayout android:gravity="end"
+                    <FrameLayout android:id="@+id/frameStackvector"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_36pxv"
+                        android:layout_marginEnd="@dimen/_16pxh"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_width="@dimen/_36pxh" style="@style/groupStylecornerRadius_4">
+                        <ImageView android:id="@+id/imageVector"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_24pxh"
+                            android:layout_marginBottom="@dimen/_18pxv"
+                            android:layout_marginEnd="@dimen/_21pxh"
+                            android:layout_marginStart="@dimen/_21pxh"
+                            android:layout_marginTop="@dimen/_18pxv"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_iconframe"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_iconframe"/>
+                    </FrameLayout>
+                    <LinearLayout
                         android:id="@+id/linearNavigationHead"
                         android:layout_height="wrap_content"
                         android:layout_width="match_parent" android:orientation="horizontal">
@@ -29,7 +46,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:layout_marginEnd="270dp">
+                            android:layout_gravity="start">
 
                             <TextView
                                 android:ellipsize="end"
@@ -54,15 +71,14 @@
                                 style="@style/txtNotoSansnotosanssemibold16"
                                 tools:text="@string/lbl_esther"/>
                         </LinearLayout>
-                        <SearchView
-                            android:id="@+id/petOwnerDashboardSearchView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="10dp"/>
-
-
                     </LinearLayout>
-
+                    <ImageView
+                        android:layout_gravity="end"
+                        android:src="@drawable/img_search"
+                        android:id="@+id/petOwnerDashboardSearchView"
+                        android:padding="12dp"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp" />
                 </androidx.appcompat.widget.Toolbar>
             <View
                 android:background="@drawable/rectangle_gradient_s_bluegray_400_87_e_bluegray_400_87"
@@ -72,9 +88,44 @@
                 android:layout_marginStart="@dimen/_15pxh"
                 android:layout_marginBottom="35dp"
                 android:layout_marginTop="@dimen/_6pxv" android:layout_width="@dimen/_327pxh"/>
+            <ImageView android:id="@+id/imageEmptySpaceIll"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_210pxh"
+                android:visibility="invisible"
+                android:layout_marginEnd="@dimen/_59pxh"
+                android:layout_marginStart="@dimen/_59pxh"
+                android:layout_marginTop="@dimen/_8pxv"
+                android:layout_width="@dimen/_225pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_emptyspaceill"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_emptyspaceill"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtTitle"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:visibility="invisible"
+                android:layout_marginTop="@dimen/_30pxv"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_17pxh"
+                android:singleLine="true"
+                android:text="Uh Oh!"
+                style="@style/txtCatamaranbold26" tools:text="@string/lbl_uh_oh"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtBody"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_8pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:text="Looks like you have no profiles set up at this moment, add your pet now"
+                style="@style/txtNotoSansnotosansmedium16" tools:text="@string/msg_looks_like_you"/>
             <LinearLayout android:gravity="start"
                 android:id="@+id/linearNavigationSe"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:layout_marginEnd="@dimen/_21pxh"
                 android:layout_marginStart="@dimen/_21pxh"
                 android:layout_width="wrap_content" android:orientation="horizontal">
@@ -87,7 +138,7 @@
                     android:layout_width="0dp"
                     android:lineSpacingExtra="@dimen/_6pxh"
                     android:singleLine="true"
-                    android:text="@{petOwnerDashboardVM.petOwnerDashboardModel.txtText}"
+                    android:text="@string/msg_active_pet_prof"
                     style="@style/txtNotoSansnotosanssemibold16" tools:text="@string/msg_active_pet_prof"/>
                 <androidx.appcompat.widget.AppCompatButton
                     android:ellipsize="end" android:gravity="center"
@@ -96,6 +147,7 @@
                     android:layout_marginStart="@dimen/_6pxh"
                     android:layout_width="@dimen/_25pxh"
                     android:lineSpacingExtra="@dimen/_6pxh"
+                    android:layout_marginTop="3dp"
                     android:paddingBottom="@dimen/_4pxv"
                     android:paddingEnd="@dimen/_8pxh"
                     android:paddingStart="@dimen/_8pxh"
@@ -108,21 +160,24 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:gravity="center_horizontal"
                 android:id="@+id/recyclerListPet"
-                android:layout_height="wrap_content"
+                android:layout_height="400dp"
+                android:clickable="true"
+                android:visibility="gone"
                 android:layout_marginEnd="@dimen/_16pxh"
                 android:layout_marginStart="@dimen/_16pxh"
                 android:layout_marginTop="@dimen/_15pxv"
                 android:layout_width="match_parent"
                 android:orientation="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                itemSpace="@{@dimen/_24pxh}" tools:itemCount="2" tools:listitem="@layout/row_pet_list"/>
+                itemSpace="@{@dimen/_24pxh}" tools:itemCount="2" tools:listitem="@layout/row_pet_list"
+                android:focusable="true" />
             <LinearLayout android:gravity="center_horizontal"
                 android:id="@+id/linearButtonsContain"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_20pxv"
                 android:layout_marginEnd="@dimen/_15pxh"
                 android:layout_marginStart="@dimen/_16pxh"
-                android:layout_marginTop="@dimen/_87pxv"
+                android:layout_marginTop="@dimen/_50pxv"
                 android:layout_width="match_parent"
                 android:orientation="vertical" style="@style/groupStylecornerRadius_2">
                 <androidx.appcompat.widget.AppCompatButton

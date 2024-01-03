@@ -76,7 +76,7 @@
                         android:id="@+id/btnDudu"
                         android:layout_height="48dp"
                         android:layout_marginStart="@dimen/_7pxh"
-                        android:layout_width="@dimen/_65pxh"
+                        android:layout_width="wrap_content"
                         android:lineSpacingExtra="@dimen/_6pxh"
                         android:paddingBottom="@dimen/_10pxv"
                         android:paddingEnd="@dimen/_14pxh"
@@ -98,9 +98,34 @@
                 android:layout_marginStart="@dimen/_16pxh"
                 android:layout_marginTop="@dimen/_9pxv" android:layout_width="@dimen/_327pxh"/>
 
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTitleOne"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_marginEnd="@dimen/_13pxh"
+                android:layout_marginStart="@dimen/_13pxh"
+                android:layout_marginTop="@dimen/_50pxv"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_17pxh"
+                android:singleLine="true"
+                android:text='@{"No " + viewPetRecordsTwoVM.viewPetRecordsTwoModel.txtTitle + " Added"}'
+                style="@style/txtCatamaranbold26" tools:text="@string/lbl_no_drops_added"/>
+            <ImageView android:id="@+id/imageIllustration"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_173pxh"
+                android:layout_marginEnd="@dimen/_13pxh"
+                android:layout_marginStart="@dimen/_13pxh"
+                android:layout_marginTop="@dimen/_39pxv"
+                android:visibility="invisible"
+                android:layout_width="@dimen/_225pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_illustration"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_illustration"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:gravity="center_horizontal"
                 android:id="@+id/recyclerListPetRecords"
+                android:visibility="gone"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_16pxh"
                 android:layout_marginStart="@dimen/_14pxh"

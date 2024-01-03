@@ -60,7 +60,7 @@
                         android:id="@+id/btnDudu"
                         android:layout_height="@dimen/_40pxv"
                         android:layout_marginStart="@dimen/_40pxh"
-                        android:layout_width="@dimen/_65pxh"
+                        android:layout_width="wrap_content"
                         android:lineSpacingExtra="@dimen/_6pxh"
                         android:paddingBottom="@dimen/_10pxv"
                         android:paddingEnd="@dimen/_14pxh"
@@ -88,12 +88,12 @@
                 android:layout_marginTop="@dimen/_10pxv"
                 android:layout_width="match_parent"
                 android:orientation="vertical" style="@style/groupStylecornerRadius_1">
-                <EditText
+                <TextView
                     android:background="@drawable/rectangle_bg_white_a700_border_gray_300_radius_14"
                     android:ellipsize="end"
                     android:hint="@string/lbl_start_date"
                     android:id="@+id/etInputContent"
-                    android:inputType="text"
+                    android:inputType="date"
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
                     android:lineSpacingExtra="@dimen/_6pxh"
@@ -114,12 +114,12 @@
                 android:layout_marginTop="@dimen/_24pxv"
                 android:layout_width="match_parent"
                 android:orientation="vertical" style="@style/groupStylecornerRadius_1">
-                <EditText
+                <TextView
                     android:background="@drawable/rectangle_bg_white_a700_border_gray_300_radius_14"
                     android:ellipsize="end"
                     android:hint="@string/msg_time_of_appoint"
                     android:id="@+id/etInputContentOne"
-                    android:inputType="text"
+                    android:inputType="time"
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
                     android:lineSpacingExtra="@dimen/_6pxh"

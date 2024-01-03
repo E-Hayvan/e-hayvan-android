@@ -84,9 +84,10 @@
                                     android:paddingBottom="@dimen/_13pxv"
                                     android:paddingEnd="@dimen/_30pxh"
                                     android:paddingStart="@dimen/_16pxh"
-                                    android:paddingTop="@dimen/_18pxv"
+                                    android:paddingTop="@dimen/_16pxv"
                                     android:lineSpacingExtra="@dimen/_6pxh"
                                     android:singleLine="true"
+                                    android:textColorHint="@color/bluegray_400"
                                     android:text="@{registerVM.registerModel.etInputContentOneValue}"
                                     style="@style/etSolidRoundedOutline" tools:ignore="Autofill" android:hint="@string/msg_name_and_surnam"/>
                             </LinearLayout>
@@ -109,15 +110,17 @@
                                 <EditText android:ellipsize="end"
                                     android:gravity="start"
                                     android:id="@+id/txtLabel2"
+                                    android:inputType="text"
                                     android:layout_height="match_parent"
                                     android:layout_width="match_parent"
                                     android:paddingBottom="@dimen/_13pxv"
                                     android:paddingEnd="@dimen/_30pxh"
                                     android:paddingStart="@dimen/_16pxh"
-                                    android:paddingTop="@dimen/_18pxv"
+                                    android:paddingTop="@dimen/_16pxv"
                                     android:lineSpacingExtra="@dimen/_6pxh"
                                     android:singleLine="true"
                                     android:text="@{registerVM.registerModel.etInputContentTwoValue}"
+                                    android:textColorHint="@color/bluegray_400"
                                     style="@style/etSolidRoundedOutline" tools:ignore="Autofill" android:hint="@string/lbl_your_email"/>
                             </LinearLayout>
                         </LinearLayout>
@@ -144,10 +147,12 @@
                                     android:paddingBottom="@dimen/_13pxv"
                                     android:paddingEnd="@dimen/_30pxh"
                                     android:paddingStart="@dimen/_16pxh"
-                                    android:paddingTop="@dimen/_18pxv"
+                                    android:paddingTop="@dimen/_16pxv"
+                                    android:inputType="textPassword"
                                     android:lineSpacingExtra="@dimen/_6pxh"
                                     android:singleLine="true"
                                     android:text="@{registerVM.registerModel.etInputContentThreeValue}"
+                                    android:textColorHint="@color/bluegray_400"
                                     style="@style/etSolidRoundedOutline" tools:ignore="Autofill" android:hint="@string/lbl_password"/>
                             </LinearLayout>
                         </LinearLayout>
@@ -244,11 +249,21 @@
                             android:layout_width="match_parent"
                             android:lineSpacingExtra="@dimen/_6pxh"
                             android:singleLine="true"
-                            style="@style/txtNotoSansnotosansmedium14_1" android:text="@string/msg_already_have_an"/>
+                            style="@style/txtNotoSansnotosansmedium14_1"
+                            android:text="@string/msg_already_have_an"/>
                     </LinearLayout>
 
                 </FrameLayout>
             </LinearLayout>
         </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:indeterminate="true"
+            android:indeterminateTint="@android:color/holo_blue_dark"
+            android:padding="150dp"
+            android:background = "@color/white"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
     </LinearLayout>
 </layout>

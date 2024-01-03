@@ -3,6 +3,7 @@ package com.ehayvan.app.modules.veterinariandashboard.ui
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.ehayvan.app.R
 import com.ehayvan.app.databinding.RowListtitleBinding
@@ -21,15 +22,11 @@ class ListtitleAdapter(
   }
 
   override fun onBindViewHolder(holder: RowListtitleVH, position: Int) {
-    val listtitleRowModel = ListtitleRowModel()
-    // TODO uncomment following line after integration with data source
-    // val listtitleRowModel = list[position]
-    holder.binding.listtitleRowModel = listtitleRowModel
+    val listTitleRowModel = list[position]
+    holder.binding.listtitleRowModel = listTitleRowModel
   }
 
-  override fun getItemCount(): Int = 3
-  // TODO uncomment following line after integration with data source
-  // return list.size
+  override fun getItemCount(): Int = list.size
 
   public fun updateData(newData: List<ListtitleRowModel>) {
     list = newData
@@ -47,11 +44,23 @@ class ListtitleAdapter(
       item: ListtitleRowModel
     ) {
     }
+    fun onImageClick(view: View, position: Int, item: ListtitleRowModel)
   }
 
   inner class RowListtitleVH(
     view: View
   ) : RecyclerView.ViewHolder(view) {
     val binding: RowListtitleBinding = RowListtitleBinding.bind(itemView)
+    init {
+      itemView.setOnClickListener {
+        clickListener?.onItemClick(itemView, adapterPosition, list[adapterPosition])
+      }
+      itemView.findViewById<ImageView>(R.id.imageVector).setOnClickListener {
+        val position = adapterPosition
+        if (position != RecyclerView.NO_POSITION) {
+          clickListener?.onImageClick(itemView, position, list[position])
+        }
+      }
+    }
   }
 }

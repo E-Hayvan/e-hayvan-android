@@ -42,16 +42,13 @@
                         <TextView
                             android:id="@+id/txtTitle"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="25dp"
                             android:gravity="center"
-                            android:layout_marginBottom="@dimen/_7pxv"
-                            android:layout_marginTop="15dp"
-                            android:layout_weight="0.9"
-                            android:layout_width="0dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="match_parent"
                             android:lineSpacingExtra="@dimen/_11pxh"
                             android:singleLine="true"
-                            android:text="@{addPetProfileVM.addPetProfileModel.txtTitle}"
-                            style="@style/txtCatamaranromansemibold16" tools:text="@string/lbl_add_pet_profile"/>
+                            android:text="@string/lbl_add_pet_profile"
+                            style="@style/txtCatamaranromansemibold16"/>
                     </LinearLayout>
                 </androidx.appcompat.widget.Toolbar>
                 <View android:background="@color/bluegray_50"
@@ -89,32 +86,7 @@
                     android:textColorHint="@color/bluegray_400"
                     style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
             </LinearLayout>
-            <LinearLayout android:gravity="center_horizontal"
-                android:id="@+id/linearInputBox1"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_15pxh"
-                android:layout_marginStart="@dimen/_15pxh"
-                android:layout_marginTop="@dimen/_24pxv"
-                android:layout_width="match_parent"
-                android:orientation="vertical" style="@style/groupStylecornerRadius_1">
-                <EditText
-                    android:background="@drawable/rectangle_bg_white_a700_border_gray_300_radius_14"
-                    android:ellipsize="end"
-                    android:hint="@string/lbl_your_pet_s_type"
-                    android:id="@+id/etInputContentOne"
-                    android:inputType="text"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
-                    android:lineSpacingExtra="@dimen/_6pxh"
-                    android:paddingBottom="@dimen/_13pxv"
-                    android:paddingEnd="@dimen/_30pxh"
-                    android:paddingStart="@dimen/_16pxh"
-                    android:paddingTop="@dimen/_18pxv"
-                    android:singleLine="true"
-                    android:text="@={addPetProfileVM.addPetProfileModel.etInputContentOneValue}"
-                    android:textColorHint="@color/bluegray_400"
-                    style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
-            </LinearLayout>
+
             <LinearLayout android:gravity="center_horizontal"
                 android:id="@+id/linearInputBox2"
                 android:layout_height="wrap_content"
@@ -128,7 +100,7 @@
                     android:ellipsize="end"
                     android:hint="@string/lbl_your_pet_s_age"
                     android:id="@+id/etLanguage"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
                     android:lineSpacingExtra="@dimen/_6pxh"
@@ -140,6 +112,22 @@
                     android:text="@={addPetProfileVM.addPetProfileModel.etLanguageValue}"
                     android:textColorHint="@color/bluegray_400"
                     style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearInputBox1"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15pxh"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylecornerRadius_1">
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/bluegray_400"
+                    android:background="@drawable/rectangle_bg_white_a700_border_gray_300_radius_14"
+                    android:prompt="@string/dropdown_prompt" />
             </LinearLayout>
             <androidx.appcompat.widget.AppCompatButton
                 android:ellipsize="end" android:gravity="center"

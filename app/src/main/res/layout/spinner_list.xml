@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:lineSpacingExtra="@dimen/_6pxh"
+    android:paddingBottom="@dimen/_13pxv"
+    android:paddingEnd="@dimen/_30pxh"
+    android:paddingStart="@dimen/_16pxh"
+    android:paddingTop="@dimen/_16pxv"
+    style="@style/etSolidRoundedOutline"
+    android:background="@drawable/rectange_bg_white_a700_border_gray_300_no_radius"/>

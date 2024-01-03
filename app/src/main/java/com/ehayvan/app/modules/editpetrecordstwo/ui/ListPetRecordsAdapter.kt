@@ -1,5 +1,6 @@
 package com.ehayvan.app.modules.editpetrecordstwo.ui
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,15 +21,13 @@ class ListPetRecordsAdapter(
     }
 
     override fun onBindViewHolder(holder: RowListPetRecordsVH, position: Int) {
-        val listPetRecordsRowModel = ListPetRecordsRowModel()
+        val listPetRecordsRowModel = list[position]
         // Uncomment the following line after integration with data source
         // val listPetRecordsRowModel = list[position]
         holder.binding.listPetRecordsRowModel = listPetRecordsRowModel
     }
 
-    override fun getItemCount(): Int = 3
-    // Uncomment the following line after integration with data source
-    // return list.size
+    override fun getItemCount(): Int = list.size
 
     public fun updateData(newData: List<ListPetRecordsRowModel>) {
         list = newData
@@ -52,5 +51,10 @@ class ListPetRecordsAdapter(
         view: View
     ) : RecyclerView.ViewHolder(view) {
         val binding: RowPetRecordsBinding = RowPetRecordsBinding.bind(itemView)
+        init {
+            itemView.setOnClickListener {
+                clickListener?.onItemClick(itemView, adapterPosition, list[adapterPosition])
+            }
+        }
     }
 }
