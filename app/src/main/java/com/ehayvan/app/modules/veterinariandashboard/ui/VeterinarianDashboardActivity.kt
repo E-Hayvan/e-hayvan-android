@@ -23,6 +23,7 @@ import com.ehayvan.app.modules.petownerdashboard.data.model.ListPetRowModel
 import com.ehayvan.app.modules.petownerdashboard.ui.PetOwnerDashboardActivity
 import com.ehayvan.app.modules.veterinariandashboard.`data`.model.ListtitleRowModel
 import com.ehayvan.app.modules.veterinariandashboard.`data`.viewmodel.VeterinarianDashboardVM
+import com.ehayvan.app.modules.viewprofile.ui.ViewProfileActivity
 import org.json.JSONObject
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -181,6 +182,13 @@ class VeterinarianDashboardActivity :
         requestQueue.add(jsonObjectRequest)
       }
     })
+    binding.frameStackvector.setOnClickListener {
+      val bundle = Bundle()
+      val intent = Intent(this, ViewProfileActivity::class.java)
+      bundle.putString("vetID", vetID)
+      intent.putExtras(bundle)
+      startActivity(intent)
+    }
   }
 
   fun extractTimeFromAppointmentDate(appointmentDate: String): String? {

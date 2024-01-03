@@ -65,7 +65,7 @@
                                 android:theme="@style/ThemeOverlay.SearchView"
                                 android:queryHint="Search for vets by clinic name"
                                 app:iconifiedByDefault="false"
-                                app:queryHint="Search vets by clinic name" />
+                                app:queryHint="Search vets by name" />
 
                         </LinearLayout>
                     </LinearLayout>

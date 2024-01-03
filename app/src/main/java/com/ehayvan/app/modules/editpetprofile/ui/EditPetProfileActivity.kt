@@ -41,7 +41,7 @@ class EditPetProfileActivity :
         val mSpinner = findViewById<Spinner>(R.id.spinner)
 
         // Create a list to display in the Spinner
-        val mList = arrayOf<String?>("Dog", "Cat", "Bird", "Other")
+        val mList = arrayOf<String?>("Cat", "Dog", "Bird", "Other")
 
         // Create an adapter as shown below
         val mArrayAdapter = ArrayAdapter<Any?>(this, R.layout.spinner_list, mList)

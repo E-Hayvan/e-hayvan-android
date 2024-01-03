@@ -60,7 +60,7 @@
                         android:id="@+id/btnDudu"
                         android:layout_height="48dp"
                         android:layout_marginStart="@dimen/_7pxh"
-                        android:layout_width="@dimen/_65pxh"
+                        android:layout_width="wrap_content"
                         android:lineSpacingExtra="@dimen/_6pxh"
                         android:paddingBottom="@dimen/_10pxv"
                         android:paddingEnd="@dimen/_14pxh"

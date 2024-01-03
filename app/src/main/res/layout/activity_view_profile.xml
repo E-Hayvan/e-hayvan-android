@@ -48,7 +48,7 @@
                             android:layout_weight="0.69"
                             android:singleLine="true"
                             style="@style/txtCatamaranromansemibold16"
-                            tools:text="View Profile"/>
+                            android:text="View Profile"/>
                 </LinearLayout>
             </androidx.appcompat.widget.Toolbar>
             <View
@@ -235,6 +235,7 @@
                 android:background="@drawable/rectangle_bg_white_a700_border_gray_300_radius_14"
                 android:layout_marginBottom="15dp"
                 android:visibility="gone"
+                android:id="@+id/container"
                 android:orientation="horizontal"
                 android:gravity="start">
 
@@ -291,7 +292,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_15pxh"
                 android:layout_marginStart="@dimen/_15pxh"
-                android:layout_marginTop="150dp"
+                android:layout_marginTop="180dp"
                 android:layout_width="match_parent"
                 android:lineSpacingExtra="@dimen/_6pxh"
                 android:paddingBottom="@dimen/_18pxv"
@@ -302,24 +303,7 @@
                 android:text="Edit Profile"
                 android:textAllCaps="false"
                 style="@style/btnSolidRounded_1"/>
-            <androidx.appcompat.widget.AppCompatButton
-                android:ellipsize="end" android:gravity="center"
-                android:id="@+id/btnChangePassword"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_15pxh"
-                android:layout_marginStart="@dimen/_15pxh"
-                android:layout_marginTop="@dimen/_8pxv"
-                android:layout_marginBottom="@dimen/_20pxv"
-                android:layout_width="match_parent"
-                android:lineSpacingExtra="@dimen/_6pxh"
-                android:paddingBottom="@dimen/_18pxv"
-                android:paddingEnd="@dimen/_30pxh"
-                android:paddingStart="@dimen/_30pxh"
-                android:paddingTop="@dimen/_18pxv"
-                android:singleLine="true"
-                android:text="Change Password"
-                android:textAllCaps="false"
-                style="@style/btnSolidRounded_1"/>
+
         </LinearLayout>
     </LinearLayout>
 </layout>

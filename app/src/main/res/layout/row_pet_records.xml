@@ -6,7 +6,7 @@
     <LinearLayout
         android:id="@+id/linearCardHorizontal"
         style="@style/groupStylewhite_1"
-        android:layout_width="370dp"
+        android:layout_width="390dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="@dimen/_19pxv"
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_7pxh"
                 android:layout_marginTop="@dimen/_1pxv"
-                android:layout_weight="0.29"
+                android:layout_weight="0.35"
                 android:ellipsize="end"
                 android:lineSpacingExtra="@dimen/_6pxh"
                 android:singleLine="true"
@@ -82,12 +82,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5pxh"
                 android:layout_marginTop="@dimen/_1pxv"
-                android:layout_weight="0.31"
+                android:layout_weight="0.41"
                 android:ellipsize="end"
                 android:lineSpacingExtra="@dimen/_6pxh"
                 android:singleLine="true"
                 android:text='@{listPetRecordsRowModel.txtLanguage + " Drops left"}'
-                tools:text="@string/lbl_4_drops_left" />
+                tools:text="11 Drops Left" />
 
             <View
                 android:id="@+id/lineDividerOne"
@@ -107,12 +107,12 @@
                 android:layout_marginStart="@dimen/_5pxh"
                 android:layout_marginTop="@dimen/_1pxv"
                 android:layout_marginEnd="@dimen/_1pxh"
-                android:layout_weight="0.34"
+                android:layout_weight="0.4"
                 android:ellipsize="end"
                 android:lineSpacingExtra="@dimen/_6pxh"
                 android:singleLine="true"
                 android:text='@{"Every " + listPetRecordsRowModel.txtDuration + " Days"}'
-                tools:text="@string/lbl_every_5_days" />
+                tools:text="Every 11 Days" />
         </LinearLayout>
     </LinearLayout>
 </layout>

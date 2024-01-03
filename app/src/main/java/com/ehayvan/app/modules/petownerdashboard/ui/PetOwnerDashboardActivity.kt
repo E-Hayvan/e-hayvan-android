@@ -26,6 +26,7 @@ import com.ehayvan.app.modules.petownerdashboard.data.viewmodel.PetOwnerDashboar
 import com.ehayvan.app.modules.veterinariandashboard.ui.VeterinarianDashboardActivity
 import com.ehayvan.app.modules.vetsearchscreen.ui.VetSearchScreenActivity
 import com.ehayvan.app.modules.viewpetprofile.ui.ViewPetProfileActivity
+import com.ehayvan.app.modules.viewprofile.ui.ViewProfileActivity
 import org.json.JSONException
 import org.json.JSONObject
 import org.w3c.dom.Text
@@ -81,6 +82,13 @@ class PetOwnerDashboardActivity :
     binding.petOwnerDashboardSearchView.setOnClickListener {
       val bundle = Bundle()
       val intent = Intent(this, VetSearchScreenActivity::class.java)
+      bundle.putString("ownerID", owner)
+      intent.putExtras(bundle)
+      startActivity(intent)
+    }
+    binding.frameStackvector.setOnClickListener {
+      val bundle = Bundle()
+      val intent = Intent(this, ViewProfileActivity::class.java)
       bundle.putString("ownerID", owner)
       intent.putExtras(bundle)
       startActivity(intent)
