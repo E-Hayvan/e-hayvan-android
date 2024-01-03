@@ -45,7 +45,7 @@ class VeterinarianDashboardActivity :
   }
 
   private fun getAppointments() {
-    val url = "http://192.168.0.19:8080/api/veterinarians/$vetID"
+    val url = "http://ehayvan.eu-north-1.elasticbeanstalk.com/api/veterinarians/$vetID"
     val body1: ImageView = findViewById(R.id.imageEmptySpaceIll)
     val body2: TextView = findViewById(R.id.txtTitle)
     val body3: TextView = findViewById(R.id.txtBody)
@@ -152,7 +152,7 @@ class VeterinarianDashboardActivity :
         startActivity(intent)
       }
       override fun onImageClick(view: View, position: Int, item: ListtitleRowModel) {
-        val url = "http://192.168.0.19:8080/api/appointments/${item.appointmentID}"
+        val url = "http://ehayvan.eu-north-1.elasticbeanstalk.com/api/appointments/${item.appointmentID}"
         val jsonObjectRequest = JsonObjectRequest(
           Request.Method.DELETE, url, null,
           { response ->

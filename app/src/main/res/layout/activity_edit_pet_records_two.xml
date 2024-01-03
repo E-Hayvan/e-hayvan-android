@@ -101,7 +101,7 @@
                 android:id="@+id/txtTitleOne"
                 android:layout_gravity="center_horizontal"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
+                android:visibility="invisible"
                 android:layout_marginEnd="@dimen/_13pxh"
                 android:layout_marginStart="@dimen/_13pxh"
                 android:layout_marginTop="@dimen/_50pxv"

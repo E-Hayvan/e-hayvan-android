@@ -52,7 +52,7 @@ class ViewPetProfileActivity :
       onBackPressed()
     }
     binding.btnDeletePet.setOnClickListener {
-      val url = "http://192.168.0.19:8080/api/pets/$petID"
+      val url = "http://ehayvan.eu-north-1.elasticbeanstalk.com/api/pets/$petID"
       val jsonObjectRequest = JsonObjectRequest(
         Request.Method.DELETE, url, null,
         { response ->

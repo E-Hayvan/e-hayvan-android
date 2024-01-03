@@ -41,7 +41,7 @@ class AppointmentActivity : BaseActivity<ActivityAppointmentBinding>(R.layout.ac
     petID = intent.extras?.getString("petID").toString()
     owner = intent.extras?.getString("ownerID").toString()
     viewModel.appointmentModel.value?.txtPetName = intent.extras?.getString("petName")
-    val url = "http://192.168.0.19:8080/api/petowners/$owner"
+    val url = "http://ehayvan.eu-north-1.elasticbeanstalk.com/api/petowners/$owner"
     val jsonObjectRequest = JsonObjectRequest(
       Request.Method.GET, url, null,
       { response ->
@@ -75,7 +75,7 @@ class AppointmentActivity : BaseActivity<ActivityAppointmentBinding>(R.layout.ac
       showTimePickerDialog(binding.etInputContentOne)
     }
     binding.btnReserve.setOnClickListener {
-      if (vetID != "") {
+      if (vetID != "null") {
         val date = binding.etInputContent.text
         val time = binding.etInputContentOne.text
         if (date.isEmpty())
@@ -83,7 +83,7 @@ class AppointmentActivity : BaseActivity<ActivityAppointmentBinding>(R.layout.ac
         if (time.isEmpty())
           binding.etInputContentOne.error = "You should enter the time"
         if (date.isNotEmpty() && time.isNotEmpty()) {
-          val url = "http://192.168.0.19:8080/api/appointments"
+          val url = "http://ehayvan.eu-north-1.elasticbeanstalk.com/api/appointments"
           var jsonBody = JSONObject()
           try {
             // Create the user object

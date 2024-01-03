@@ -118,10 +118,10 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
         layout.visibility = View.GONE
         var url : String = ""
         if (checkBoxText.isChecked) {
-          url = "http://192.168.0.19:8080/api/petowners/newowner"
+          url = "http://ehayvan.eu-north-1.elasticbeanstalk.com/api/petowners/newowner"
         }
         if (checkBoxTextOne.isChecked) {
-          url = "http://192.168.0.19:8080/api/veterinarians"
+          url = "http://ehayvan.eu-north-1.elasticbeanstalk.com/api/veterinarians"
         }
 
         val jsonBody = JSONObject()
@@ -148,7 +148,7 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
             progressBar.visibility = View.GONE
             if (checkBoxText.isChecked) {
               val bundle = Bundle()
-              val ownerID = response.optString("ownerID")
+              val ownerID = response.optString("petOwnerID")
               Log.d("Pet Owner ID", ownerID)
               val intent = Intent(this, PetOwnerDashboardActivity::class.java)
               bundle.putString("ownerID", ownerID)

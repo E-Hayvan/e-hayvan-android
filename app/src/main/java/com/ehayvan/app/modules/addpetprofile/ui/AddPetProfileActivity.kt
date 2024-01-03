@@ -82,7 +82,7 @@ class AddPetProfileActivity :
       if (petName.isEmpty())
         binding.etInputContent.error = "You should enter the pet's name"
       if (petAge.isNotEmpty() && petName.isNotEmpty()) {
-        val url = "http://192.168.0.19:8080/api/pets"
+        val url = "http://ehayvan.eu-north-1.elasticbeanstalk.com/api/pets"
         var jsonBody = JSONObject()
         try {
           // Create the user object

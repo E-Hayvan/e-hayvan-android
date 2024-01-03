@@ -62,7 +62,7 @@ class VetSearchScreenActivity :
     listVetAdapter.setOnItemClickListener(object : ListVetAdapter.OnItemClickListener {
       @SuppressLint("UseCompatLoadingForDrawables")
       override fun onItemClick(view: View, position: Int, item: ListVetModel) {
-        val url = "http://192.168.0.19:8080/api/petowners/updateVet/${item.vetID}/$owner"
+        val url = "http://ehayvan.eu-north-1.elasticbeanstalk.com/api/petowners/updateVet/${item.vetID}/$owner"
         val jsonObjectRequest = JsonObjectRequest(
           Request.Method.PUT, url, null,
           { response ->
@@ -118,7 +118,7 @@ class VetSearchScreenActivity :
   }
 
   fun postReq() {
-    val url = "http://192.168.0.19:8080/api/veterinarians/search/$queryVet"
+    val url = "http://ehayvan.eu-north-1.elasticbeanstalk.com/api/veterinarians/search/$queryVet"
     val jsonArrayRequest = JsonArrayRequest(
       Request.Method.GET, url, null,
       { response ->

@@ -70,11 +70,11 @@ class EditPetRecordsThreeActivity :
       if (body4.isEmpty())
         binding.etInputContentThree.error = "You should enter the number of drop"
       if (body1.isNotEmpty() && body2.isNotEmpty() && body3.isNotEmpty() && body4.isNotEmpty()) {
-        var url = "http://192.168.0.19:8080/api/medications"
+        var url = "http://ehayvan.eu-north-1.elasticbeanstalk.com/api/medications"
         var jsonBody = JSONObject()
         var requestMethod = Request.Method.POST
         if (type == "add") {
-          url = "http://192.168.0.19:8080/api/medications"
+          url = "http://ehayvan.eu-north-1.elasticbeanstalk.com/api/medications"
           jsonBody = JSONObject()
           try {
             // Create the user object
@@ -100,7 +100,7 @@ class EditPetRecordsThreeActivity :
           }
         }
         if (type == "edit") {
-          url = "http://192.168.0.19:8080/api/medications/update/$medicationID"
+          url = "http://ehayvan.eu-north-1.elasticbeanstalk.com/api/medications/update/$medicationID"
           jsonBody = JSONObject()
           requestMethod = Request.Method.PUT
           try {

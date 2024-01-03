@@ -61,7 +61,7 @@ class EditPetRecordsTwoActivity :
   }
 
   private fun getMedications() {
-    val url = "http://192.168.0.19:8080/api/pets/$petID"
+    val url = "http://ehayvan.eu-north-1.elasticbeanstalk.com/api/pets/$petID"
     val body1: ImageView = findViewById(R.id.imageIllustration)
     val body2: TextView = findViewById(R.id.txtTitleOne)
     val recyclerList: RecyclerView = findViewById(R.id.recyclerListPetRecords)

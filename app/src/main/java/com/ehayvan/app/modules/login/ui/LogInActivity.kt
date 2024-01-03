@@ -61,7 +61,7 @@ class LogInActivity : BaseActivity<ActivityLogInBinding>(R.layout.activity_log_i
       if (inputText1.isNotEmpty() && inputText2.isNotEmpty() && mailCheck) {
         progressBar.visibility = View.VISIBLE
         txtContainer.visibility = View.GONE
-        val url = "http://192.168.0.19:8080/api/customers/login/$inputText1/$inputText2"
+        val url = "http://ehayvan.eu-north-1.elasticbeanstalk.com/api/customers/login/$inputText1/$inputText2"
 
         val jsonObjectRequest = JsonObjectRequest(
           Request.Method.GET, url, null,

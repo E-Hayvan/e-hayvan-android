@@ -88,7 +88,7 @@ class PetOwnerDashboardActivity :
   }
 
   private fun getPets(ownerID: String?) {
-    val url = "http://192.168.0.19:8080/api/petowners/$ownerID"
+    val url = "http://ehayvan.eu-north-1.elasticbeanstalk.com/api/petowners/$ownerID"
     val body1: ImageView = findViewById(R.id.imageEmptySpaceIll)
     val body2: TextView = findViewById(R.id.txtTitle)
     val body3: TextView = findViewById(R.id.txtBody)
