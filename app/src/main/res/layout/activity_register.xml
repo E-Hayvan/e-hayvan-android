@@ -156,6 +156,39 @@
                                     style="@style/etSolidRoundedOutline" tools:ignore="Autofill" android:hint="@string/lbl_password"/>
                             </LinearLayout>
                         </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:id="@+id/linearInputBox3"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_15pxh"
+                            android:layout_marginStart="@dimen/_15pxh"
+                            android:layout_marginTop="@dimen/_5pxv"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical" style="@style/groupStylecornerRadius_1">
+                            <LinearLayout
+                                android:gravity="center_horizontal"
+                                android:id="@+id/linearInputContent4"
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
+                                <EditText android:ellipsize="end"
+                                    android:gravity="start"
+                                    android:id="@+id/txtLabel4"
+                                    android:layout_height="match_parent"
+                                    android:layout_width="match_parent"
+                                    android:paddingBottom="@dimen/_13pxv"
+                                    android:paddingEnd="@dimen/_30pxh"
+                                    android:paddingStart="@dimen/_16pxh"
+                                    android:paddingTop="@dimen/_16pxv"
+                                    android:inputType="text"
+                                    android:lineSpacingExtra="@dimen/_6pxh"
+                                    android:singleLine="true"
+                                    android:text="@{registerVM.registerModel.etInputContentFourValue}"
+                                    android:textColorHint="@color/bluegray_400"
+                                    style="@style/etSolidRoundedOutline" tools:ignore="Autofill" android:hint="@string/lbl_your_clinic"/>
+                            </LinearLayout>
+                        </LinearLayout>
                         <LinearLayout android:gravity="start"
                             android:id="@+id/linearRowtext"
                             android:layout_height="wrap_content"

@@ -13,13 +13,9 @@ import com.ehayvan.app.R
 import com.ehayvan.app.appcomponents.base.BaseActivity
 import com.ehayvan.app.databinding.ActivityViewProfileBinding
 import com.ehayvan.app.modules.editprofile.ui.EditProfileActivity
-import com.ehayvan.app.modules.petownerdashboard.data.model.ListPetRowModel
 import com.ehayvan.app.modules.register.ui.RegisterActivity
-import com.ehayvan.app.modules.veterinariandashboard.ui.VeterinarianDashboardActivity
-import com.ehayvan.app.modules.viewprofile.`data`.model.Content1RowModel
 import com.ehayvan.app.modules.viewprofile.`data`.viewmodel.ViewProfileVM
 import org.json.JSONObject
-import kotlin.Int
 import kotlin.String
 import kotlin.Unit
 
@@ -111,16 +107,7 @@ class ViewProfileActivity : BaseActivity<ActivityViewProfileBinding>(R.layout.ac
         requestQueue.add(jsonObjectRequest)
       }
 
-  fun onClickRecyclerContent(
-    view: View,
-    position: Int,
-    item: Content1RowModel
-  ): Unit {
-    when(view.id) {
-    }
-  }
-
-  companion object {
+      companion object {
     const val TAG: String = "VIEW_PROFILE_ACTIVITY"
 
   }

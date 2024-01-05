@@ -30,6 +30,7 @@ import org.json.JSONObject
 class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity_register) {
   private val viewModel: RegisterVM by viewModels<RegisterVM>()
   private lateinit var requestQueue: RequestQueue
+  private var clinicCheck = false
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
     requestQueue = Volley.newRequestQueue(this)
@@ -49,15 +50,24 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
     val txtLabel1 = findViewById<EditText>(R.id.txtLabel1)
     val txtLabel2 = findViewById<EditText>(R.id.txtLabel2)
     val txtLabel3 = findViewById<EditText>(R.id.txtLabel3)
+    val txtLabel4 = findViewById<EditText>(R.id.txtLabel4)
 
     checkBoxText.setOnClickListener {
       // When checkBoxText is clicked, uncheck checkBoxTextOne
+      binding.linearInputBox3.visibility = View.GONE
+      clinicCheck = false
       checkBoxTextOne.isChecked = false
     }
 
     checkBoxTextOne.setOnClickListener {
       // When checkBoxTextOne is clicked, uncheck checkBoxText
       checkBoxText.isChecked = false
+      if (!clinicCheck) {
+        binding.linearInputBox3.visibility = View.VISIBLE
+        clinicCheck = true
+        txtLabel4.error = null
+      }
+
     }
 
     signUpButton.setOnClickListener {
@@ -65,6 +75,7 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
       val spaceIndex = inputText1.indexOf(' ')
       var mailCheck = true
       var surnameCheck = true
+      var clinic = true
       val name: String
       val surname: String
 
@@ -111,8 +122,17 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
         checkBoxTextOne.error = null
         checkBoxText.error = null
       }
+      if (clinicCheck) {
+        val inputText4 = txtLabel4.text
+        if (inputText4.isEmpty()) {
+          txtLabel4.error = "You should enter the clinic name"
+          clinic = false
+        } else {
+          clinic = true
+        }
+      }
       if ((checkBoxText.isChecked || checkBoxTextOne.isChecked) && checkBoxTextTwo.isChecked &&
-        inputText1.isNotEmpty() && inputText2.isNotEmpty() && inputText3.isNotEmpty() && surnameCheck && mailCheck
+        inputText1.isNotEmpty() && inputText2.isNotEmpty() && inputText3.isNotEmpty() && surnameCheck && mailCheck && clinic
       ) {
         progressBar.visibility = View.VISIBLE
         layout.visibility = View.GONE
@@ -135,7 +155,7 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
           // Add the user object to the main JSON body
           jsonBody.put("user", userObject)
           if (checkBoxTextOne.isChecked) {
-            jsonBody.put("clinic", "")
+            jsonBody.put("clinic", binding.txtLabel4.text)
           }
         } catch (e: JSONException) {
           e.printStackTrace()

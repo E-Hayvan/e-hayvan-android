@@ -3,12 +3,7 @@ package com.ehayvan.app.modules.viewpetprofile.ui
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.activity.viewModels
-import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonObjectRequest
@@ -16,16 +11,11 @@ import com.android.volley.toolbox.Volley
 import com.ehayvan.app.R
 import com.ehayvan.app.appcomponents.base.BaseActivity
 import com.ehayvan.app.databinding.ActivityViewPetProfileBinding
-import com.ehayvan.app.modules.addpetprofile.ui.AddPetProfileActivity
 import com.ehayvan.app.modules.appointment.ui.AppointmentActivity
 import com.ehayvan.app.modules.editpetprofile.ui.EditPetProfileActivity
-import com.ehayvan.app.modules.petownerdashboard.data.model.ListPetRowModel
 import com.ehayvan.app.modules.petownerdashboard.ui.PetOwnerDashboardActivity
-import com.ehayvan.app.modules.viewpetprofile.`data`.model.ContentRowModel
 import com.ehayvan.app.modules.viewpetprofile.`data`.viewmodel.ViewPetProfileVM
 import com.ehayvan.app.modules.viewpetrecordsone.ui.ViewPetRecordsOneActivity
-import org.json.JSONObject
-import kotlin.Int
 import kotlin.String
 import kotlin.Unit
 
