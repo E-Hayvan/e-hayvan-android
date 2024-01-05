@@ -180,7 +180,7 @@ class VetSearchScreenActivity :
     item: ListVetModel
   ): Unit {
     when(view.id) {
-      //TODO Write the vet green style with api
+
     }
   }
 

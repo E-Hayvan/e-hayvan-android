@@ -9,5 +9,6 @@ data class RegisterModel(
 
   var etInputContentTwoValue: String? = null,
 
-  var etInputContentThreeValue: String? = null
+  var etInputContentThreeValue: String? = null,
+  var etInputContentFourValue: String? = null
 )

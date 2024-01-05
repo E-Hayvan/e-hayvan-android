@@ -11,7 +11,6 @@ import com.ehayvan.app.databinding.ActivityLaunchScreenBinding
 import com.ehayvan.app.modules.editpetprofile.ui.EditPetProfileActivity
 import com.ehayvan.app.modules.editpetrecordsthree.ui.EditPetRecordsThreeActivity
 import com.ehayvan.app.modules.editpetrecordstwo.ui.EditPetRecordsTwoActivity
-import com.ehayvan.app.modules.editpetrecordstwoempty.ui.EditPetRecordsTwoEmptyActivity
 import com.ehayvan.app.modules.editprofile.ui.EditProfileActivity
 import com.ehayvan.app.modules.launchscreen.`data`.viewmodel.LaunchScreenVM
 import com.ehayvan.app.modules.petownerdashboard.ui.PetOwnerDashboardActivity
